@@ -1,0 +1,28 @@
+wandb: [wandb.login()] Loaded credentials for https://api.forge.coreweave.com from C:\Users\11608\_netrc.
+wandb: Currently logged in as: kevinboyulien (kevinboyulien-national-taiwan-university) to https://api.forge.coreweave.com. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.31.0
+wandb: Run data is saved locally in wandb\run-20261101_151651-0njzp6y9
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run defense-ppo-reproducible
+wandb:  View project at https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3
+wandb:  View run at https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3/runs/0njzp6y9
+wandb: updating run metadata
+wandb: uploading output.log; uploading config.yaml
+wandb: 
+wandb: Run summary:
+wandb:    bc/collected_steps 10000
+wandb:              bc/epoch 120
+wandb:                bc/mse 0.0
+wandb:   best_balanced_score 1.03529
+wandb:      best_global_step 16384
+wandb:                 epoch 5
+wandb:         epoch_seconds 47.06252
+wandb:   eval/balanced_score 0.98824
+wandb: eval/rusher_draw_rate 0
+wandb:    eval/rusher_length 206.82
+wandb:                   +25 ...
+wandb: 
+wandb:  View run defense-ppo-reproducible at: https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3/runs/0njzp6y9
+wandb:  View project at: https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: wandb\run-20261101_151651-0njzp6y9\logs

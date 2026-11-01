@@ -1,0 +1,29 @@
+wandb: [wandb.login()] Loaded credentials for https://api.forge.coreweave.com from C:\Users\11608\_netrc.
+wandb: Currently logged in as: kevinboyulien (kevinboyulien-national-taiwan-university) to https://api.forge.coreweave.com. Use `wandb login --relogin` to force relogin
+wandb: setting up run 4r0t3h22
+wandb: Tracking run with wandb version 0.31.0
+wandb: Run data is saved locally in wandb\run-20261101_154316-4r0t3h22
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fast-cover-no_velocity
+wandb:  View project at https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3
+wandb:  View run at https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3/runs/4r0t3h22
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: 
+wandb: Run summary:
+wandb:    bc/collected_steps 10000
+wandb:              bc/epoch 120
+wandb:                bc/mse 0.0
+wandb:   best_balanced_score 0.86667
+wandb:      best_global_step 32768
+wandb:                 epoch 5
+wandb:         epoch_seconds 57.18832
+wandb:   eval/balanced_score 0.84444
+wandb: eval/rusher_draw_rate 0
+wandb:    eval/rusher_length 283.1
+wandb:                   +31 ...
+wandb: 
+wandb:  View run fast-cover-no_velocity at: https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3/runs/4r0t3h22
+wandb:  View project at: https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: wandb\run-20261101_154316-4r0t3h22\logs

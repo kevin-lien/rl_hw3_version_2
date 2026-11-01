@@ -1,0 +1,6 @@
+﻿{
+    "pid":  1584,
+    "command":  "python train_astro_party.py --controller cover",
+    "checkpoint":  "models/model_astro_party_cover.zip",
+    "uploads_model":  false
+}

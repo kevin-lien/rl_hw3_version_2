@@ -1,0 +1,7 @@
+﻿{
+    "trial":  "no_velocity",
+    "pid":  19664,
+    "checkpoint":  "models/model_astro_party_fast_cover_novelo",
+    "reward_profile":  "fast_cover",
+    "uploads_model":  false
+}

@@ -1,0 +1,10 @@
+rusher 5 5 wins
+rusher 10 6 wins
+rusher 15 9 wins
+rusher 20 13 wins
+rusher {'win': 0.65, 'draw': 0.0, 'steps': 267.6, 'mean_speed': 143.4264259338379, 'cover_fraction': 0.42045380773937835, 'reload_cover_fraction': 0.5307281343476438, 'orbit_direction_match': 0.6809994321120988, 'enemy_respawns': 0.5}
+sniper 5 4 wins
+sniper 10 9 wins
+sniper 15 13 wins
+sniper 20 18 wins
+sniper {'win': 0.9, 'draw': 0.0, 'steps': 364.05, 'mean_speed': 157.5159206390381, 'cover_fraction': 0.45836631045746534, 'reload_cover_fraction': 0.47783490600702566, 'orbit_direction_match': 0.5658116369923072, 'enemy_respawns': 0.15}

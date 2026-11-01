@@ -1,0 +1,28 @@
+{
+  "command": "python train_astro_party.py",
+  "uses_prior_checkpoint": false,
+  "reproduced_path": "fast_cover_reproduce/models/model_astro_party.zip",
+  "reference_steps": 40960,
+  "reproduced_steps": 40960,
+  "parameter_count": 6238,
+  "all_policy_tensors_equal": true,
+  "maximum_absolute_difference": 0.0,
+  "tensor_differences": {
+    "log_std": 0.0,
+    "mlp_extractor.value_net.0.weight": 0.0,
+    "mlp_extractor.value_net.0.bias": 0.0,
+    "mlp_extractor.value_net.2.weight": 0.0,
+    "mlp_extractor.value_net.2.bias": 0.0,
+    "action_net.weight": 0.0,
+    "action_net.bias": 0.0,
+    "value_net.weight": 0.0,
+    "value_net.bias": 0.0
+  },
+  "source_layout": "flat train_astro_party.py and train_astro_party_env.py; stock envs and baselines",
+  "reference_sha256": "53d4f1bdab58769406c9b29379c0ee88c27fef7d0a3eb840c7a753ea5691c757",
+  "reproduced_sha256": "322dbe004f66f13524e22e1b4173f5e9e8852bdeb927b0a7ccfd29f2ace4d071",
+  "training_source_sha256": "e16f3c04beba6f23295d3f355493383cad600e6ac1295e029230021163f2fece",
+  "training_env_sha256": "54bb8fbd4aeb256a95cdd4d5e38456aa17b61c15fed7f749cdebaa1d70383040",
+  "run_id": "ghme0u0w",
+  "run_url": "https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3/runs/ghme0u0w"
+}

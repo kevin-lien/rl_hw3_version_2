@@ -5,3 +5,5 @@ __pycache__/
 astro_party/wandb/
 astro_party/runs/
 astro_party/data/
+wandb/
+.wandb-cache/

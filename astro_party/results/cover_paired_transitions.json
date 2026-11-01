@@ -1,0 +1,12 @@
+{
+  "rusher": {
+    "reference_win_cover_draw": 0,
+    "reference_win_cover_loss": 13,
+    "cover_win_reference_not_win": 7
+  },
+  "sniper": {
+    "reference_win_cover_draw": 9,
+    "reference_win_cover_loss": 14,
+    "cover_win_reference_not_win": 9
+  }
+}

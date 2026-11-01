@@ -1,0 +1,11 @@
+Loaded models/reproduced.zip with PPO
+
+medium baseline (rusher_bot), seeds 0-99:
+  WWWWWWWWWWWWWWWWWWW.WWWWWWWWWW.WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW.WWWWWWWWWWWWWWWWWWWW.WWW.WWW   (W = win, . = loss or draw)
+  win rate 95% (95/100), need 90% -> 5/5
+
+strong baseline (sniper_bot), seeds 0-99:
+  WWWWWWWWWWW..WWWWW.WWWWWWWWWWWWW.WW.WW.WWWWWWWWWWWWW.WWWWWWWWWWWWWWWWWWWWWWWWWWWW.WWWWWWWWWWWWWW.WWW   (W = win, . = loss or draw)
+  win rate 91% (91/100), need 85% -> 5/5
+
+Score: 10/10

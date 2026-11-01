@@ -1,0 +1,22 @@
+﻿[
+    {
+        "name":  "model_astro_party_reference_before_retrain.zip",
+        "bytes":  120852,
+        "sha256":  "53D4F1BDAB58769406C9B29379C0EE88C27FEF7D0A3EB840C7A753EA5691C757"
+    },
+    {
+        "name":  "report.pdf",
+        "bytes":  1103483,
+        "sha256":  "5C11F573B4243888EFEC43A8F57926F4396F5FFF607A0AD06E96D82BC75A6212"
+    },
+    {
+        "name":  "train_astro_party.py",
+        "bytes":  39892,
+        "sha256":  "5A5776C41B1538A772A0257973CA1728EB8AD89587DF3C480883D9B562A97300"
+    },
+    {
+        "name":  "train_astro_party_env.py",
+        "bytes":  8221,
+        "sha256":  "54BB8FBD4AEB256A95CDD4D5E38456AA17B61C15FED7F749CDEBAA1D70383040"
+    }
+]

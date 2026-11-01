@@ -1,0 +1,7 @@
+{
+  "defaults_equal_tested_recipe": true,
+  "config_edits_applied": true,
+  "cli_overrides_config": true,
+  "training_source_sha256": "4b63b30e952465601f441f631bf48a1ddae9faa8d54a7b107ea9736909a716ed",
+  "tested_previous_source_sha256": "e16f3c04beba6f23295d3f355493383cad600e6ac1295e029230021163f2fece"
+}

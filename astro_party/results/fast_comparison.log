@@ -1,0 +1,37 @@
+old_cover rusher 20 18 wins
+old_cover rusher 40 35 wins
+old_cover rusher 60 53 wins
+old_cover rusher 80 69 wins
+old_cover rusher 100 86 wins
+old_cover rusher {'win_rate': 0.86, 'loss_rate': 0.14, 'draw_rate': 0.0, 'ship_speed_mean': 146.01668200172648, 'retreat_speed_mean': 158.14113898416167, 'retreat_cover_fraction': 0.16116504854368932, 'empty_ammo_cover_fraction': 0.007267441860465116, 'orbit_direction_match': 0.8633416458852868, 'pilot_finish_rate': 0.8037383177570093, 'enemy_respawns_mean': 0.21, 'ram_win_rate': 0.04, 'mean_steps': 266.25, 'pilot_finish_median': 0.24, 'first_shot_median': 2.74}
+old_cover sniper 20 17 wins
+old_cover sniper 40 34 wins
+old_cover sniper 60 46 wins
+old_cover sniper 80 62 wins
+old_cover sniper 100 76 wins
+old_cover sniper {'win_rate': 0.76, 'loss_rate': 0.11, 'draw_rate': 0.13, 'ship_speed_mean': 128.52430748217702, 'retreat_speed_mean': 129.31288907179444, 'retreat_cover_fraction': 0.3178329571106095, 'empty_ammo_cover_fraction': 0.0035714285714285713, 'orbit_direction_match': 0.6871004136893569, 'pilot_finish_rate': 0.8085106382978723, 'enemy_respawns_mean': 0.16, 'ram_win_rate': 0.23, 'mean_steps': 784.07, 'pilot_finish_median': 1.42, 'first_shot_median': 3.86}
+Waiting for completed checkpoint: models/model_astro_party_fast_cover_novelo.zip
+fast_no_velocity rusher 20 15 wins
+fast_no_velocity rusher 40 29 wins
+fast_no_velocity rusher 60 45 wins
+fast_no_velocity rusher 80 58 wins
+fast_no_velocity rusher 100 72 wins
+fast_no_velocity rusher {'win_rate': 0.72, 'loss_rate': 0.27, 'draw_rate': 0.01, 'ship_speed_mean': 163.42327047118474, 'retreat_speed_mean': 175.44850608857539, 'retreat_cover_fraction': 0.4075593319660123, 'empty_ammo_cover_fraction': 0.022304832713754646, 'orbit_direction_match': 0.7794161901895877, 'pilot_finish_rate': 0.6857142857142857, 'enemy_respawns_mean': 0.32, 'ram_win_rate': 0.16, 'mean_steps': 285.14, 'pilot_finish_median': 0.16, 'first_shot_median': 2.02}
+fast_no_velocity sniper 20 15 wins
+fast_no_velocity sniper 40 31 wins
+fast_no_velocity sniper 60 47 wins
+fast_no_velocity sniper 80 62 wins
+fast_no_velocity sniper 100 77 wins
+fast_no_velocity sniper {'win_rate': 0.77, 'loss_rate': 0.22, 'draw_rate': 0.01, 'ship_speed_mean': 168.1402037224464, 'retreat_speed_mean': 173.93411776382047, 'retreat_cover_fraction': 0.40020776522529544, 'empty_ammo_cover_fraction': 0.037112010796221326, 'orbit_direction_match': 0.6911685514270328, 'pilot_finish_rate': 0.7777777777777778, 'enemy_respawns_mean': 0.22, 'ram_win_rate': 0.39, 'mean_steps': 386.26, 'pilot_finish_median': 1.66, 'first_shot_median': 2.1}
+fast_velocity rusher 20 16 wins
+fast_velocity rusher 40 31 wins
+fast_velocity rusher 60 46 wins
+fast_velocity rusher 80 58 wins
+fast_velocity rusher 100 72 wins
+fast_velocity rusher {'win_rate': 0.72, 'loss_rate': 0.27, 'draw_rate': 0.01, 'ship_speed_mean': 163.0165849426781, 'retreat_speed_mean': 174.14693425682233, 'retreat_cover_fraction': 0.3905242500700869, 'empty_ammo_cover_fraction': 0.021301775147928994, 'orbit_direction_match': 0.7675021607605877, 'pilot_finish_rate': 0.6486486486486487, 'enemy_respawns_mean': 0.36, 'ram_win_rate': 0.16, 'mean_steps': 289.64, 'pilot_finish_median': 0.16, 'first_shot_median': 2.02}
+fast_velocity sniper 20 14 wins
+fast_velocity sniper 40 30 wins
+fast_velocity sniper 60 47 wins
+fast_velocity sniper 80 65 wins
+fast_velocity sniper 100 80 wins
+fast_velocity sniper {'win_rate': 0.8, 'loss_rate': 0.19, 'draw_rate': 0.01, 'ship_speed_mean': 166.2162024771793, 'retreat_speed_mean': 171.95193212733093, 'retreat_cover_fraction': 0.4259882778401297, 'empty_ammo_cover_fraction': 0.02912621359223301, 'orbit_direction_match': 0.6891071197829177, 'pilot_finish_rate': 0.7766990291262136, 'enemy_respawns_mean': 0.22, 'ram_win_rate': 0.39, 'mean_steps': 386.8, 'pilot_finish_median': 1.67, 'first_shot_median': 2.1}

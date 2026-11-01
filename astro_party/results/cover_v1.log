@@ -1,0 +1,10 @@
+rusher 5 0 wins
+rusher 10 1 wins
+rusher 15 4 wins
+rusher 20 7 wins
+rusher {'win_rate': 0.35, 'draw_rate': 0.0, 'opening_cover_fraction': 0.3614777334576279, 'first_shot_median': 3.76}
+sniper 5 2 wins
+sniper 10 4 wins
+sniper 15 9 wins
+sniper 20 12 wins
+sniper {'win_rate': 0.6, 'draw_rate': 0.2, 'opening_cover_fraction': 0.4622, 'first_shot_median': 5.41}

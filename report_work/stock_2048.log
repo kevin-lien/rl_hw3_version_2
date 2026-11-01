@@ -1,0 +1,18 @@
+Successfully loaded model using DQN
+Avg_score:   1238.0
+Avg_highest: 123.84
+Counts: (Total of 100 rollouts)
+4: 4
+8: 2
+16: 4
+32: 10
+64: 23
+128: 36
+256: 19
+512: 2
+
+Baselines (best tile over 100 rollouts = 512, seeds 0-99):
+  simple (reach 128 in at least one rollout): 5/5
+  medium (reach 256 in at least one rollout): 5/5
+  strong (reach 512 in at least one rollout): 5/5
+Score: 15/15

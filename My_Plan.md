@@ -55,6 +55,44 @@ Rusher 在 120–260 px 作戰，瞄準寬鬆且不閃避；Sniper 在 380–620
 
 ## 執行紀錄
 
+### 新實驗：速度獎勵、同向快速繞行與追撞逃生員
+
+使用者要求在上一個掩體版本上增加速度、跟隨敵人的順 / 逆時針繞行、缺彈時藏在中央行星後、有一發就可探頭，以及敵人出艙時提高 approach coefficient 並追撞。
+
+- 保留既有 defense / cover checkpoints 與 `original/train_before_fast_cover.py`、`original/train_env_before_fast_cover.py`。
+- `fast_cover` reward profile：速度 bonus 係數 0.0015；完整 1500 步上限 2.25 < 擊殺 20，且低於每步成本 0.002，不能靠繞圈累積正報酬。藏在中央行星後權重 1、暴露時 0.25；追小人只獎勵朝其方向的速度。
+- 追小人接近係數從舊有效值 2.0 提高到 6.0；自身出艙仍優先逃生，不獎勵向敵人衝。
+- 新 FastCoverBot 使用敵人的可見角速度估計繞行方向，以速度目標追蹤影子位置；有彈藥即可探頭，自己的子彈仍在飛行時先退避，不再等待滿彈匣。
+- 敌人出艙分支在掩體計畫之前執行；以追蹤其橫向速度加上接近速度追撞，原 60 步避彈搜尋仍最後執行。
+- 原 reward / physics 在 1000 步固定動作回歸測試完全相同；新版 Gymnasium checker、速度 reward 上限與移離小人不加分的受控狀態測試已通過。
+- 使用獨立教師診斷種子 64000 起調整，再訓練真正 PPO checkpoint；預留 65000 起用於固定模型後比較，不以教師成績代替模型結果。
+
+### 新實驗：中央行星掩體與一鍵重現
+
+使用者新增要求：開局約 3–5 秒優先避戰，盡量維持「敵人—中央行星—自身」的相對位置；補彈後側移探頭射擊，之後退回遮蔽；原避彈搜尋保留。
+
+實作與驗收：
+
+1. 保留已達公開 95% / 91% 的 checkpoint 為 `model_astro_party_defense_reference.zip`。
+2. 新增可解釋的 cover controller；所有決策只依原始觀測。原始觀測沒有 elapsed time，因此開局時段以移動進度 / 位置 / 速度近似，不能宣稱能精確計時 3–5 秒。
+3. 避彈搜尋放在掩體導航之後，保留原本的 60 步、15 種候選動作；用危險狀態的前後最小子彈距離確認功能仍在。
+4. 先做教師對戰與開局 / 掩體使用率診斷，再訓練標準 SB3 checkpoint，與 reference 在相同種子比較勝負 / 平手。
+5. 若新戰術未優於原方法，保留為獨立實驗，不把弱模型冒充通過 baseline 的最終模型。
+6. 將裸命令 `python train_astro_party.py` 的預設參數調整為最終採用的完整 recipe，並在乾淨、含平面提交訓練檔的目錄實際從頭重跑；確認無需舊 checkpoint 或外部實驗檔。
+
+完成結果：
+
+- Cover v1 教師（20 局 / 對手）為 35% / 60%；加入暴露時加速與近距離反擊後，v2 為 90% / 70%。
+- v2 真正訓練了 10,000 步教師資料、120 輪 BC、40,960 步 PPO，輸出 `models/model_astro_party_cover.zip`；W&B run `cj240jwb` 已完成並讀回驗證。
+- 新種子 61000–61099，各對手 100 局：原 reference 為 92% / 88%，cover 為 86% / 74%。Sniper 開局遮蔽率 28% → 53%，前 5 秒出艙率 14% → 5%，但平手率 1% → 11%。因此新戰術保留實驗，不取代預設 checkpoint。
+- 原避彈元件回歸檢查 386 個狀態與舊版本動作完全一致。cover 教師 300 次避彈檢查皆改善預測距離；訓練後模型 200 次檢查亦全部改善，中位改善 31.5 px。
+- 平面提交式乾淨目錄裸命令重跑完成；全部 6,238 個參數 tensors 與 reference 相等，最大差 0；原版評分也同為 95% / 91%，10/10。
+- 訓練主檔預設現為通過版本的完整 recipe，支援平面與 envs/ 訓練環境檔；`python train_astro_party.py --controller cover` 可重現獨立 cover 實驗。模型 artifacts 上傳改為 `--upload-model` 額外選項；預設只記錄 W&B 曲線。
+- 已更新報告至 9 頁，新增掩體實驗、實際模型軌跡、成對比較與一鍵重現證據。
+- 定稿主檔 SHA-256 `e5604d8549c22b19fd945f0d334658c5d79efff4f59083c1ef2b21c6de227532` 已在 `submission_reproduce/` 再次裸命令重訓完成（run `0njzp6y9`）；全部 tensors 差值仍為 0，與 `submission_astro_party/` 準備交付的源檔雜湊一致。
+- W&B 新增 auto 模式，使用現有登入且不顯示互動登入提示；無憑證時離線記錄。無憑證分支已 smoke test，沒有帳戶也不會中止訓練。最終模型、報告等檔案不會預設上傳。
+- Astro 部分按平面格式整理於 `submission_astro_party/`（兩個訓練檔、通過模型、9 頁 report.pdf）；這不是包含 2048 / 學號的完整 COOL 壓縮檔。
+
 - 已讀 README、原版訓練 / 評分環境、兩個 baseline 與核心遊戲機制。
 - 原始範例只訓練 Rusher、總計 100,000 步，沒有 W&B 整合；這不足以證明通過雙 baseline。
 - 已建立 `.venv311`，使用 CPU PyTorch 2.9.1、SB3 2.9.0；套件鎖定於 `requirements-lock.txt`。
@@ -72,3 +110,12 @@ Rusher 在 120–260 px 作戰，瞄準寬鬆且不閃避；Sniper 在 380–620
 - 最終選擇 run `6o6gk5el` 的 40,960 步 checkpoint，已放在 `astro_party/models/model_astro_party.zip`。乾淨原版公開評分為 Rusher 95%、Sniper 91%，10/10；新保留種子 50000–50099 為 92%、87%，兩者均達門檻。
 - 擴大驗證種子 10000–10099 為 90%、84%；保留這項未達 Sniper 門檻的結果，不能宣稱所有種子集都穩定達標。最終 checkpoint 的選擇使用了公開開發回饋。
 - 已成功將主要訓練 run 同步至登入的 W&B，並由 API 讀回 148 筆雲端 history，確認雙對手勝率、reward、PPO value loss 可視化存在。其他舊 run 的整批同步因自動核准審查對未檢查 artifacts 的疑慮被拒絕，保留在本機；最終模型與結果採明確檢查後的個別上傳。
+
+
+### 高速掩體實驗完成與決策
+
+1. 有／無速度 bonus 兩組皆完成 10,000 示範、120 輪 BC、40,960 步 PPO；相同 seed、初始 BC 權重逐 tensor 相等。W&B run 為 xdfwkau6 / 4r0t3h22，完整雲端曲線已讀回驗證。
+2. 固定種子 65000–65099，每個模型對每個 baseline 各 100 場。舊掩體 Rusher/Sniper 86%/76%；高速無 bonus 72%/77%；高速有 bonus 72%/80%。Sniper 船速 128.5→166.2，平手 13→1 場，但零彈遮蔽僅約 3%，尚未達成穩定躲藏。速度 bonus 不比零 bonus 更快；不能將單 seed 的三場勝率差解讀為普遍有效。
+3. 保留原正式 checkpoint（公開評估 95%/91%）；新版本獨立儲存。撞擊勝場增加不等於出艙後完成率提升，避免用局部行為指標取代最終勝率。
+4. 實際訓練模型的 180 個避彈介入狀態皆提高預測最小子彈距離，中位改善 11.44 px；受控無彈追撞 46 步成功。這些是機制驗證，不能當完整勝率保證。
+5. 最新兩份訓練原始碼在 fast_cover_reproduce/ 中完全從零用 python train_astro_party.py 重訓，run ghme0u0w；40,960 步後全部 policy tensors 與正式 reference 相同，最大差 0。原 reward 1,000 步回歸一致。報告更新為 11 頁，含對照圖與負面結果；繳交包仍選正式通過模型。

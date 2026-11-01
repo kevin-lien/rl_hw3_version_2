@@ -1,0 +1,1361 @@
+{
+  "config": {
+    "episodes": 20,
+    "seed_base": 64000,
+    "orbit_radius": 220.0,
+    "cruise_speed": 240.0,
+    "tag": "fast_cover_v4"
+  },
+  "results": {
+    "rusher": {
+      "summary": {
+        "win": 0.65,
+        "draw": 0.0,
+        "steps": 267.6,
+        "mean_speed": 143.4264259338379,
+        "cover_fraction": 0.42045380773937835,
+        "reload_cover_fraction": 0.5307281343476438,
+        "orbit_direction_match": 0.6809994321120988,
+        "enemy_respawns": 0.5
+      },
+      "games": [
+        {
+          "seed": 64000,
+          "win": true,
+          "draw": false,
+          "steps": 127,
+          "mean_speed": 144.79879760742188,
+          "cover_fraction": 0.3700787401574803,
+          "reload_cover_fraction": 0.4117647058823529,
+          "orbit_direction_match": 0.16666666666666666,
+          "first_shot": 1.1,
+          "pilot_kill_seconds": 1.04,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64001,
+          "win": true,
+          "draw": false,
+          "steps": 130,
+          "mean_speed": 123.5609130859375,
+          "cover_fraction": 0.5230769230769231,
+          "reload_cover_fraction": 0.5714285714285714,
+          "orbit_direction_match": 1.0,
+          "first_shot": 2.26,
+          "pilot_kill_seconds": 0.16,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64002,
+          "win": true,
+          "draw": false,
+          "steps": 159,
+          "mean_speed": 155.0225067138672,
+          "cover_fraction": 0.389937106918239,
+          "reload_cover_fraction": 0.4246575342465753,
+          "orbit_direction_match": 0.762589928057554,
+          "first_shot": 1.62,
+          "pilot_kill_seconds": 0.14,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64003,
+          "win": true,
+          "draw": false,
+          "steps": 122,
+          "mean_speed": 103.32837677001953,
+          "cover_fraction": 0.4344262295081967,
+          "reload_cover_fraction": 0.0,
+          "orbit_direction_match": 0.6363636363636364,
+          "first_shot": 1.4,
+          "pilot_kill_seconds": 0.12,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64004,
+          "win": true,
+          "draw": false,
+          "steps": 256,
+          "mean_speed": 154.89288330078125,
+          "cover_fraction": 0.6796875,
+          "reload_cover_fraction": 0.991869918699187,
+          "orbit_direction_match": 0.8545454545454545,
+          "first_shot": 2.92,
+          "pilot_kill_seconds": 1.62,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64005,
+          "win": false,
+          "draw": false,
+          "steps": 352,
+          "mean_speed": 120.66728973388672,
+          "cover_fraction": 0.15625,
+          "reload_cover_fraction": 0.391304347826087,
+          "orbit_direction_match": 0.0,
+          "first_shot": 0.76,
+          "pilot_kill_seconds": null,
+          "enemy_respawns": 1
+        },
+        {
+          "seed": 64006,
+          "win": false,
+          "draw": false,
+          "steps": 385,
+          "mean_speed": 120.46269989013672,
+          "cover_fraction": 0.19220779220779222,
+          "reload_cover_fraction": 0.4,
+          "orbit_direction_match": 1.0,
+          "first_shot": 1.62,
+          "pilot_kill_seconds": null,
+          "enemy_respawns": 1
+        },
+        {
+          "seed": 64007,
+          "win": true,
+          "draw": false,
+          "steps": 209,
+          "mean_speed": 163.3766326904297,
+          "cover_fraction": 0.7177033492822966,
+          "reload_cover_fraction": 0.8481012658227848,
+          "orbit_direction_match": 0.9402985074626866,
+          "first_shot": 3.8,
+          "pilot_kill_seconds": 0.14,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64008,
+          "win": false,
+          "draw": false,
+          "steps": 378,
+          "mean_speed": 147.15655517578125,
+          "cover_fraction": 0.4523809523809524,
+          "reload_cover_fraction": 0.7473684210526316,
+          "orbit_direction_match": 0.8314606741573034,
+          "first_shot": 1.96,
+          "pilot_kill_seconds": null,
+          "enemy_respawns": 1
+        },
+        {
+          "seed": 64009,
+          "win": false,
+          "draw": false,
+          "steps": 383,
+          "mean_speed": 147.80441284179688,
+          "cover_fraction": 0.14360313315926893,
+          "reload_cover_fraction": 0.2,
+          "orbit_direction_match": 0.5128205128205128,
+          "first_shot": 1.56,
+          "pilot_kill_seconds": null,
+          "enemy_respawns": 1
+        },
+        {
+          "seed": 64010,
+          "win": true,
+          "draw": false,
+          "steps": 111,
+          "mean_speed": 143.02854919433594,
+          "cover_fraction": 0.44144144144144143,
+          "reload_cover_fraction": 0.6153846153846154,
+          "orbit_direction_match": 1.0,
+          "first_shot": 1.88,
+          "pilot_kill_seconds": 0.14,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64011,
+          "win": true,
+          "draw": false,
+          "steps": 113,
+          "mean_speed": 139.7841339111328,
+          "cover_fraction": 0.4336283185840708,
+          "reload_cover_fraction": 0.5957446808510638,
+          "orbit_direction_match": 0.48484848484848486,
+          "first_shot": 1.76,
+          "pilot_kill_seconds": 0.12,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64012,
+          "win": false,
+          "draw": false,
+          "steps": 520,
+          "mean_speed": 156.88973999023438,
+          "cover_fraction": 0.5365384615384615,
+          "reload_cover_fraction": 0.796875,
+          "orbit_direction_match": 1.0,
+          "first_shot": 4.42,
+          "pilot_kill_seconds": null,
+          "enemy_respawns": 1
+        },
+        {
+          "seed": 64013,
+          "win": false,
+          "draw": false,
+          "steps": 135,
+          "mean_speed": 173.2552032470703,
+          "cover_fraction": 0.5407407407407407,
+          "reload_cover_fraction": 0.5888888888888889,
+          "orbit_direction_match": 0.3409090909090909,
+          "first_shot": 1.3,
+          "pilot_kill_seconds": null,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64014,
+          "win": true,
+          "draw": false,
+          "steps": 196,
+          "mean_speed": 192.24871826171875,
+          "cover_fraction": 0.336734693877551,
+          "reload_cover_fraction": 0.3900709219858156,
+          "orbit_direction_match": 0.8283582089552238,
+          "first_shot": 3.46,
+          "pilot_kill_seconds": 0.1,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64015,
+          "win": true,
+          "draw": false,
+          "steps": 177,
+          "mean_speed": 153.13119506835938,
+          "cover_fraction": 0.6045197740112994,
+          "reload_cover_fraction": 0.5609756097560976,
+          "orbit_direction_match": 0.7037037037037037,
+          "first_shot": 2.34,
+          "pilot_kill_seconds": 0.12,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64016,
+          "win": false,
+          "draw": false,
+          "steps": 295,
+          "mean_speed": 186.29832458496094,
+          "cover_fraction": 0.5966101694915255,
+          "reload_cover_fraction": 1.0,
+          "orbit_direction_match": 1.0,
+          "first_shot": 0.8,
+          "pilot_kill_seconds": null,
+          "enemy_respawns": 1
+        },
+        {
+          "seed": 64017,
+          "win": true,
+          "draw": false,
+          "steps": 852,
+          "mean_speed": 99.46849060058594,
+          "cover_fraction": 0.1068075117370892,
+          "reload_cover_fraction": 0.5416666666666666,
+          "orbit_direction_match": 0.7945205479452054,
+          "first_shot": 2.64,
+          "pilot_kill_seconds": 0.42,
+          "enemy_respawns": 3
+        },
+        {
+          "seed": 64018,
+          "win": true,
+          "draw": false,
+          "steps": 142,
+          "mean_speed": 110.5461654663086,
+          "cover_fraction": 0.3591549295774648,
+          "reload_cover_fraction": 0.0,
+          "orbit_direction_match": 0.15,
+          "first_shot": 1.28,
+          "pilot_kill_seconds": 1.12,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64019,
+          "win": true,
+          "draw": false,
+          "steps": 310,
+          "mean_speed": 132.8069305419922,
+          "cover_fraction": 0.3935483870967742,
+          "reload_cover_fraction": 0.5384615384615384,
+          "orbit_direction_match": 0.6129032258064516,
+          "first_shot": 1.16,
+          "pilot_kill_seconds": 0.1,
+          "enemy_respawns": 1
+        }
+      ]
+    },
+    "sniper": {
+      "summary": {
+        "win": 0.9,
+        "draw": 0.0,
+        "steps": 364.05,
+        "mean_speed": 157.5159206390381,
+        "cover_fraction": 0.45836631045746534,
+        "reload_cover_fraction": 0.47783490600702566,
+        "orbit_direction_match": 0.5658116369923072,
+        "enemy_respawns": 0.15
+      },
+      "games": [
+        {
+          "seed": 64000,
+          "win": true,
+          "draw": false,
+          "steps": 143,
+          "mean_speed": 146.0126953125,
+          "cover_fraction": 0.32867132867132864,
+          "reload_cover_fraction": 0.3783783783783784,
+          "orbit_direction_match": 0.14814814814814814,
+          "first_shot": 1.1,
+          "pilot_kill_seconds": 1.3,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64001,
+          "win": true,
+          "draw": false,
+          "steps": 119,
+          "mean_speed": 143.16290283203125,
+          "cover_fraction": 0.5714285714285714,
+          "reload_cover_fraction": 0.4,
+          "orbit_direction_match": 0.35714285714285715,
+          "first_shot": 1.52,
+          "pilot_kill_seconds": 0.5,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64002,
+          "win": false,
+          "draw": false,
+          "steps": 437,
+          "mean_speed": 174.99591064453125,
+          "cover_fraction": 0.517162471395881,
+          "reload_cover_fraction": 0.654054054054054,
+          "orbit_direction_match": 0.8146067415730337,
+          "first_shot": 2.76,
+          "pilot_kill_seconds": null,
+          "enemy_respawns": 1
+        },
+        {
+          "seed": 64003,
+          "win": true,
+          "draw": false,
+          "steps": 271,
+          "mean_speed": 137.9635772705078,
+          "cover_fraction": 0.31365313653136534,
+          "reload_cover_fraction": 0.0,
+          "orbit_direction_match": 0.4117647058823529,
+          "first_shot": 1.42,
+          "pilot_kill_seconds": 0.12,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64004,
+          "win": true,
+          "draw": false,
+          "steps": 219,
+          "mean_speed": 160.60693359375,
+          "cover_fraction": 0.821917808219178,
+          "reload_cover_fraction": 0.8050314465408805,
+          "orbit_direction_match": 0.8904109589041096,
+          "first_shot": 2.92,
+          "pilot_kill_seconds": 0.16,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64005,
+          "win": true,
+          "draw": false,
+          "steps": 124,
+          "mean_speed": 149.14573669433594,
+          "cover_fraction": 0.3790322580645161,
+          "reload_cover_fraction": 0.36,
+          "orbit_direction_match": 0.0,
+          "first_shot": 0.76,
+          "pilot_kill_seconds": 1.22,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64006,
+          "win": true,
+          "draw": false,
+          "steps": 563,
+          "mean_speed": 124.90938568115234,
+          "cover_fraction": 0.12255772646536411,
+          "reload_cover_fraction": 0.208955223880597,
+          "orbit_direction_match": 0.967741935483871,
+          "first_shot": 1.62,
+          "pilot_kill_seconds": 0.22,
+          "enemy_respawns": 2
+        },
+        {
+          "seed": 64007,
+          "win": true,
+          "draw": false,
+          "steps": 223,
+          "mean_speed": 161.38037109375,
+          "cover_fraction": 0.672645739910314,
+          "reload_cover_fraction": 0.7127659574468085,
+          "orbit_direction_match": 0.7468354430379747,
+          "first_shot": 3.76,
+          "pilot_kill_seconds": 0.16,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64008,
+          "win": true,
+          "draw": false,
+          "steps": 381,
+          "mean_speed": 165.49363708496094,
+          "cover_fraction": 0.6220472440944882,
+          "reload_cover_fraction": 0.8054298642533937,
+          "orbit_direction_match": 0.6555023923444976,
+          "first_shot": 2.14,
+          "pilot_kill_seconds": 1.5,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64009,
+          "win": true,
+          "draw": false,
+          "steps": 281,
+          "mean_speed": 162.05889892578125,
+          "cover_fraction": 0.19572953736654805,
+          "reload_cover_fraction": 0.1509433962264151,
+          "orbit_direction_match": 0.7894736842105263,
+          "first_shot": 3.14,
+          "pilot_kill_seconds": 2.08,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64010,
+          "win": true,
+          "draw": false,
+          "steps": 164,
+          "mean_speed": 159.68594360351562,
+          "cover_fraction": 0.29878048780487804,
+          "reload_cover_fraction": 0.42105263157894735,
+          "orbit_direction_match": 0.35294117647058826,
+          "first_shot": 1.14,
+          "pilot_kill_seconds": 1.7,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64011,
+          "win": true,
+          "draw": false,
+          "steps": 288,
+          "mean_speed": 142.2075653076172,
+          "cover_fraction": 0.1701388888888889,
+          "reload_cover_fraction": 0.3888888888888889,
+          "orbit_direction_match": 0.0,
+          "first_shot": 1.98,
+          "pilot_kill_seconds": 2.9,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64012,
+          "win": true,
+          "draw": false,
+          "steps": 747,
+          "mean_speed": 172.88064575195312,
+          "cover_fraction": 0.6412315930388219,
+          "reload_cover_fraction": 0.603988603988604,
+          "orbit_direction_match": 0.764525993883792,
+          "first_shot": 4.42,
+          "pilot_kill_seconds": 3.42,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64013,
+          "win": false,
+          "draw": false,
+          "steps": 156,
+          "mean_speed": 169.595703125,
+          "cover_fraction": 0.46794871794871795,
+          "reload_cover_fraction": 0.5824175824175825,
+          "orbit_direction_match": 0.33707865168539325,
+          "first_shot": 1.3,
+          "pilot_kill_seconds": null,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64014,
+          "win": true,
+          "draw": false,
+          "steps": 295,
+          "mean_speed": 159.8087615966797,
+          "cover_fraction": 0.34576271186440677,
+          "reload_cover_fraction": 0.4583333333333333,
+          "orbit_direction_match": 0.35964912280701755,
+          "first_shot": 4.68,
+          "pilot_kill_seconds": 0.92,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64015,
+          "win": true,
+          "draw": false,
+          "steps": 213,
+          "mean_speed": 147.50439453125,
+          "cover_fraction": 0.5023474178403756,
+          "reload_cover_fraction": 0.6106194690265486,
+          "orbit_direction_match": 0.6428571428571429,
+          "first_shot": 2.34,
+          "pilot_kill_seconds": 1.04,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64016,
+          "win": true,
+          "draw": false,
+          "steps": 884,
+          "mean_speed": 189.77479553222656,
+          "cover_fraction": 0.5984162895927602,
+          "reload_cover_fraction": 0.6758241758241759,
+          "orbit_direction_match": 0.9529085872576177,
+          "first_shot": 0.8,
+          "pilot_kill_seconds": 3.16,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64017,
+          "win": true,
+          "draw": false,
+          "steps": 850,
+          "mean_speed": 186.65646362304688,
+          "cover_fraction": 0.5164705882352941,
+          "reload_cover_fraction": 0.5265822784810127,
+          "orbit_direction_match": 0.8465608465608465,
+          "first_shot": 2.88,
+          "pilot_kill_seconds": 3.88,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64018,
+          "win": true,
+          "draw": false,
+          "steps": 665,
+          "mean_speed": 151.5391082763672,
+          "cover_fraction": 0.5503759398496241,
+          "reload_cover_fraction": 0.4552238805970149,
+          "orbit_direction_match": 0.7441860465116279,
+          "first_shot": 1.3,
+          "pilot_kill_seconds": 3.44,
+          "enemy_respawns": 0
+        },
+        {
+          "seed": 64019,
+          "win": true,
+          "draw": false,
+          "steps": 258,
+          "mean_speed": 144.9349822998047,
+          "cover_fraction": 0.5310077519379846,
+          "reload_cover_fraction": 0.3582089552238806,
+          "orbit_direction_match": 0.5338983050847458,
+          "first_shot": 1.16,
+          "pilot_kill_seconds": 0.5,
+          "enemy_respawns": 0
+        }
+      ]
+    }
+  },
+  "dodge_checks": [
+    {
+      "before": 18.105506922651788,
+      "after": 43.56403426003402
+    },
+    {
+      "before": 7.938706268629188,
+      "after": 43.56403426003402
+    },
+    {
+      "before": 5.454497982652046,
+      "after": 43.56403426003402
+    },
+    {
+      "before": 5.437283994300343,
+      "after": 43.56405974910435
+    },
+    {
+      "before": 10.044002958261192,
+      "after": 43.56408523818115
+    },
+    {
+      "before": 15.524358596463909,
+      "after": 43.5641523655675
+    },
+    {
+      "before": 20.837692663408383,
+      "after": 43.5641523655675
+    },
+    {
+      "before": 12.114585225955764,
+      "after": 43.5641188018445
+    },
+    {
+      "before": 18.63238265883277,
+      "after": 43.71116688812387
+    },
+    {
+      "before": 22.893666248450824,
+      "after": 43.711230611798484
+    },
+    {
+      "before": 26.54431217020508,
+      "after": 43.711230611798484
+    },
+    {
+      "before": 29.932276386833518,
+      "after": 43.71125312100826
+    },
+    {
+      "before": 33.048869664842584,
+      "after": 43.71125312100826
+    },
+    {
+      "before": 18.840869130794168,
+      "after": 37.96031356429481
+    },
+    {
+      "before": 22.7698581104047,
+      "after": 37.96031356429481
+    },
+    {
+      "before": 25.58142779064176,
+      "after": 37.96031356429481
+    },
+    {
+      "before": 28.101912293356293,
+      "after": 37.960344356702485
+    },
+    {
+      "before": 30.419856430721147,
+      "after": 37.960344356702485
+    },
+    {
+      "before": 32.52402868988938,
+      "after": 37.96037514918332
+    },
+    {
+      "before": 15.961328043526558,
+      "after": 38.0166188356401
+    },
+    {
+      "before": 17.70528111246779,
+      "after": 38.0166188356401
+    },
+    {
+      "before": 19.52164378893055,
+      "after": 38.01666049452463
+    },
+    {
+      "before": 21.3966258845009,
+      "after": 38.01666049452463
+    },
+    {
+      "before": 23.3240784109358,
+      "after": 38.01666049452463
+    },
+    {
+      "before": 25.26332770543735,
+      "after": 38.016702153461495
+    },
+    {
+      "before": 26.784732999906105,
+      "after": 38.016702153461495
+    },
+    {
+      "before": 28.34724884128443,
+      "after": 38.016743812450706
+    },
+    {
+      "before": 29.91167979324251,
+      "after": 38.016743812450706
+    },
+    {
+      "before": 31.437724014445948,
+      "after": 38.016743812450706
+    },
+    {
+      "before": 32.88595284257862,
+      "after": 37.905383742925146
+    },
+    {
+      "before": 34.15080558219586,
+      "after": 37.816731768508795
+    },
+    {
+      "before": 2.603157691361034,
+      "after": 32.784422341164294
+    },
+    {
+      "before": 4.048526489994233,
+      "after": 32.784422341164294
+    },
+    {
+      "before": 8.170134112086203,
+      "after": 32.78444732054129
+    },
+    {
+      "before": 12.161698046182853,
+      "after": 32.78444732054129
+    },
+    {
+      "before": 15.829526446623326,
+      "after": 32.78444732054129
+    },
+    {
+      "before": 19.14699483740353,
+      "after": 32.784472299927664
+    },
+    {
+      "before": 22.113403931854243,
+      "after": 32.784472299927664
+    },
+    {
+      "before": 16.01139827874861,
+      "after": 32.365839926052644
+    },
+    {
+      "before": 20.076194766325024,
+      "after": 32.2826314750679
+    },
+    {
+      "before": 22.845036828606812,
+      "after": 32.2826314750679
+    },
+    {
+      "before": 24.83537695577025,
+      "after": 32.282626885547664
+    },
+    {
+      "before": 26.366226382310902,
+      "after": 32.282626885547664
+    },
+    {
+      "before": 27.728640482716738,
+      "after": 32.282626885547664
+    },
+    {
+      "before": 28.922085924402793,
+      "after": 32.28265320161059
+    },
+    {
+      "before": 20.064896486661084,
+      "after": 26.760712225150765
+    },
+    {
+      "before": 21.898012908118893,
+      "after": 26.760770585301508
+    },
+    {
+      "before": 22.84007371697719,
+      "after": 26.760770585301508
+    },
+    {
+      "before": 23.690890519959197,
+      "after": 26.760846816762086
+    },
+    {
+      "before": 24.43895996484538,
+      "after": 26.760846816762086
+    },
+    {
+      "before": 25.08030812301217,
+      "after": 26.742526004110434
+    },
+    {
+      "before": 25.445129123554175,
+      "after": 26.742612016338523
+    },
+    {
+      "before": 25.754928683513942,
+      "after": 26.887671606930205
+    },
+    {
+      "before": 26.132199737324193,
+      "after": 26.825482476832658
+    },
+    {
+      "before": 26.330981954214447,
+      "after": 26.825482476832658
+    },
+    {
+      "before": 26.487250609473307,
+      "after": 26.825482476832658
+    },
+    {
+      "before": 9.414417663033937,
+      "after": 67.35241737087027
+    },
+    {
+      "before": 12.642739222298847,
+      "after": 67.35242650353214
+    },
+    {
+      "before": 25.53915950634779,
+      "after": 79.73821668248979
+    },
+    {
+      "before": 29.509619178347997,
+      "after": 79.73824566490663
+    },
+    {
+      "before": 32.89752698022234,
+      "after": 79.73824566490663
+    },
+    {
+      "before": 2.391013971252443,
+      "after": 48.14977397009528
+    },
+    {
+      "before": 4.365474240435509,
+      "after": 48.14973693259134
+    },
+    {
+      "before": 9.494749815689152,
+      "after": 48.14973693259134
+    },
+    {
+      "before": 6.163363234547315,
+      "after": 48.1497294916309
+    },
+    {
+      "before": 1.8741574880554606,
+      "after": 48.149692454150774
+    },
+    {
+      "before": 6.511042219443688,
+      "after": 48.149692454150774
+    },
+    {
+      "before": 11.943583005400694,
+      "after": 48.14968501322214
+    },
+    {
+      "before": 17.117608429790153,
+      "after": 45.09265241234921
+    },
+    {
+      "before": 20.36362189685415,
+      "after": 45.09265241234921
+    },
+    {
+      "before": 23.405635554828226,
+      "after": 45.09261897583691
+    },
+    {
+      "before": 5.162252495968643,
+      "after": 45.97169971760391
+    },
+    {
+      "before": 9.070068603806824,
+      "after": 45.971704039200034
+    },
+    {
+      "before": 14.217760339980215,
+      "after": 45.97170836081601
+    },
+    {
+      "before": 18.848340749046596,
+      "after": 45.97167815078271
+    },
+    {
+      "before": 23.23153380263637,
+      "after": 45.97171268245184
+    },
+    {
+      "before": 27.32907132511194,
+      "after": 45.97171700410752
+    },
+    {
+      "before": 31.129139629484968,
+      "after": 45.97171700410752
+    },
+    {
+      "before": 34.2330438415293,
+      "after": 45.09627728330286
+    },
+    {
+      "before": 13.514477454238923,
+      "after": 25.236157742363485
+    },
+    {
+      "before": 4.207804503877694,
+      "after": 25.236167580252797
+    },
+    {
+      "before": 3.683014250815075,
+      "after": 25.23617741817518
+    },
+    {
+      "before": 3.3446316854566795,
+      "after": 25.23611964145631
+    },
+    {
+      "before": 8.132969624112793,
+      "after": 25.236129479434283
+    },
+    {
+      "before": 2.6305128250191006,
+      "after": 25.23613931744533
+    },
+    {
+      "before": 3.9339136119802354,
+      "after": 25.236081540786845
+    },
+    {
+      "before": 6.628506391859303,
+      "after": 25.23609137885348
+    },
+    {
+      "before": 3.0880821684062245,
+      "after": 25.2189944964214
+    },
+    {
+      "before": 5.700207952632748,
+      "after": 25.218938638928936
+    },
+    {
+      "before": 9.624864628578317,
+      "after": 25.218950939677864
+    },
+    {
+      "before": 9.318596150924714,
+      "after": 25.21896324045772
+    },
+    {
+      "before": 10.650422306772692,
+      "after": 25.21890738304375
+    },
+    {
+      "before": 12.934261197651475,
+      "after": 25.21891968388178
+    },
+    {
+      "before": 15.4399299516886,
+      "after": 25.21887612741526
+    },
+    {
+      "before": 17.827118370429925,
+      "after": 25.12615959548647
+    },
+    {
+      "before": 19.6392572564206,
+      "after": 25.12615959548647
+    },
+    {
+      "before": 21.01128082941322,
+      "after": 24.923565488558815
+    },
+    {
+      "before": 22.294121903927348,
+      "after": 24.92350519051949
+    },
+    {
+      "before": 23.348511346508804,
+      "after": 24.92350447039673
+    },
+    {
+      "before": 24.145439272842097,
+      "after": 24.92350447039673
+    },
+    {
+      "before": 24.670155147572785,
+      "after": 24.92344417235925
+    },
+    {
+      "before": 29.365029104369746,
+      "after": 29.459470975539848
+    },
+    {
+      "before": 4.106761909395845,
+      "after": 9.223289266575344
+    },
+    {
+      "before": 2.0321856430554437,
+      "after": 9.223299840820806
+    },
+    {
+      "before": 4.666633076589915,
+      "after": 9.223289266575344
+    },
+    {
+      "before": 5.3883846428882425,
+      "after": 9.223245263742372
+    },
+    {
+      "before": 5.092437793427714,
+      "after": 9.223201261103373
+    },
+    {
+      "before": 5.885640652529843,
+      "after": 8.853257754286581
+    },
+    {
+      "before": 7.008041034984108,
+      "after": 8.85324804283308
+    },
+    {
+      "before": 6.106426311905194,
+      "after": 7.885477236158659
+    },
+    {
+      "before": 16.612464855077725,
+      "after": 19.872608021950686
+    },
+    {
+      "before": 17.369357752217663,
+      "after": 19.872608021950686
+    },
+    {
+      "before": 17.721144914796014,
+      "after": 19.87262167428863
+    },
+    {
+      "before": 18.097639556787165,
+      "after": 19.471807558363345
+    },
+    {
+      "before": 18.534967371377203,
+      "after": 19.471807558363345
+    },
+    {
+      "before": 18.88034195722849,
+      "after": 19.471807558363345
+    },
+    {
+      "before": 19.13890595024827,
+      "after": 19.471821061252516
+    },
+    {
+      "before": 19.317461470969352,
+      "after": 19.471849487397904
+    },
+    {
+      "before": 19.42483047415846,
+      "after": 19.471862990269955
+    },
+    {
+      "before": 12.27646119200509,
+      "after": 16.034419145061694
+    },
+    {
+      "before": 12.515066111387675,
+      "after": 16.0344087859846
+    },
+    {
+      "before": 12.908034642880887,
+      "after": 16.0344087859846
+    },
+    {
+      "before": 13.395106585027188,
+      "after": 15.837112652103695
+    },
+    {
+      "before": 13.950039267084478,
+      "after": 15.645963176348555
+    },
+    {
+      "before": 14.471072704354984,
+      "after": 15.645973093881242
+    },
+    {
+      "before": 14.890229631732321,
+      "after": 15.64592670891605
+    },
+    {
+      "before": 15.21117686664282,
+      "after": 15.64592670891605
+    },
+    {
+      "before": 15.439048823202997,
+      "after": 15.64592670891605
+    },
+    {
+      "before": 15.580790041324532,
+      "after": 15.645880324051443
+    },
+    {
+      "before": 2.962316754723621,
+      "after": 7.695221844068969
+    },
+    {
+      "before": 3.3677731406292417,
+      "after": 7.695243627840906
+    },
+    {
+      "before": 4.047731024583279,
+      "after": 7.6952715591398135
+    },
+    {
+      "before": 1.2788518146029153,
+      "after": 7.69526541170246
+    },
+    {
+      "before": 1.5428543103458943,
+      "after": 7.679820313598579
+    },
+    {
+      "before": 3.5580422562480374,
+      "after": 7.416890308218474
+    },
+    {
+      "before": 5.225718686084601,
+      "after": 7.416890308218474
+    },
+    {
+      "before": 16.133349553848987,
+      "after": 19.353446687771587
+    },
+    {
+      "before": 16.46578728912519,
+      "after": 19.353459991704653
+    },
+    {
+      "before": 16.892214399386614,
+      "after": 19.248914021241074
+    },
+    {
+      "before": 17.37996814928894,
+      "after": 18.95980226257283
+    },
+    {
+      "before": 17.873415426128894,
+      "after": 18.959786597689906
+    },
+    {
+      "before": 18.266660901110665,
+      "after": 18.95977350251508
+    },
+    {
+      "before": 18.56458672426388,
+      "after": 18.95977350251508
+    },
+    {
+      "before": 18.773577552533748,
+      "after": 18.959757837657516
+    },
+    {
+      "before": 12.603444407039218,
+      "after": 15.480304967000363
+    },
+    {
+      "before": 12.821142727254447,
+      "after": 15.480317199906674
+    },
+    {
+      "before": 13.165980593134691,
+      "after": 15.367245400636776
+    },
+    {
+      "before": 13.598193820462832,
+      "after": 15.064520012197805
+    },
+    {
+      "before": 14.054118382699524,
+      "after": 15.064520012197805
+    },
+    {
+      "before": 14.419405344023128,
+      "after": 15.064520012197805
+    },
+    {
+      "before": 14.69695407654455,
+      "after": 15.064520012197805
+    },
+    {
+      "before": 14.89174617038199,
+      "after": 15.064508087630909
+    },
+    {
+      "before": 14.964915194063309,
+      "after": 15.064508087630909
+    },
+    {
+      "before": 4.8362461389861195,
+      "after": 47.83866589741539
+    },
+    {
+      "before": 2.7578750453318834,
+      "after": 45.49520570760027
+    },
+    {
+      "before": 6.256964766008302,
+      "after": 45.49520570760027
+    },
+    {
+      "before": 8.985245134469404,
+      "after": 45.49520570760027
+    },
+    {
+      "before": 12.733807750073657,
+      "after": 45.49526431144865
+    },
+    {
+      "before": 16.820673128652633,
+      "after": 45.49526431144865
+    },
+    {
+      "before": 21.00211836472191,
+      "after": 45.495322915303426
+    },
+    {
+      "before": 8.961561158435508,
+      "after": 45.495322915303426
+    },
+    {
+      "before": 13.666844573319175,
+      "after": 45.495322915303426
+    },
+    {
+      "before": 18.285921732520794,
+      "after": 45.49538151916459
+    },
+    {
+      "before": 22.73914662269044,
+      "after": 45.49538151916459
+    },
+    {
+      "before": 26.895489798053255,
+      "after": 45.495440123032154
+    },
+    {
+      "before": 30.745299617103843,
+      "after": 45.495440123032154
+    },
+    {
+      "before": 34.26295804975893,
+      "after": 45.495440123032154
+    },
+    {
+      "before": 20.487383908911827,
+      "after": 43.89381711509103
+    },
+    {
+      "before": 25.07549011464835,
+      "after": 43.89381711509103
+    },
+    {
+      "before": 28.859567651185667,
+      "after": 43.893863716864914
+    },
+    {
+      "before": 32.40144724763993,
+      "after": 43.893863716864914
+    },
+    {
+      "before": 34.996089947065116,
+      "after": 43.893863716864914
+    },
+    {
+      "before": 5.07145946076565,
+      "after": 11.38645617548722
+    },
+    {
+      "before": 6.495828420687851,
+      "after": 11.38645617548722
+    },
+    {
+      "before": 7.694584668904878,
+      "after": 11.386451649395774
+    },
+    {
+      "before": 8.68182155263176,
+      "after": 11.386447123384322
+    },
+    {
+      "before": 9.475165688050055,
+      "after": 11.386432033336858
+    },
+    {
+      "before": 10.094272361267528,
+      "after": 11.3864275073994
+    },
+    {
+      "before": 10.56024926953335,
+      "after": 11.386422981541935
+    },
+    {
+      "before": 10.703296602408864,
+      "after": 11.163073064026023
+    },
+    {
+      "before": 10.519348001327103,
+      "after": 13.082689423811077
+    },
+    {
+      "before": 10.82065588079397,
+      "after": 12.968747533121507
+    },
+    {
+      "before": 11.227607265849887,
+      "after": 12.665558364617226
+    },
+    {
+      "before": 4.723896771040981,
+      "after": 9.371578419045722
+    },
+    {
+      "before": 4.291374256776778,
+      "after": 9.371549566267644
+    },
+    {
+      "before": 4.360450260934506,
+      "after": 9.286339772927713
+    },
+    {
+      "before": 4.857352351472236,
+      "after": 9.173764022677197
+    },
+    {
+      "before": 5.548952043393167,
+      "after": 9.053725648462143
+    },
+    {
+      "before": 31.032758213355333,
+      "after": 43.56929333437964
+    },
+    {
+      "before": 15.339677733151214,
+      "after": 43.56932931738802
+    },
+    {
+      "before": 19.34758955461011,
+      "after": 43.56935922388423
+    },
+    {
+      "before": 15.782969736357016,
+      "after": 43.56937137695516
+    },
+    {
+      "before": 14.27974158049033,
+      "after": 43.569401283443874
+    },
+    {
+      "before": 12.491530176587668,
+      "after": 43.56940736000597
+    },
+    {
+      "before": 12.153880399876762,
+      "after": 43.5694433430698
+    },
+    {
+      "before": 4.032843146527328,
+      "after": 42.233908229257665
+    },
+    {
+      "before": 4.2746099467905925,
+      "after": 42.23393746975051
+    },
+    {
+      "before": 3.112484866134445,
+      "after": 42.233975446157885
+    },
+    {
+      "before": 8.231091903522461,
+      "after": 42.233975446157885
+    },
+    {
+      "before": 8.175661897790564,
+      "after": 42.233975446157885
+    }
+  ]
+}

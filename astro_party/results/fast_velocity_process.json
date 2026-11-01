@@ -1,0 +1,7 @@
+﻿{
+    "trial":  "velocity",
+    "pid":  9260,
+    "checkpoint":  "models/model_astro_party_fast_cover",
+    "reward_profile":  "fast_cover",
+    "uploads_model":  false
+}

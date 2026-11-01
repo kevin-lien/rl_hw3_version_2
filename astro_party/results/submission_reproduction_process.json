@@ -1,0 +1,7 @@
+﻿{
+    "pid":  31260,
+    "command":  "python train_astro_party.py",
+    "folder":  "C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\submission_reproduce",
+    "prior_checkpoint_count":  0,
+    "source_final":  true
+}

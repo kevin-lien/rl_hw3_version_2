@@ -1,0 +1,21 @@
+W&B run: https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3/runs/cj240jwb
+Demonstrations: 5000/10000
+Demonstrations: 10000/10000
+BC epoch 10: mse=0.025059
+BC epoch 20: mse=0.004240
+BC epoch 30: mse=0.001609
+BC epoch 40: mse=0.000556
+BC epoch 50: mse=0.000167
+BC epoch 60: mse=0.000045
+BC epoch 70: mse=0.000011
+BC epoch 80: mse=0.000002
+BC epoch 90: mse=0.000000
+BC epoch 100: mse=0.000000
+BC epoch 110: mse=0.000000
+BC epoch 120: mse=0.000000
+BC validation: {"eval/rusher_win_rate": 0.82, "eval/rusher_loss_rate": 0.18, "eval/rusher_draw_rate": 0.0, "eval/rusher_length": 310.8, "eval/sniper_win_rate": 0.68, "eval/sniper_loss_rate": 0.16, "eval/sniper_draw_rate": 0.16, "eval/sniper_length": 836.46, "eval/balanced_score": 0.8}
+{"eval/rusher_win_rate": 0.86, "eval/rusher_loss_rate": 0.14, "eval/rusher_draw_rate": 0.0, "eval/rusher_length": 307.42, "eval/sniper_win_rate": 0.76, "eval/sniper_loss_rate": 0.1, "eval/sniper_draw_rate": 0.14, "eval/sniper_length": 797.64, "eval/balanced_score": 0.8941176470588236, "global_step": 8192, "epoch": 1, "epoch_seconds": 77.36594779998995}
+{"eval/rusher_win_rate": 0.82, "eval/rusher_loss_rate": 0.18, "eval/rusher_draw_rate": 0.0, "eval/rusher_length": 328.2, "eval/sniper_win_rate": 0.72, "eval/sniper_loss_rate": 0.14, "eval/sniper_draw_rate": 0.14, "eval/sniper_length": 859.52, "eval/balanced_score": 0.8470588235294118, "global_step": 16384, "epoch": 2, "epoch_seconds": 106.35115790000418}
+{"eval/rusher_win_rate": 0.82, "eval/rusher_loss_rate": 0.18, "eval/rusher_draw_rate": 0.0, "eval/rusher_length": 300.52, "eval/sniper_win_rate": 0.76, "eval/sniper_loss_rate": 0.14, "eval/sniper_draw_rate": 0.1, "eval/sniper_length": 795.4, "eval/balanced_score": 0.8941176470588236, "global_step": 24576, "epoch": 3, "epoch_seconds": 76.56144829996629}
+{"eval/rusher_win_rate": 0.86, "eval/rusher_loss_rate": 0.14, "eval/rusher_draw_rate": 0.0, "eval/rusher_length": 302.92, "eval/sniper_win_rate": 0.74, "eval/sniper_loss_rate": 0.12, "eval/sniper_draw_rate": 0.14, "eval/sniper_length": 835.4, "eval/balanced_score": 0.8705882352941177, "global_step": 32768, "epoch": 4, "epoch_seconds": 84.83813470002497}
+{"eval/rusher_win_rate": 0.84, "eval/rusher_loss_rate": 0.16, "eval/rusher_draw_rate": 0.0, "eval/rusher_length": 321.1, "eval/sniper_win_rate": 0.66, "eval/sniper_loss_rate": 0.16, "eval/sniper_draw_rate": 0.18, "eval/sniper_length": 815.88, "eval/balanced_score": 0.7764705882352941, "global_step": 40960, "epoch": 5, "epoch_seconds": 76.41616899997462}

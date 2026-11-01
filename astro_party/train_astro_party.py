@@ -7,6 +7,7 @@ import argparse
 import json
 import math
 import time
+from functools import partial
 
 import numpy as np
 import torch
@@ -18,7 +19,14 @@ from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
 from stable_baselines3.common.vec_env import DummyVecEnv, SubprocVecEnv
 
-from envs.train_astro_party_env import AstroPartyTrainEnv, decode_action
+# The submission lists the training env next to this file; the starter repo
+# keeps it under envs/. Support both layouts without changing the game.
+try:
+    from train_astro_party_env import AstroPartyTrainEnv, decode_action
+except ModuleNotFoundError as error:
+    if error.name != 'train_astro_party_env':
+        raise
+    from envs.train_astro_party_env import AstroPartyTrainEnv, decode_action
 from envs.eval_astro_party_env import AstroPartyEvalEnv
 from models.rusher_bot import rusher_bot_action
 from models.sniper_bot import (sniper_bot_action, RuleBot, State, _wrap,
@@ -27,6 +35,51 @@ from models.sniper_bot import (sniper_bot_action, RuleBot, State, _wrap,
 from envs.game import (BULLET_SPEED,WALLS,PLANET_POS,PLANET_RADIUS,
                       _ray_circle_t,_ray_aabb_entry_t,_ray_box_exit_t,
                       _circle_rect_collide,_resolve_circle_collision)
+
+
+# Edit this dictionary, then run: python train_astro_party.py
+# Command-line arguments override these values. W&B's run ID is automatic;
+# "name" is the display name. All keys use underscores, e.g. save_path.
+CONFIG = {
+    'name': 'defense-ppo-reproducible',
+    # None selects models/model_astro_party for the default defense controller.
+    # SB3 accepts paths with or without the .zip extension.
+    'save_path': 'models/model_astro_party.zip',
+    'project': 'astro-party-hw3',
+    'entity': None,
+    'wandb_mode': 'auto',
+    'seed': 42,
+    'epochs': 5,
+    'steps_per_epoch': 8192,
+    'eval_episodes': 50,
+    'eval_seed': 10000,
+    'envs': 4,
+    'learning_rate': 1e-6,
+    'bc_steps': 10000,
+    'bc_epochs': 120,
+    'features': 'tactical',
+    'controller': 'defense',
+    'near': 500,
+    'far': 700,
+    'no_dodge': False,
+    'lead': .8,
+    'horizon': 60,
+    'margin': 28,
+    'log_std': -3.5,
+    'anchor_retention': 1.0,
+    'select_last': True,
+    'resume': None,
+    'upload_model': False,
+    # Optional cover experiments; inactive with controller='defense'.
+    'cover_radius': 180.,
+    'peek_angle': 1.05,
+    'opening_speed': 80.,
+    'orbit_radius': 220.,
+    'cruise_speed': 240.,
+    'reward_profile': 'auto',
+    'velocity_coef': .0015,
+    'hunt_approach_coef': 6.,
+}
 
 
 class PursuitBot(RuleBot):
@@ -73,6 +126,10 @@ class DefenseBot(PursuitBot):
             turn,thrust,shoot=self._hunt(s)
         else:
             turn,thrust,shoot=self._duel(s)
+        return self.finish_action(s,turn,thrust)
+
+    def finish_action(self,s,turn,thrust,allow_fire=True):
+        """Emergency defense stays after navigation, before final firing."""
         if s.opp_bullets and self.dodge:
             base=_sim_min_dist(s,turn,thrust,s.opp_bullets,self.horizon,s.me_astro)
             margin=self.margin+(0 if s.me_astro else 7)
@@ -87,8 +144,229 @@ class DefenseBot(PursuitBot):
         if not s.me_astro:
             err,fire=self._aim(s,13 if s.opp_astro else 20)
             tolerance=math.atan2(11 if s.opp_astro else 17,max(math.hypot(s.dx,s.dy),1))*self.fire_tol
-            shoot=fire and abs(err-turn*.07)<tolerance
+            shoot=allow_fire and fire and abs(err-turn*.07)<tolerance
+        else:
+            shoot=False
         return np.array([turn,thrust,1 if shoot else -1],dtype=np.float32)
+
+
+class CoverBot(DefenseBot):
+    """Planet cover -> peek with a full magazine -> retreat while reloading.
+
+    There is no elapsed-time observation. The initial slow approach to the
+    shadow is a state-based approximation of the requested opening dodge period.
+    No clock, hidden game state or persistent counter is used by the policy.
+    """
+    def __init__(self,*args,cover_radius=180.,peek_angle=1.05,
+                 opening_speed=80.,**kwargs):
+        super().__init__(*args,**kwargs)
+        self.cover_radius=cover_radius
+        self.peek_angle=peek_angle
+        self.opening_speed=opening_speed
+
+    @staticmethod
+    def planet_blocks(s):
+        length=s.dx*s.dx+s.dy*s.dy
+        t=max(0.,min(1.,((600-s.px)*s.dx+(400-s.py)*s.dy)/max(length,1e-9)))
+        return math.hypot(s.px+t*s.dx-600,s.py+t*s.dy-400)<104
+
+    def plan(self,s):
+        """Return an observable phase and navigation target for diagnosis."""
+        ox,oy=s.px+s.dx-600,s.py+s.dy-400
+        away=math.atan2(oy,ox)+math.pi
+        radial=math.hypot(s.px-600,s.py-400)
+        # Every legal initial spawn has radius >= 250 px. Move slowly inward
+        # behind the planet before starting the peek/reload cycle.
+        opening=radial>220
+        ready=s.ammo>=3 and s.ready
+        phase='opening' if opening else ('peek' if ready else 'retreat')
+        offset=_wrap(math.atan2(s.py-400,s.px-600)-away)
+        side=(1 if offset>0 else -1) if abs(offset)>.12 else (1 if self.peek_angle>=0 else -1)
+        angle=away+(side*abs(self.peek_angle) if phase=='peek' else 0.)
+        tx=600+self.cover_radius*math.cos(angle)
+        ty=400+self.cover_radius*math.sin(angle)
+        speed=self.opening_speed if opening else (140. if ready else 200.)
+        if not self.planet_blocks(s):
+            speed=max(speed,200.)
+        return phase,tx,ty,speed
+
+    def navigate(self,s,tx,ty,speed):
+        # Short arc waypoints keep a direct path from cutting through the planet.
+        gx,gy=tx-s.px,ty-s.py
+        length=gx*gx+gy*gy
+        t=max(0.,min(1.,((600-s.px)*gx+(400-s.py)*gy)/max(length,1e-9)))
+        if math.hypot(s.px+t*gx-600,s.py+t*gy-400)<132:
+            angle=math.atan2(s.py-400,s.px-600)
+            gap=_wrap(math.atan2(ty-400,tx-600)-angle)
+            angle+=max(-.45,min(.45,gap))
+            radius=max(self.cover_radius,min(math.hypot(s.px-600,s.py-400),230.))
+            tx,ty=600+radius*math.cos(angle),400+radius*math.sin(angle)
+        dx,dy=tx-s.px,ty-s.py
+        distance=math.hypot(dx,dy)
+        velocity=min(speed,distance*2.)
+        dvx=dx/max(distance,1e-9)*velocity-s.vx
+        dvy=dy/max(distance,1e-9)*velocity-s.vy
+        ax,ay=dvx*4.,dvy*4.
+        # Fixed cover bars can otherwise trap an approach from a corner.
+        for cx,cy,hw,hh in WALLS:
+            qx=min(max(s.px,cx-hw),cx+hw)
+            qy=min(max(s.py,cy-hh),cy+hh)
+            rx,ry=s.px-qx,s.py-qy
+            d=math.hypot(rx,ry)
+            if 1e-6<d<65:
+                force=250*(65-d)/65
+                ax+=force*rx/d; ay+=force*ry/d
+        error=_wrap(math.atan2(ax,-ay)-s.ang)
+        reverse=_wrap(error-math.pi)
+        backwards=abs(reverse)+.35<abs(error)
+        error=reverse if backwards else error
+        turn=max(-1.,min(1.,error/.07))
+        strength=min(1.,math.hypot(ax,ay)/(350 if backwards else 700))
+        thrust=strength*max(0.,math.cos(error))*(-1 if backwards else 1)
+        return turn,thrust
+
+    def __call__(self,obs):
+        s=State(obs)
+        if s.me_astro:
+            turn,thrust,_=_flee(s)
+            return self.finish_action(s,turn,thrust,False)
+        if s.opp_astro:
+            turn,thrust,_=self._hunt(s)
+            return self.finish_action(s,turn,thrust)
+        # Do not sacrifice immediate survival to insist on a cover waypoint.
+        if math.hypot(s.dx,s.dy)<280 and not self.planet_blocks(s):
+            turn,thrust,_=self._duel(s)
+            return self.finish_action(s,turn,thrust)
+        phase,tx,ty,speed=self.plan(s)
+        turn,thrust=self.navigate(s,tx,ty,speed)
+        if phase=='peek' and not self.planet_blocks(s):
+            err,_=self._aim(s,20)
+            turn=max(-1.,min(1.,err/.07))
+            # Brake the drift while turning the gun toward the intercept point.
+            thrust=-.8 if s.vx*s.hx+s.vy*s.hy>50 else 0.
+        return self.finish_action(s,turn,thrust,phase=='peek')
+
+
+class FastCoverBot(CoverBot):
+    """Track the opponent's orbit, peek with available ammo, then ram pilots.
+
+    Positive world angular velocity is clockwise because screen y points down.
+    Own bullets in flight provide an observable retreat signal after shooting.
+    """
+    def __init__(self,*args,orbit_radius=220.,cruise_speed=240.,**kwargs):
+        super().__init__(*args,**kwargs)
+        self.orbit_radius=orbit_radius
+        self.cruise_speed=cruise_speed
+
+    @staticmethod
+    def orbit_motion(s):
+        ox,oy=s.px+s.dx-600,s.py+s.dy-400
+        omega=(ox*s.ovy-oy*s.ovx)/max(ox*ox+oy*oy,1.)
+        omega=max(-1.5,min(1.5,omega))
+        if abs(omega)>.025:
+            direction=1. if omega>0 else -1.
+        else:
+            own=(s.px-600)*s.vy-(s.py-400)*s.vx
+            direction=1. if own>=0 else -1.
+        return omega,direction
+
+    def plan(self,s,own_bullets_active=False):
+        ox,oy=s.px+s.dx-600,s.py+s.dy-400
+        omega,direction=self.orbit_motion(s)
+        shadow=math.atan2(oy,ox)+math.pi+omega*.35
+        ready=(s.ammo>0 or s.laser) and s.ready and not own_bullets_active
+        phase='peek' if ready else 'retreat'
+        if math.hypot(s.px-600,s.py-400)>300:
+            phase='reposition'
+        enemy_radius=max(111.,math.hypot(ox,oy))
+        # Just clear the planet's tangent, rather than moving far into the open.
+        edge=math.pi-math.acos(min(1.,110/self.orbit_radius))-math.acos(min(1.,110/enemy_radius))+.10
+        edge=max(.65,min(1.45,edge))
+        # Peek behind the shadow so the subsequent retreat follows the enemy's
+        # clockwise/counterclockwise motion instead of reversing into its path.
+        offset=_wrap(math.atan2(s.py-400,s.px-600)-shadow)
+        peek_side=(1. if offset>0 else -1.) if abs(offset)>.12 else -direction
+        angle=shadow+peek_side*edge if phase=='peek' else shadow+direction*.15
+        return phase,600+self.orbit_radius*math.cos(angle),400+self.orbit_radius*math.sin(angle),self.cruise_speed
+
+    def velocity_action(self,s,vx,vy):
+        ax,ay=(vx-s.vx)*5.,(vy-s.vy)*5.
+        radius=math.hypot(s.px-600,s.py-400)
+        if radius<145:
+            ax+=(s.px-600)/max(radius,1.)*600
+            ay+=(s.py-400)/max(radius,1.)*600
+        for cx,cy,hw,hh in WALLS:
+            qx=min(max(s.px,cx-hw),cx+hw); qy=min(max(s.py,cy-hh),cy+hh)
+            rx,ry=s.px-qx,s.py-qy
+            distance=math.hypot(rx,ry)
+            if 1e-6<distance<65:
+                force=400*(65-distance)/65
+                ax+=force*rx/distance; ay+=force*ry/distance
+        if math.hypot(ax,ay)<15:
+            return 0.,0.
+        error=_wrap(math.atan2(ax,-ay)-s.ang)
+        reverse=_wrap(error-math.pi)
+        backwards=abs(reverse)+.35<abs(error)
+        error=reverse if backwards else error
+        turn=max(-1.,min(1.,error/.07))
+        throttle=min(1.,math.hypot(ax,ay)/(350 if backwards else 700))*max(0.,math.cos(error))
+        return turn,(-throttle if backwards else throttle)
+
+    def orbit_action(self,s,phase,tx,ty):
+        rx,ry=s.px-600,s.py-400
+        radius=max(1.,math.hypot(rx,ry))
+        ux,uy=rx/radius,ry/radius
+        angle_error=_wrap(math.atan2(ty-400,tx-600)-math.atan2(ry,rx))
+        omega,direction=self.orbit_motion(s)
+        radial=max(-160.,min(160.,(self.orbit_radius-radius)*3.))
+        tangent=max(-self.cruise_speed,min(self.cruise_speed,omega*radius+angle_error*radius*3.))
+        if phase!='peek' and abs(angle_error)<.3:
+            tangent=direction*max(abs(tangent),80.)
+        vx,vy=ux*radial-uy*tangent,uy*radial+ux*tangent
+        magnitude=math.hypot(vx,vy)
+        if magnitude>self.cruise_speed:
+            vx*=self.cruise_speed/magnitude; vy*=self.cruise_speed/magnitude
+        return self.velocity_action(s,vx,vy)
+
+    def ram_pilot(self,s):
+        time_to_target=intercept_time(s.dx,s.dy,s.ovx,s.ovy,260)
+        t=min(2.,time_to_target if time_to_target is not None else math.hypot(s.dx,s.dy)/260)
+        dx,dy=s.dx+s.ovx*t,s.dy+s.ovy*t
+        if not line_of_sight(s.px,s.py,s.px+dx,s.py+dy,()):
+            return self.navigate(s,s.px+dx,s.py+dy,260.)
+        # Match the pilot's lateral drift and add a strong closing velocity.
+        # Do not slow below the pilot's speed near the final collision radius.
+        distance=max(1.,math.hypot(s.dx,s.dy))
+        vx=s.ovx+s.dx/distance*260.
+        vy=s.ovy+s.dy/distance*260.
+        speed=math.hypot(vx,vy)
+        if speed>260:
+            vx*=260/speed; vy*=260/speed
+        return self.velocity_action(s,vx,vy)
+
+    def __call__(self,obs):
+        s=State(obs)
+        if s.me_astro:
+            turn,thrust,_=_flee(s)
+            return self.finish_action(s,turn,thrust,False)
+        if s.opp_astro:
+            turn,thrust=self.ram_pilot(s)
+            return self.finish_action(s,turn,thrust)
+        own_flight=bool(np.any(np.asarray(obs)[[48,53,58,63]]>.5))
+        distance=max(1.,math.hypot(s.dx,s.dy))
+        rushing=-(s.dx*s.ovx+s.dy*s.ovy)/distance>130 and distance<650
+        # A fast closing opponent needs a counter-shot before we commit to
+        # an orbit. This uses its observed velocity, not an opponent label.
+        if (distance<400 and not self.planet_blocks(s)) or (rushing and s.ammo>0 and s.ready and not own_flight):
+            turn,thrust,_=self._duel(s)
+            return self.finish_action(s,turn,thrust)
+        phase,tx,ty,_=self.plan(s,own_flight)
+        turn,thrust=self.orbit_action(s,phase,tx,ty)
+        if phase=='peek' and (not self.planet_blocks(s) or math.hypot(tx-s.px,ty-s.py)<100):
+            error,_=self._aim(s,20)
+            turn=max(-1.,min(1.,error/.07))
+            thrust=0.  # Aim while coasting; do not brake to a stationary target.
+        return self.finish_action(s,turn,thrust,phase=='peek')
 
 
 class OcclusionDefenseBot(DefenseBot):
@@ -210,10 +488,18 @@ class TacticalFeatures(BaseFeaturesExtractor):
     Report this inductive bias when using this option.
     """
     def __init__(self, observation_space, near=30.0, far=100.0, dodge=True,
-                 controller='pursuit',lead=.8,horizon=25,margin=28):
+                 controller='pursuit',lead=.8,horizon=25,margin=28,
+                 cover_radius=180.,peek_angle=1.05,opening_speed=80.,
+                 orbit_radius=220.,cruise_speed=240.):
         super().__init__(observation_space, features_dim=29)
         if controller=='pursuit':
             self.teacher=PursuitBot(near,far,1.0,dodge,.8)
+        elif controller=='cover':
+            self.teacher=CoverBot(near,far,lead,horizon,margin,dodge,
+                cover_radius=cover_radius,peek_angle=peek_angle,opening_speed=opening_speed)
+        elif controller=='fast-cover':
+            self.teacher=FastCoverBot(near,far,lead,horizon,margin,dodge,
+                orbit_radius=orbit_radius,cruise_speed=cruise_speed)
         else:
             use_physics=controller in ['occlusion','collision','physics']
             bot_class=OcclusionDefenseBot if use_physics else DefenseBot
@@ -236,14 +522,41 @@ class TacticalFeatures(BaseFeaturesExtractor):
         return torch.cat((torch.as_tensor(proposals,device=o.device),o[:,:26]),dim=1)
 
 
-def make_env():
-    return Monitor(AstroPartyTrainEnv(mixed_opponents=True))
+def make_env(reward_profile='original',velocity_coef=.0015,hunt_approach_coef=6.):
+    return Monitor(AstroPartyTrainEnv(mixed_opponents=True,reward_profile=reward_profile,
+        velocity_coef=velocity_coef,hunt_approach_coef=hunt_approach_coef))
 
 
 def write_json(filename, value):
     """Write only experiment outputs, using Python's built-in file interface."""
     with open(filename,'w',encoding='utf-8') as stream:
         json.dump(value,stream,indent=2)
+
+
+def init_tracking(config):
+    """A TA can retrain without our W&B account or an interactive login."""
+    requested=config['wandb_mode']
+    mode=requested
+    if requested=='auto':
+        try:
+            # Use existing credentials only; never ask for or embed an API key.
+            authenticated=wandb.login(prompt=False,verify=False)
+        except (wandb.errors.Error,TypeError):
+            authenticated=False
+        mode='online' if authenticated else 'offline'
+    options=dict(project=config['project'],entity=config['entity'],name=config['name'],
+        config=config,dir='.',settings=wandb.Settings(init_timeout=30))
+    try:
+        run=wandb.init(mode=mode,**options)
+    except wandb.errors.Error:
+        if requested!='auto' or mode=='offline':
+            raise
+        print('W&B online unavailable; keeping the full training log offline.',flush=True)
+        mode='offline'
+        run=wandb.init(mode=mode,**options)
+    run.summary['logging_mode']=mode
+    print('W&B logging mode:',mode,flush=True)
+    return run
 
 
 def evaluate(model, episodes, seed_base=10000):
@@ -284,12 +597,23 @@ class TrainingLog(BaseCallback):
         self.run, self.started = run, time.perf_counter()
 
     def _on_step(self):
+        for info in self.locals.get('infos',[]):
+            for key in ['speed','velocity_reward','covered','hunt_mode','approach_coefficient']:
+                if key in info:
+                    self.motion.setdefault(key,[]).append(info[key])
+            if info.get('is_ship',0) and 'speed' in info:
+                self.motion.setdefault('ship_speed',[]).append(info['speed'])
         return True
+
+    def _on_rollout_start(self):
+        self.motion={}
 
     def _on_rollout_end(self):
         data = {k:float(v) for k,v in self.model.logger.name_to_value.items()
                 if isinstance(v,(float,int,np.number))}
         data.update(global_step=self.num_timesteps)
+        for key,values in self.motion.items():
+            data['motion/'+key+'_mean']=float(np.mean(values))
         data['time/steps_per_second'] = self.num_timesteps/max(time.perf_counter()-self.started,1)
         recent = self.model.ep_info_buffer
         if recent:
@@ -390,43 +714,65 @@ def train(model, config, run):
     return history
 
 
-def main():
+def build_parser():
     p = argparse.ArgumentParser()
-    p.add_argument('--name',default='ppo-mixed-cpu')
-    p.add_argument('--project',default='astro-party-hw3')
-    p.add_argument('--entity',default=None)
-    p.add_argument('--wandb-mode',choices=['online','offline','disabled'],default='online')
-    p.add_argument('--features',choices=['geometry','tactical','raw'],default='geometry')
-    for name,default in [('epochs',20),('steps-per-epoch',32768),('eval-episodes',20),
-                         ('eval-seed',10000),('seed',42),('envs',4),('bc-steps',20000),('bc-epochs',60)]:
-        p.add_argument('--'+name,type=int,default=default)
-    p.add_argument('--learning-rate',type=float,default=1e-4)
-    p.add_argument('--near',type=float,default=30)
-    p.add_argument('--far',type=float,default=100)
+    p.add_argument('--name')
+    p.add_argument('--project')
+    p.add_argument('--entity')
+    p.add_argument('--wandb-mode',choices=['auto','online','offline','disabled'])
+    p.add_argument('--features',choices=['geometry','tactical','raw'])
+    for name in ['epochs','steps-per-epoch','eval-episodes','eval-seed',
+                 'seed','envs','bc-steps','bc-epochs']:
+        p.add_argument('--'+name,type=int)
+    p.add_argument('--learning-rate',type=float)
+    p.add_argument('--near',type=float)
+    p.add_argument('--far',type=float)
     p.add_argument('--no-dodge',action='store_true')
-    p.add_argument('--controller',choices=['pursuit','defense','occlusion','collision','physics'],default='defense')
-    p.add_argument('--lead',type=float,default=.8)
-    p.add_argument('--horizon',type=int,default=25)
-    p.add_argument('--margin',type=float,default=28)
-    p.add_argument('--log-std',type=float,default=-3.5)
-    p.add_argument('--anchor-retention',type=float,default=1.0)
-    p.add_argument('--resume',default=None)
-    p.add_argument('--save-path',default='models/model_astro_party')
-    p.add_argument('--select-last',action='store_true',
+    p.add_argument('--controller',choices=['pursuit','defense','cover','fast-cover','occlusion','collision','physics'])
+    p.add_argument('--lead',type=float)
+    p.add_argument('--horizon',type=int)
+    p.add_argument('--margin',type=float)
+    p.add_argument('--log-std',type=float)
+    p.add_argument('--anchor-retention',type=float)
+    p.add_argument('--cover-radius',type=float)
+    p.add_argument('--peek-angle',type=float)
+    p.add_argument('--opening-speed',type=float)
+    p.add_argument('--orbit-radius',type=float)
+    p.add_argument('--cruise-speed',type=float)
+    p.add_argument('--reward-profile',choices=['auto','original','fast_cover'])
+    p.add_argument('--velocity-coef',type=float)
+    p.add_argument('--hunt-approach-coef',type=float)
+    p.add_argument('--resume')
+    p.add_argument('--save-path')
+    p.add_argument('--select-last',action=argparse.BooleanOptionalAction,
                    help='Export the last checkpoint instead of the validation best')
+    p.add_argument('--upload-model',action='store_true',
+                   help='Also upload the local checkpoint as a W&B artifact (opt-in)')
+    p.set_defaults(**CONFIG)
+    return p
+
+
+def main():
+    p = build_parser()
     args = p.parse_args()
+    if args.save_path is None:
+        args.save_path=('models/model_astro_party_fast_cover' if args.controller=='fast-cover' else
+            'models/model_astro_party_cover' if args.controller=='cover' else 'models/model_astro_party')
+    if args.reward_profile=='auto':
+        args.reward_profile='fast_cover' if args.controller=='fast-cover' else 'original'
     config = vars(args)
     torch.set_num_threads(1)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
-    run = wandb.init(project=args.project,entity=args.entity,name=args.name,
-        config=config,mode=args.wandb_mode,dir='.',settings=wandb.Settings(init_timeout=90))
+    run = init_tracking(config)
     run.define_metric('global_step')
-    for prefix in ['eval','train','rollout']:
+    for prefix in ['eval','train','rollout','motion']:
         run.define_metric(prefix+'/*',step_metric='global_step')
     write_json(f'{run.dir}/run_info.json',dict(id=run.id,url=run.url,config=config))
     print(f'W&B run: {run.url}',flush=True)
-    env = DummyVecEnv([make_env]) if args.envs == 1 else SubprocVecEnv([make_env for _ in range(args.envs)])
+    factory=partial(make_env,reward_profile=args.reward_profile,velocity_coef=args.velocity_coef,
+        hunt_approach_coef=args.hunt_approach_coef)
+    env = DummyVecEnv([factory]) if args.envs == 1 else SubprocVecEnv([factory for _ in range(args.envs)])
     env.seed(100000+args.seed)
     kwargs = dict(net_arch=dict(pi=[128,128],vf=[128,128]),activation_fn=nn.Tanh,log_std_init=args.log_std)
     if args.features == 'geometry':
@@ -434,7 +780,9 @@ def main():
     elif args.features == 'tactical':
         kwargs.update(features_extractor_class=TacticalFeatures,
             features_extractor_kwargs=dict(near=args.near,far=args.far,dodge=not args.no_dodge,
-                controller=args.controller,lead=args.lead,horizon=args.horizon,margin=args.margin),
+                controller=args.controller,lead=args.lead,horizon=args.horizon,margin=args.margin,
+                cover_radius=args.cover_radius,peek_angle=args.peek_angle,opening_speed=args.opening_speed,
+                orbit_radius=args.orbit_radius,cruise_speed=args.cruise_speed),
             net_arch=dict(pi=[],vf=[64,64]))
     algorithm=AnchoredPPO if args.anchor_retention<1.0 else PPO
     if args.resume:
@@ -453,6 +801,12 @@ def main():
         if args.bc_steps and not args.resume:
             if args.controller=='pursuit':
                 teacher=PursuitBot(args.near,args.far,1.,not args.no_dodge,.8)
+            elif args.controller=='cover':
+                teacher=CoverBot(args.near,args.far,args.lead,args.horizon,args.margin,not args.no_dodge,
+                    cover_radius=args.cover_radius,peek_angle=args.peek_angle,opening_speed=args.opening_speed)
+            elif args.controller=='fast-cover':
+                teacher=FastCoverBot(args.near,args.far,args.lead,args.horizon,args.margin,not args.no_dodge,
+                    orbit_radius=args.orbit_radius,cruise_speed=args.cruise_speed)
             else:
                 use_physics=args.controller in ['occlusion','collision','physics']
                 bot_class=OcclusionDefenseBot if use_physics else DefenseBot
@@ -470,9 +824,10 @@ def main():
             model.save(args.save_path)
             run.summary['exported_checkpoint']='last'
             run.summary['exported_global_step']=model.num_timesteps
-        artifact = wandb.Artifact(f'astro-party-{run.id}',type='model')
-        artifact.add_file(args.save_path+'.zip')
-        run.log_artifact(artifact)
+        if args.upload_model:
+            artifact = wandb.Artifact(f'astro-party-{run.id}',type='model')
+            artifact.add_file(args.save_path if args.save_path.endswith('.zip') else args.save_path+'.zip')
+            run.log_artifact(artifact)
     finally:
         env.close()
         run.finish()

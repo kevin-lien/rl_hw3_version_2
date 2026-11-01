@@ -1,0 +1,48 @@
+{
+  "folder": "C:\\Users\\11608\\Desktop\\\u5927\u4e09\u4e0a\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\b13901072",
+  "archive": "C:\\Users\\11608\\Desktop\\\u5927\u4e09\u4e0a\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\b13901072.zip",
+  "report_pages": 7,
+  "files": [
+    {
+      "name": "model_2048.zip",
+      "bytes": 2177352,
+      "sha256": "4e332223c4d1fba86f11901e45287527876915c9c8aa79411f8221387448e70d"
+    },
+    {
+      "name": "model_astro_party.zip",
+      "bytes": 162572,
+      "sha256": "4fef21c22956755d46e97ad033e9611b9501c86f112dcad933282784418589f0"
+    },
+    {
+      "name": "report.pdf",
+      "bytes": 561813,
+      "sha256": "563b21116bac7d92d8f057a05485df04ca385cbef54ef7a1d6506aff3101dce6"
+    },
+    {
+      "name": "train_2048.py",
+      "bytes": 11067,
+      "sha256": "0a0250738aae4000bba779f90466133bf44cb748922d1e936682ea7a0aef2fdd"
+    },
+    {
+      "name": "train_2048_env.py",
+      "bytes": 11342,
+      "sha256": "71e2d9add6a0f19945d56fc8849248669b5692d6ef1b70afc2a6532d1e3f6768"
+    },
+    {
+      "name": "train_astro_party.py",
+      "bytes": 39892,
+      "sha256": "5a5776c41b1538a772a0257973ca1728eb8ad89587df3c480883d9b562a97300"
+    },
+    {
+      "name": "train_astro_party_env.py",
+      "bytes": 8221,
+      "sha256": "54bb8fbd4aeb256a95cdd4d5e38456aa17b61c15fed7f749cdebaa1d70383040"
+    }
+  ],
+  "verified_public_results": {
+    "2048": "15/15, max tile 512",
+    "astro_party": "10/10, Rusher 95%, Sniper 91%"
+  },
+  "model_2048_source": "2048/models/model_2048_weight1000.zip",
+  "note": "Course report policy requires student review and own wording before submission."
+}

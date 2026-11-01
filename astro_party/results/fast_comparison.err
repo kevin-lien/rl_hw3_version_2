@@ -1,0 +1,29 @@
+wandb: [wandb.login()] Loaded credentials for https://api.forge.coreweave.com from C:\Users\11608\_netrc.
+wandb: Currently logged in as: kevinboyulien (kevinboyulien-national-taiwan-university) to https://api.forge.coreweave.com. Use `wandb login --relogin` to force relogin
+wandb: setting up run x4hdfhjo
+wandb: Tracking run with wandb version 0.31.0
+wandb: Run data is saved locally in wandb\run-20261101_154626-x4hdfhjo
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run fast-cover-speed-ablation
+wandb:  View project at https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3
+wandb:  View run at https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3/runs/x4hdfhjo
+wandb: updating run metadata
+wandb: uploading config.yaml; uploading wandb-summary.json
+wandb: 
+wandb: Run summary:
+wandb:                 fast_no_velocity/rusher/draw_rate 0.01
+wandb: fast_no_velocity/rusher/empty_ammo_cover_fraction 0.0223
+wandb:       fast_no_velocity/rusher/enemy_respawns_mean 0.32
+wandb:         fast_no_velocity/rusher/first_shot_median 2.02
+wandb:                 fast_no_velocity/rusher/loss_rate 0.27
+wandb:                fast_no_velocity/rusher/mean_steps 285.14
+wandb:     fast_no_velocity/rusher/orbit_direction_match 0.77942
+wandb:       fast_no_velocity/rusher/pilot_finish_median 0.16
+wandb:         fast_no_velocity/rusher/pilot_finish_rate 0.68571
+wandb:              fast_no_velocity/rusher/ram_win_rate 0.16
+wandb:                                               +74 ...
+wandb: 
+wandb:  View run fast-cover-speed-ablation at: https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3/runs/x4hdfhjo
+wandb:  View project at: https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: wandb\run-20261101_154626-x4hdfhjo\logs

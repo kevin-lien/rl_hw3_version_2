@@ -1,0 +1,2174 @@
+{
+  "config": {
+    "episodes": 20,
+    "seed_base": 60000,
+    "radius": 180,
+    "peek_angle": 1.05,
+    "opening_speed": 80,
+    "tag": "cover_v2"
+  },
+  "results": {
+    "rusher": {
+      "win_rate": 0.9,
+      "draw_rate": 0.0,
+      "opening_cover_fraction": 0.5022208065173142,
+      "first_shot_median": 2.75,
+      "games": [
+        {
+          "seed": 60000,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 976,
+          "first_shot_seconds": 2.96,
+          "cover_fraction": 0.4415983606557377,
+          "opening_cover_fraction": 0.708,
+          "phases": {
+            "opening": 206,
+            "peek": 65,
+            "retreat": 84,
+            "hunt": 410,
+            "survival": 11,
+            "pilot": 200
+          }
+        },
+        {
+          "seed": 60001,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 159,
+          "first_shot_seconds": 2.8,
+          "cover_fraction": 0.6352201257861635,
+          "opening_cover_fraction": 0.6352201257861635,
+          "phases": {
+            "opening": 139,
+            "peek": 1,
+            "retreat": 14,
+            "hunt": 5
+          }
+        },
+        {
+          "seed": 60002,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 239,
+          "first_shot_seconds": 2.08,
+          "cover_fraction": 0.5313807531380753,
+          "opening_cover_fraction": 0.5313807531380753,
+          "phases": {
+            "opening": 84,
+            "peek": 20,
+            "retreat": 20,
+            "hunt": 115
+          }
+        },
+        {
+          "seed": 60003,
+          "win": false,
+          "loss": true,
+          "draw": false,
+          "steps": 310,
+          "first_shot_seconds": null,
+          "cover_fraction": 0.41935483870967744,
+          "opening_cover_fraction": 0.52,
+          "phases": {
+            "opening": 208,
+            "peek": 58,
+            "pilot": 44
+          }
+        },
+        {
+          "seed": 60004,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 185,
+          "first_shot_seconds": 3.1,
+          "cover_fraction": 0.7027027027027027,
+          "opening_cover_fraction": 0.7027027027027027,
+          "phases": {
+            "opening": 154,
+            "peek": 1,
+            "retreat": 14,
+            "hunt": 16
+          }
+        },
+        {
+          "seed": 60005,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 155,
+          "first_shot_seconds": 2.34,
+          "cover_fraction": 0.4838709677419355,
+          "opening_cover_fraction": 0.4838709677419355,
+          "phases": {
+            "opening": 95,
+            "peek": 22,
+            "retreat": 16,
+            "hunt": 22
+          }
+        },
+        {
+          "seed": 60006,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 449,
+          "first_shot_seconds": 2.42,
+          "cover_fraction": 0.3986636971046771,
+          "opening_cover_fraction": 0.268,
+          "phases": {
+            "opening": 42,
+            "peek": 158,
+            "survival": 10,
+            "pilot": 200,
+            "hunt": 24,
+            "retreat": 15
+          }
+        },
+        {
+          "seed": 60007,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 193,
+          "first_shot_seconds": 2.18,
+          "cover_fraction": 0.5544041450777202,
+          "opening_cover_fraction": 0.5544041450777202,
+          "phases": {
+            "opening": 91,
+            "peek": 18,
+            "retreat": 17,
+            "hunt": 67
+          }
+        },
+        {
+          "seed": 60008,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 212,
+          "first_shot_seconds": 2.16,
+          "cover_fraction": 0.5990566037735849,
+          "opening_cover_fraction": 0.5990566037735849,
+          "phases": {
+            "opening": 102,
+            "peek": 6,
+            "retreat": 19,
+            "hunt": 85
+          }
+        },
+        {
+          "seed": 60009,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 386,
+          "first_shot_seconds": 2.7,
+          "cover_fraction": 0.21502590673575128,
+          "opening_cover_fraction": 0.332,
+          "phases": {
+            "opening": 137,
+            "peek": 27,
+            "retreat": 15,
+            "hunt": 207
+          }
+        },
+        {
+          "seed": 60010,
+          "win": false,
+          "loss": true,
+          "draw": false,
+          "steps": 258,
+          "first_shot_seconds": null,
+          "cover_fraction": 0.2441860465116279,
+          "opening_cover_fraction": 0.252,
+          "phases": {
+            "opening": 145,
+            "peek": 18,
+            "pilot": 95
+          }
+        },
+        {
+          "seed": 60011,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 250,
+          "first_shot_seconds": 3.86,
+          "cover_fraction": 0.548,
+          "opening_cover_fraction": 0.548,
+          "phases": {
+            "opening": 170,
+            "peek": 23,
+            "retreat": 13,
+            "hunt": 44
+          }
+        },
+        {
+          "seed": 60012,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 355,
+          "first_shot_seconds": 4.36,
+          "cover_fraction": 0.4169014084507042,
+          "opening_cover_fraction": 0.344,
+          "phases": {
+            "opening": 133,
+            "peek": 96,
+            "retreat": 3,
+            "hunt": 123
+          }
+        },
+        {
+          "seed": 60013,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 136,
+          "first_shot_seconds": 2.32,
+          "cover_fraction": 0.5073529411764706,
+          "opening_cover_fraction": 0.5073529411764706,
+          "phases": {
+            "opening": 67,
+            "peek": 49,
+            "retreat": 12,
+            "hunt": 8
+          }
+        },
+        {
+          "seed": 60014,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 432,
+          "first_shot_seconds": 3.6,
+          "cover_fraction": 0.24074074074074073,
+          "opening_cover_fraction": 0.416,
+          "phases": {
+            "opening": 190,
+            "peek": 20,
+            "retreat": 14,
+            "hunt": 208
+          }
+        },
+        {
+          "seed": 60015,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 282,
+          "first_shot_seconds": 2.58,
+          "cover_fraction": 0.6134751773049646,
+          "opening_cover_fraction": 0.692,
+          "phases": {
+            "opening": 118,
+            "peek": 11,
+            "retreat": 22,
+            "hunt": 131
+          }
+        },
+        {
+          "seed": 60016,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 509,
+          "first_shot_seconds": 2.96,
+          "cover_fraction": 0.25343811394891946,
+          "opening_cover_fraction": 0.516,
+          "phases": {
+            "opening": 150,
+            "peek": 87,
+            "retreat": 64,
+            "hunt": 208
+          }
+        },
+        {
+          "seed": 60017,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 198,
+          "first_shot_seconds": 2.2,
+          "cover_fraction": 0.5858585858585859,
+          "opening_cover_fraction": 0.5858585858585859,
+          "phases": {
+            "opening": 106,
+            "peek": 4,
+            "retreat": 18,
+            "hunt": 70
+          }
+        },
+        {
+          "seed": 60018,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 182,
+          "first_shot_seconds": 3.24,
+          "cover_fraction": 0.34615384615384615,
+          "opening_cover_fraction": 0.34615384615384615,
+          "phases": {
+            "opening": 134,
+            "peek": 41,
+            "hunt": 7
+          }
+        },
+        {
+          "seed": 60019,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 207,
+          "first_shot_seconds": 2.98,
+          "cover_fraction": 0.5024154589371981,
+          "opening_cover_fraction": 0.5024154589371981,
+          "phases": {
+            "opening": 140,
+            "peek": 9,
+            "retreat": 16,
+            "hunt": 42
+          }
+        }
+      ]
+    },
+    "sniper": {
+      "win_rate": 0.7,
+      "draw_rate": 0.05,
+      "opening_cover_fraction": 0.525819298245614,
+      "first_shot_median": 5.22,
+      "games": [
+        {
+          "seed": 60000,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 1449,
+          "first_shot_seconds": 3.16,
+          "cover_fraction": 0.3505866114561767,
+          "opening_cover_fraction": 0.636,
+          "phases": {
+            "opening": 417,
+            "peek": 638,
+            "retreat": 273,
+            "hunt": 121
+          }
+        },
+        {
+          "seed": 60001,
+          "win": false,
+          "loss": true,
+          "draw": false,
+          "steps": 744,
+          "first_shot_seconds": 5.22,
+          "cover_fraction": 0.45698924731182794,
+          "opening_cover_fraction": 0.564,
+          "phases": {
+            "opening": 223,
+            "peek": 348,
+            "retreat": 137,
+            "pilot": 36
+          }
+        },
+        {
+          "seed": 60002,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 823,
+          "first_shot_seconds": 8.48,
+          "cover_fraction": 0.3778857837181045,
+          "opening_cover_fraction": 0.44,
+          "phases": {
+            "opening": 189,
+            "peek": 475,
+            "retreat": 78,
+            "hunt": 81
+          }
+        },
+        {
+          "seed": 60003,
+          "win": false,
+          "loss": true,
+          "draw": false,
+          "steps": 1163,
+          "first_shot_seconds": 6.06,
+          "cover_fraction": 0.4006878761822872,
+          "opening_cover_fraction": 0.692,
+          "phases": {
+            "opening": 370,
+            "peek": 559,
+            "retreat": 200,
+            "pilot": 34
+          }
+        },
+        {
+          "seed": 60004,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 1435,
+          "first_shot_seconds": 9.5,
+          "cover_fraction": 0.37212543554006966,
+          "opening_cover_fraction": 0.592,
+          "phases": {
+            "opening": 385,
+            "peek": 585,
+            "retreat": 432,
+            "hunt": 33
+          }
+        },
+        {
+          "seed": 60005,
+          "win": false,
+          "loss": true,
+          "draw": false,
+          "steps": 258,
+          "first_shot_seconds": null,
+          "cover_fraction": 0.43410852713178294,
+          "opening_cover_fraction": 0.448,
+          "phases": {
+            "opening": 106,
+            "peek": 100,
+            "pilot": 52
+          }
+        },
+        {
+          "seed": 60006,
+          "win": false,
+          "loss": true,
+          "draw": false,
+          "steps": 1300,
+          "first_shot_seconds": 5.52,
+          "cover_fraction": 0.15076923076923077,
+          "opening_cover_fraction": 0.268,
+          "phases": {
+            "opening": 155,
+            "peek": 285,
+            "retreat": 50,
+            "pilot": 796,
+            "survival": 14
+          }
+        },
+        {
+          "seed": 60007,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 326,
+          "first_shot_seconds": 2.6,
+          "cover_fraction": 0.43558282208588955,
+          "opening_cover_fraction": 0.568,
+          "phases": {
+            "opening": 91,
+            "peek": 76,
+            "retreat": 80,
+            "hunt": 79
+          }
+        },
+        {
+          "seed": 60008,
+          "win": false,
+          "loss": true,
+          "draw": false,
+          "steps": 793,
+          "first_shot_seconds": 4.6,
+          "cover_fraction": 0.519546027742749,
+          "opening_cover_fraction": 0.468,
+          "phases": {
+            "opening": 188,
+            "peek": 547,
+            "retreat": 50,
+            "survival": 1,
+            "pilot": 7
+          }
+        },
+        {
+          "seed": 60009,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 995,
+          "first_shot_seconds": 3.86,
+          "cover_fraction": 0.421105527638191,
+          "opening_cover_fraction": 0.568,
+          "phases": {
+            "opening": 139,
+            "peek": 269,
+            "retreat": 101,
+            "hunt": 279,
+            "survival": 7,
+            "pilot": 200
+          }
+        },
+        {
+          "seed": 60010,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 461,
+          "first_shot_seconds": 3.62,
+          "cover_fraction": 0.39913232104121477,
+          "opening_cover_fraction": 0.48,
+          "phases": {
+            "opening": 91,
+            "peek": 227,
+            "retreat": 74,
+            "hunt": 69
+          }
+        },
+        {
+          "seed": 60011,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 853,
+          "first_shot_seconds": 4.86,
+          "cover_fraction": 0.406799531066823,
+          "opening_cover_fraction": 0.652,
+          "phases": {
+            "opening": 289,
+            "peek": 365,
+            "retreat": 128,
+            "hunt": 71
+          }
+        },
+        {
+          "seed": 60012,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 457,
+          "first_shot_seconds": 7.9,
+          "cover_fraction": 0.3544857768052516,
+          "opening_cover_fraction": 0.456,
+          "phases": {
+            "opening": 277,
+            "peek": 118,
+            "retreat": 19,
+            "hunt": 43
+          }
+        },
+        {
+          "seed": 60013,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 889,
+          "first_shot_seconds": 9.84,
+          "cover_fraction": 0.2992125984251969,
+          "opening_cover_fraction": 0.536,
+          "phases": {
+            "opening": 252,
+            "peek": 447,
+            "retreat": 81,
+            "hunt": 109
+          }
+        },
+        {
+          "seed": 60014,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 228,
+          "first_shot_seconds": 3.88,
+          "cover_fraction": 0.5043859649122807,
+          "opening_cover_fraction": 0.5043859649122807,
+          "phases": {
+            "opening": 146,
+            "peek": 48,
+            "retreat": 17,
+            "hunt": 17
+          }
+        },
+        {
+          "seed": 60015,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 1126,
+          "first_shot_seconds": 5.9,
+          "cover_fraction": 0.5062166962699822,
+          "opening_cover_fraction": 0.628,
+          "phases": {
+            "opening": 134,
+            "peek": 659,
+            "retreat": 255,
+            "hunt": 78
+          }
+        },
+        {
+          "seed": 60016,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 252,
+          "first_shot_seconds": 3.66,
+          "cover_fraction": 0.5634920634920635,
+          "opening_cover_fraction": 0.568,
+          "phases": {
+            "opening": 120,
+            "peek": 63,
+            "retreat": 22,
+            "hunt": 47
+          }
+        },
+        {
+          "seed": 60017,
+          "win": false,
+          "loss": false,
+          "draw": true,
+          "steps": 1499,
+          "first_shot_seconds": 11.46,
+          "cover_fraction": 0.26417611741160774,
+          "opening_cover_fraction": 0.44,
+          "phases": {
+            "opening": 602,
+            "peek": 747,
+            "retreat": 150
+          }
+        },
+        {
+          "seed": 60018,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 1088,
+          "first_shot_seconds": 2.68,
+          "cover_fraction": 0.4053308823529412,
+          "opening_cover_fraction": 0.592,
+          "phases": {
+            "opening": 327,
+            "peek": 362,
+            "retreat": 133,
+            "hunt": 66,
+            "pilot": 200
+          }
+        },
+        {
+          "seed": 60019,
+          "win": true,
+          "loss": false,
+          "draw": false,
+          "steps": 434,
+          "first_shot_seconds": 7.26,
+          "cover_fraction": 0.3064516129032258,
+          "opening_cover_fraction": 0.416,
+          "phases": {
+            "opening": 211,
+            "peek": 152,
+            "retreat": 20,
+            "hunt": 51
+          }
+        }
+      ]
+    }
+  },
+  "dodge_checks": [
+    {
+      "before": 23.86231116339071,
+      "after": 40.835722883715825,
+      "improvement": 16.973411720325114
+    },
+    {
+      "before": 24.433598288185742,
+      "after": 40.835713612446916,
+      "improvement": 16.402115324261175
+    },
+    {
+      "before": 25.172375033253413,
+      "after": 40.835713612446916,
+      "improvement": 15.663338579193503
+    },
+    {
+      "before": 25.929695088250234,
+      "after": 40.835713612446916,
+      "improvement": 14.906018524196682
+    },
+    {
+      "before": 8.630099941132503,
+      "after": 40.83570434119871,
+      "improvement": 32.20560440006621
+    },
+    {
+      "before": 9.544897544906718,
+      "after": 40.835695069971216,
+      "improvement": 31.290797525064498
+    },
+    {
+      "before": 13.347535107484026,
+      "after": 40.835733416390624,
+      "improvement": 27.488198308906597
+    },
+    {
+      "before": 0.9043758524687703,
+      "after": 35.019044804758174,
+      "improvement": 34.114668952289406
+    },
+    {
+      "before": 5.461990289498924,
+      "after": 35.019044804758174,
+      "improvement": 29.55705451525925
+    },
+    {
+      "before": 15.38519585800758,
+      "after": 35.019044804758174,
+      "improvement": 19.633848946750597
+    },
+    {
+      "before": 18.563249651194166,
+      "after": 35.019044804758174,
+      "improvement": 16.455795153564008
+    },
+    {
+      "before": 21.57722694316221,
+      "after": 35.01907225032503,
+      "improvement": 13.441845307162822
+    },
+    {
+      "before": 24.368731618441146,
+      "after": 35.01907225032503,
+      "improvement": 10.650340631883886
+    },
+    {
+      "before": 26.913739722510932,
+      "after": 35.019099695896976,
+      "improvement": 8.105359973386044
+    },
+    {
+      "before": 29.20378450587668,
+      "after": 35.019099695896976,
+      "improvement": 5.815315190020296
+    },
+    {
+      "before": 31.139787169722364,
+      "after": 35.019099695896976,
+      "improvement": 3.879312526174612
+    },
+    {
+      "before": 32.494266383556614,
+      "after": 35.01908635188226,
+      "improvement": 2.5248199683256445
+    },
+    {
+      "before": 33.245420263020684,
+      "after": 35.01911379746974,
+      "improvement": 1.773693534449059
+    },
+    {
+      "before": 33.76036375619108,
+      "after": 35.01911379746974,
+      "improvement": 1.2587500412786596
+    },
+    {
+      "before": 34.18886319743565,
+      "after": 34.694247902084626,
+      "improvement": 0.505384704648975
+    },
+    {
+      "before": 34.431525357342494,
+      "after": 34.694247902084626,
+      "improvement": 0.2627225447421324
+    },
+    {
+      "before": 34.5826231558042,
+      "after": 34.694247902084626,
+      "improvement": 0.11162474628042673
+    },
+    {
+      "before": 34.663393165160784,
+      "after": 34.694275148138054,
+      "improvement": 0.030881982977270184
+    },
+    {
+      "before": 17.150341475812418,
+      "after": 18.715819961011423,
+      "improvement": 1.5654784851990051
+    },
+    {
+      "before": 17.125900513343694,
+      "after": 18.715819961011423,
+      "improvement": 1.5899194476677287
+    },
+    {
+      "before": 17.614002970844087,
+      "after": 18.59212094143333,
+      "improvement": 0.978117970589242
+    },
+    {
+      "before": 18.06055724284049,
+      "after": 18.61417379683524,
+      "improvement": 0.5536165539947504
+    },
+    {
+      "before": 18.539823072118207,
+      "after": 18.608657025582737,
+      "improvement": 0.06883395346453014
+    },
+    {
+      "before": 21.227690330164183,
+      "after": 21.94656266701926,
+      "improvement": 0.7188723368550782
+    },
+    {
+      "before": 21.418542185011557,
+      "after": 21.94656266701926,
+      "improvement": 0.5280204820077046
+    },
+    {
+      "before": 21.685707760669022,
+      "after": 21.946564053888732,
+      "improvement": 0.26085629321971027
+    },
+    {
+      "before": 21.816613347569806,
+      "after": 21.946564053888732,
+      "improvement": 0.12995070631892602
+    },
+    {
+      "before": 21.897367896405612,
+      "after": 21.94656544080055,
+      "improvement": 0.049197544394939285
+    },
+    {
+      "before": 25.691382541822456,
+      "after": 51.867573716477764,
+      "improvement": 26.176191174655308
+    },
+    {
+      "before": 34.87068674042933,
+      "after": 45.22549793274137,
+      "improvement": 10.354811192312042
+    },
+    {
+      "before": 26.54051950886386,
+      "after": 45.22549793274137,
+      "improvement": 18.68497842387751
+    },
+    {
+      "before": 20.680610564980892,
+      "after": 45.22549793274137,
+      "improvement": 24.544887367760477
+    },
+    {
+      "before": 22.44724591929023,
+      "after": 45.22555190549638,
+      "improvement": 22.778305986206153
+    },
+    {
+      "before": 26.26658821616192,
+      "after": 45.22555190549638,
+      "improvement": 18.95896368933446
+    },
+    {
+      "before": 29.66063649002156,
+      "after": 45.22555190549638,
+      "improvement": 15.564915415474822
+    },
+    {
+      "before": 32.640102658148514,
+      "after": 45.22560587826935,
+      "improvement": 12.585503220120835
+    },
+    {
+      "before": 32.30791060537542,
+      "after": 58.26392642482804,
+      "improvement": 25.956015819452624
+    },
+    {
+      "before": 24.11022631405511,
+      "after": 58.26398722896493,
+      "improvement": 34.15376091490982
+    },
+    {
+      "before": 16.187924666937462,
+      "after": 58.26398722896493,
+      "improvement": 42.07606256202747
+    },
+    {
+      "before": 7.279811520829058,
+      "after": 58.26398722896493,
+      "improvement": 50.98417570813587
+    },
+    {
+      "before": 1.3175677515385507,
+      "after": 58.26398722896493,
+      "improvement": 56.94641947742638
+    },
+    {
+      "before": 9.428224815389347,
+      "after": 58.26398722896493,
+      "improvement": 48.83576241357558
+    },
+    {
+      "before": 17.183376739377774,
+      "after": 58.26398722896493,
+      "improvement": 41.08061048958716
+    },
+    {
+      "before": 24.53625257259767,
+      "after": 58.26398722896493,
+      "improvement": 33.72773465636726
+    },
+    {
+      "before": 31.477239638525127,
+      "after": 58.26398722896493,
+      "improvement": 26.786747590439802
+    },
+    {
+      "before": 12.217501917131596,
+      "after": 37.232110230008516,
+      "improvement": 25.01460831287692
+    },
+    {
+      "before": 16.258221773392737,
+      "after": 37.2321505845606,
+      "improvement": 20.973928811167863
+    },
+    {
+      "before": 20.045119715121942,
+      "after": 37.23219637539106,
+      "improvement": 17.18707666026912
+    },
+    {
+      "before": 23.577239840032142,
+      "after": 37.23223672994984,
+      "improvement": 13.654996889917697
+    },
+    {
+      "before": 26.465928829935258,
+      "after": 37.23223672994984,
+      "improvement": 10.766307900014581
+    },
+    {
+      "before": 16.843152970276613,
+      "after": 37.23223672994984,
+      "improvement": 20.389083759673227
+    },
+    {
+      "before": 18.875063054602343,
+      "after": 37.23227708456493,
+      "improvement": 18.357214029962584
+    },
+    {
+      "before": 5.805885892372579,
+      "after": 37.23231743923633,
+      "improvement": 31.426431546863753
+    },
+    {
+      "before": 8.05951091014622,
+      "after": 37.23231743923633,
+      "improvement": 29.172806529090114
+    },
+    {
+      "before": 10.630568100686547,
+      "after": 37.23231743923633,
+      "improvement": 26.601749338549787
+    },
+    {
+      "before": 13.241360083755048,
+      "after": 37.232357793964056,
+      "improvement": 23.990997710209008
+    },
+    {
+      "before": 15.795355889437854,
+      "after": 37.153090499516104,
+      "improvement": 21.35773461007825
+    },
+    {
+      "before": 18.237007974664706,
+      "after": 37.15312911551074,
+      "improvement": 18.91612114084603
+    },
+    {
+      "before": 20.55617289475411,
+      "after": 37.15312911551074,
+      "improvement": 16.596956220756628
+    },
+    {
+      "before": 22.747678301905633,
+      "after": 37.028684439192865,
+      "improvement": 14.281006137287232
+    },
+    {
+      "before": 24.796233173085238,
+      "after": 37.028722321933024,
+      "improvement": 12.232489148847787
+    },
+    {
+      "before": 26.702090240597578,
+      "after": 36.92801837576882,
+      "improvement": 10.225928135171245
+    },
+    {
+      "before": 28.45039776191309,
+      "after": 36.92805592981075,
+      "improvement": 8.477658167897662
+    },
+    {
+      "before": 30.040501879334418,
+      "after": 36.92805592981075,
+      "improvement": 6.887554050476336
+    },
+    {
+      "before": 31.472225661206767,
+      "after": 36.92809348391537,
+      "improvement": 5.455867822708601
+    },
+    {
+      "before": 32.746808422355215,
+      "after": 36.92809348391537,
+      "improvement": 4.181285061560153
+    },
+    {
+      "before": 33.86639091149957,
+      "after": 36.928131038082675,
+      "improvement": 3.0617401265831035
+    },
+    {
+      "before": 34.83363340145918,
+      "after": 37.83146512957503,
+      "improvement": 2.997831728115848
+    },
+    {
+      "before": 17.059455058994548,
+      "after": 52.48460584162728,
+      "improvement": 35.42515078263273
+    },
+    {
+      "before": 10.553004680929847,
+      "after": 45.92650014455681,
+      "improvement": 35.373495463626966
+    },
+    {
+      "before": 5.36601152891275,
+      "after": 45.92650014455681,
+      "improvement": 40.56048861564406
+    },
+    {
+      "before": 1.2456278901753293,
+      "after": 45.926505898096615,
+      "improvement": 44.68087800792129
+    },
+    {
+      "before": 5.245575508306243,
+      "after": 45.92644595748605,
+      "improvement": 40.68087044917981
+    },
+    {
+      "before": 9.897793774684791,
+      "after": 45.92645171105293,
+      "improvement": 36.028657936368134
+    },
+    {
+      "before": 14.31146162547491,
+      "after": 45.92645171105293,
+      "improvement": 31.614990085578015
+    },
+    {
+      "before": 18.455735678564775,
+      "after": 45.92639752404669,
+      "improvement": 27.470661845481917
+    },
+    {
+      "before": 22.328714705489656,
+      "after": 45.926403277660185,
+      "improvement": 23.59768857217053
+    },
+    {
+      "before": 25.933378627263085,
+      "after": 45.926403277660185,
+      "improvement": 19.9930246503971
+    },
+    {
+      "before": 28.92116887160815,
+      "after": 45.92634909071848,
+      "improvement": 17.005180219110333
+    },
+    {
+      "before": 28.00870735835128,
+      "after": 45.9263548443786,
+      "improvement": 17.91764748602732
+    },
+    {
+      "before": 30.203797762636537,
+      "after": 45.9263548443786,
+      "improvement": 15.722557081742064
+    },
+    {
+      "before": 31.9658125253679,
+      "after": 45.9263548443786,
+      "improvement": 13.960542319010699
+    },
+    {
+      "before": 33.63449542280021,
+      "after": 45.92630065750142,
+      "improvement": 12.291805234701215
+    },
+    {
+      "before": 2.9807846988036744,
+      "after": 35.55585119151425,
+      "improvement": 32.575066492710576
+    },
+    {
+      "before": 4.428217136970813,
+      "after": 35.55585119151425,
+      "improvement": 31.127634054543435
+    },
+    {
+      "before": 6.834659277348078,
+      "after": 35.55583438556745,
+      "improvement": 28.721175108219374
+    },
+    {
+      "before": 5.647805032186537,
+      "after": 35.55581757971748,
+      "improvement": 29.90801254753094
+    },
+    {
+      "before": 9.155180052230127,
+      "after": 35.55578824179365,
+      "improvement": 26.40060818956352
+    },
+    {
+      "before": 9.68151182621351,
+      "after": 35.55578824179365,
+      "improvement": 25.87427641558014
+    },
+    {
+      "before": 10.794719986453822,
+      "after": 35.55578824179365,
+      "improvement": 24.76106825533983
+    },
+    {
+      "before": 14.337661545168901,
+      "after": 35.55577143602664,
+      "improvement": 21.21810989085774
+    },
+    {
+      "before": 16.89206484869817,
+      "after": 35.55577143602664,
+      "improvement": 18.66370658732847
+    },
+    {
+      "before": 19.17360877224092,
+      "after": 35.55575463035646,
+      "improvement": 16.38214585811554
+    },
+    {
+      "before": 22.08455700447476,
+      "after": 35.55575463035646,
+      "improvement": 13.4711976258817
+    },
+    {
+      "before": 25.168567971848987,
+      "after": 35.55575463035646,
+      "improvement": 10.387186658507474
+    },
+    {
+      "before": 28.16407941653713,
+      "after": 35.55573782478311,
+      "improvement": 7.391658408245977
+    },
+    {
+      "before": 30.081904012366756,
+      "after": 35.44334722035385,
+      "improvement": 5.361443207987094
+    },
+    {
+      "before": 31.45518532155592,
+      "after": 34.82511123339227,
+      "improvement": 3.3699259118363507
+    },
+    {
+      "before": 32.57169508799255,
+      "after": 34.39561275301433,
+      "improvement": 1.8239176650217814
+    },
+    {
+      "before": 33.28815169365267,
+      "after": 34.27599179340807,
+      "improvement": 0.9878400997553953
+    },
+    {
+      "before": 33.37886155373043,
+      "after": 34.20713293745904,
+      "improvement": 0.8282713837286124
+    },
+    {
+      "before": 33.197200999475065,
+      "after": 33.370680104182355,
+      "improvement": 0.17347910470729033
+    },
+    {
+      "before": 8.372226209614576,
+      "after": 9.221446461353082,
+      "improvement": 0.8492202517385063
+    },
+    {
+      "before": 7.7915041247518015,
+      "after": 9.781948156482692,
+      "improvement": 1.99044403173089
+    },
+    {
+      "before": 7.366503199960408,
+      "after": 8.913013853361234,
+      "improvement": 1.5465106534008255
+    },
+    {
+      "before": 7.026336570063986,
+      "after": 8.52591112433443,
+      "improvement": 1.4995745542704437
+    },
+    {
+      "before": 6.5246521539187246,
+      "after": 7.749798861335836,
+      "improvement": 1.2251467074171112
+    },
+    {
+      "before": 6.1751097554646694,
+      "after": 7.828808968410987,
+      "improvement": 1.653699212946318
+    },
+    {
+      "before": 5.863232502807742,
+      "after": 6.316245242882532,
+      "improvement": 0.4530127400747901
+    },
+    {
+      "before": 15.611535678969496,
+      "after": 20.478690741958598,
+      "improvement": 4.867155062989102
+    },
+    {
+      "before": 2.1166556497949527,
+      "after": 20.478690741958598,
+      "improvement": 18.362035092163644
+    },
+    {
+      "before": 3.5708444916856097,
+      "after": 20.478657379987727,
+      "improvement": 16.907812888302118
+    },
+    {
+      "before": 5.838892085699706,
+      "after": 20.478624018144416,
+      "improvement": 14.63973193244471
+    },
+    {
+      "before": 7.109612474890008,
+      "after": 20.478624018144416,
+      "improvement": 13.369011543254409
+    },
+    {
+      "before": 8.535713869381354,
+      "after": 20.478624018144416,
+      "improvement": 11.942910148763062
+    },
+    {
+      "before": 8.422875513236228,
+      "after": 20.478590656428665,
+      "improvement": 12.055715143192437
+    },
+    {
+      "before": 1.2053973070459245,
+      "after": 20.478590656428665,
+      "improvement": 19.27319334938274
+    },
+    {
+      "before": 4.1295975650655,
+      "after": 20.478557294840478,
+      "improvement": 16.34895972977498
+    },
+    {
+      "before": 8.316331059674553,
+      "after": 20.478557294840478,
+      "improvement": 12.162226235165924
+    },
+    {
+      "before": 12.171469807958129,
+      "after": 20.478523933379854,
+      "improvement": 8.307054125421725
+    },
+    {
+      "before": 15.666054418725308,
+      "after": 20.478523933379854,
+      "improvement": 4.812469514654547
+    },
+    {
+      "before": 17.977829400936752,
+      "after": 20.47849057204679,
+      "improvement": 2.500661171110039
+    },
+    {
+      "before": 18.78974831426404,
+      "after": 20.409376021899753,
+      "improvement": 1.6196277076357148
+    },
+    {
+      "before": 13.198592209346735,
+      "after": 20.409376021899753,
+      "improvement": 7.210783812553018
+    },
+    {
+      "before": 16.060774767824615,
+      "after": 20.409321060614626,
+      "improvement": 4.348546292790012
+    },
+    {
+      "before": 18.70430844300633,
+      "after": 20.409321060614626,
+      "improvement": 1.705012617608297
+    },
+    {
+      "before": 20.741411128147366,
+      "after": 25.251640322755158,
+      "improvement": 4.510229194607792
+    },
+    {
+      "before": 21.892445959094164,
+      "after": 25.251640322755158,
+      "improvement": 3.3591943636609933
+    },
+    {
+      "before": 22.82681159139149,
+      "after": 25.251640322755158,
+      "improvement": 2.424828731363668
+    },
+    {
+      "before": 23.56547852817359,
+      "after": 25.251640322755158,
+      "improvement": 1.6861617945815688
+    },
+    {
+      "before": 24.13125684226336,
+      "after": 25.251640322755158,
+      "improvement": 1.120383480491796
+    },
+    {
+      "before": 24.548294989091062,
+      "after": 25.14616416106922,
+      "improvement": 0.5978691719781573
+    },
+    {
+      "before": 24.77303672444994,
+      "after": 25.049220365256634,
+      "improvement": 0.27618364080669267
+    },
+    {
+      "before": 4.9689647055602055,
+      "after": 51.27416630066743,
+      "improvement": 46.30520159510723
+    },
+    {
+      "before": 8.075500017185195,
+      "after": 51.27416630066743,
+      "improvement": 43.19866628348224
+    },
+    {
+      "before": 10.176100684010247,
+      "after": 51.27419916891132,
+      "improvement": 41.09809848490107
+    },
+    {
+      "before": 13.159494216226303,
+      "after": 51.27423203715686,
+      "improvement": 38.11473782093056
+    },
+    {
+      "before": 16.454866016984838,
+      "after": 51.27423419732172,
+      "improvement": 34.81936818033688
+    },
+    {
+      "before": 34.767771068677646,
+      "after": 48.45797418790354,
+      "improvement": 13.690203119225892
+    },
+    {
+      "before": 27.543184263731884,
+      "after": 48.457962228956504,
+      "improvement": 20.91477796522462
+    },
+    {
+      "before": 18.628876346816902,
+      "after": 48.45798614685243,
+      "improvement": 29.829109800035525
+    },
+    {
+      "before": 12.695767221605982,
+      "after": 48.458000137132615,
+      "improvement": 35.76223291552663
+    },
+    {
+      "before": 6.225598736488051,
+      "after": 48.458000137132615,
+      "improvement": 42.23240140064456
+    },
+    {
+      "before": 1.952181205884775,
+      "after": 48.45805000428427,
+      "improvement": 46.50586879839949
+    },
+    {
+      "before": 7.67148613017039,
+      "after": 48.45803804535594,
+      "improvement": 40.786551915185555
+    },
+    {
+      "before": 6.0737400711326215,
+      "after": 48.45806196321445,
+      "improvement": 42.38432189208183
+    },
+    {
+      "before": 5.584311086478404,
+      "after": 45.37364580598137,
+      "improvement": 39.78933471950297
+    },
+    {
+      "before": 6.072648443769505,
+      "after": 45.37365697602931,
+      "improvement": 39.30100853225981
+    },
+    {
+      "before": 2.8934281135543025,
+      "after": 45.373720897022935,
+      "improvement": 42.480292783468634
+    },
+    {
+      "before": 7.711344759690646,
+      "after": 45.37369855694037,
+      "improvement": 37.66235379724972
+    },
+    {
+      "before": 4.514601622946694,
+      "after": 47.430583182881556,
+      "improvement": 42.91598155993486
+    },
+    {
+      "before": 5.7608024041644645,
+      "after": 47.43060810353248,
+      "improvement": 41.66980569936801
+    },
+    {
+      "before": 8.78569233960367,
+      "after": 46.1063585337827,
+      "improvement": 37.32066619417903
+    },
+    {
+      "before": 9.39747616396894,
+      "after": 47.27059580048319,
+      "improvement": 37.873119636514254
+    },
+    {
+      "before": 9.468844150330469,
+      "after": 47.27060832466425,
+      "improvement": 37.80176417433378
+    },
+    {
+      "before": 3.7520004522477706,
+      "after": 47.27064319026404,
+      "improvement": 43.51864273801627
+    },
+    {
+      "before": 5.460446102656871,
+      "after": 46.76532101350146,
+      "improvement": 41.30487491084459
+    },
+    {
+      "before": 5.746601018810255,
+      "after": 47.160317849063524,
+      "improvement": 41.41371683025327
+    },
+    {
+      "before": 10.975326181043602,
+      "after": 47.160317849063524,
+      "improvement": 36.18499166801992
+    },
+    {
+      "before": 17.257126768882415,
+      "after": 46.97887836786023,
+      "improvement": 29.721751598977818
+    },
+    {
+      "before": 17.406614835250792,
+      "after": 47.0955925345765,
+      "improvement": 29.688977699325704
+    },
+    {
+      "before": 23.081275231229167,
+      "after": 47.09563588299832,
+      "improvement": 24.014360651769156
+    },
+    {
+      "before": 28.302283990876667,
+      "after": 47.09563588299832,
+      "improvement": 18.793351892121656
+    },
+    {
+      "before": 32.09094384070377,
+      "after": 47.08260952785645,
+      "improvement": 14.991665687152675
+    },
+    {
+      "before": 33.643025004214195,
+      "after": 47.086023455298154,
+      "improvement": 13.442998451083959
+    },
+    {
+      "before": 33.274567928582755,
+      "after": 48.71641487160002,
+      "improvement": 15.441846943017268
+    },
+    {
+      "before": 32.03969138344145,
+      "after": 32.087333222350836,
+      "improvement": 0.047641838909385115
+    },
+    {
+      "before": 3.687649097254876,
+      "after": 16.30704868707272,
+      "improvement": 12.619399589817842
+    },
+    {
+      "before": 0.5839587496733741,
+      "after": 16.30707080674522,
+      "improvement": 15.723112057071845
+    },
+    {
+      "before": 2.4114093622041173,
+      "after": 16.307114258803086,
+      "improvement": 13.895704896598968
+    },
+    {
+      "before": 4.961480355651275,
+      "after": 16.307121369532997,
+      "improvement": 11.345641013881721
+    },
+    {
+      "before": 7.219750953779139,
+      "after": 16.307107148073644,
+      "improvement": 9.087356194294506
+    },
+    {
+      "before": 9.192653968931308,
+      "after": 16.307143489563803,
+      "improvement": 7.114489520632494
+    },
+    {
+      "before": 10.893004670742574,
+      "after": 16.30715771100574,
+      "improvement": 5.414153040263166
+    },
+    {
+      "before": 12.3363316035795,
+      "after": 16.30717983121569,
+      "improvement": 3.970848227636191
+    },
+    {
+      "before": 13.540287478161908,
+      "after": 16.30718694192772,
+      "improvement": 2.7668994637658137
+    },
+    {
+      "before": 14.524063581326994,
+      "after": 16.223766499475328,
+      "improvement": 1.6997029181483345
+    },
+    {
+      "before": 15.116284174445674,
+      "after": 16.124343774221508,
+      "improvement": 1.0080595997758337
+    },
+    {
+      "before": 15.429169014665119,
+      "after": 16.124343774221508,
+      "improvement": 0.6951747595563891
+    },
+    {
+      "before": 15.671357878595911,
+      "after": 16.124369705527137,
+      "improvement": 0.45301182693122577
+    },
+    {
+      "before": 15.851936393722315,
+      "after": 16.003773557035412,
+      "improvement": 0.15183716331309682
+    },
+    {
+      "before": 14.221267408601742,
+      "after": 14.459623677243089,
+      "improvement": 0.23835626864134696
+    },
+    {
+      "before": 14.33609274584758,
+      "after": 14.459567734236302,
+      "improvement": 0.12347498838872184
+    },
+    {
+      "before": 15.161642538553496,
+      "after": 15.387724552459943,
+      "improvement": 0.22608201390644744
+    },
+    {
+      "before": 22.329889006679473,
+      "after": 22.540756776427813,
+      "improvement": 0.2108677697483401
+    },
+    {
+      "before": 9.904648901510186,
+      "after": 9.98714784227861,
+      "improvement": 0.08249894076842423
+    },
+    {
+      "before": 9.263429211875106,
+      "after": 46.06411254240138,
+      "improvement": 36.800683330526276
+    },
+    {
+      "before": 17.826834428205967,
+      "after": 46.06411254240138,
+      "improvement": 28.237278114195416
+    },
+    {
+      "before": 24.972483601981004,
+      "after": 46.06411328209581,
+      "improvement": 21.091629680114806
+    },
+    {
+      "before": 27.18623847836749,
+      "after": 46.06411254240138,
+      "improvement": 18.877874064033893
+    },
+    {
+      "before": 23.47981209448356,
+      "after": 46.06411328209581,
+      "improvement": 22.58430118761225
+    },
+    {
+      "before": 21.642757529837173,
+      "after": 46.06411328209581,
+      "improvement": 24.421355752258638
+    },
+    {
+      "before": 20.79346756029551,
+      "after": 46.06411328209581,
+      "improvement": 25.2706457218003
+    },
+    {
+      "before": 16.145269557021194,
+      "after": 46.064114021871106,
+      "improvement": 29.91884446484991
+    },
+    {
+      "before": 13.893131918657682,
+      "after": 46.064114021871106,
+      "improvement": 32.170982103213426
+    },
+    {
+      "before": 13.090126594764993,
+      "after": 46.06417505254349,
+      "improvement": 32.974048457778494
+    },
+    {
+      "before": 28.257846409666847,
+      "after": 46.06417505254349,
+      "improvement": 17.806328642876643
+    },
+    {
+      "before": 32.70656850778599,
+      "after": 45.217336869394316,
+      "improvement": 12.510768361608328
+    },
+    {
+      "before": 2.89267395512457,
+      "after": 44.225951728493236,
+      "improvement": 41.333277773368664
+    },
+    {
+      "before": 3.4086019621467507,
+      "after": 44.22590640670859,
+      "improvement": 40.81730444456184
+    },
+    {
+      "before": 8.784319725425897,
+      "after": 44.22590640670859,
+      "improvement": 35.44158668128269
+    },
+    {
+      "before": 13.601477766923383,
+      "after": 44.22586108496173,
+      "improvement": 30.624383318038348
+    },
+    {
+      "before": 17.652293657969146,
+      "after": 44.22586108496173,
+      "improvement": 26.573567426992582
+    },
+    {
+      "before": 21.76868376056783,
+      "after": 44.22586108496173,
+      "improvement": 22.4571773243939
+    },
+    {
+      "before": 25.768066281413773,
+      "after": 44.13349433624777,
+      "improvement": 18.365428054834
+    },
+    {
+      "before": 1.4679019412337904,
+      "after": 37.90182931676328,
+      "improvement": 36.43392737552949
+    },
+    {
+      "before": 8.104584524113823,
+      "after": 37.90182931676328,
+      "improvement": 29.797244792649458
+    },
+    {
+      "before": 14.46579062218601,
+      "after": 38.14313999618533,
+      "improvement": 23.677349373999323
+    },
+    {
+      "before": 20.554527417385632,
+      "after": 38.14313999618533,
+      "improvement": 17.5886125787997
+    },
+    {
+      "before": 26.369950571174112,
+      "after": 38.12551642218625,
+      "improvement": 11.75556585101214
+    },
+    {
+      "before": 14.999042854467888,
+      "after": 38.26451793034375,
+      "improvement": 23.265475075875862
+    },
+    {
+      "before": 20.838289294503923,
+      "after": 38.238063069318414,
+      "improvement": 17.39977377481449
+    },
+    {
+      "before": 23.68009283942195,
+      "after": 38.365303281172494,
+      "improvement": 14.685210441750545
+    },
+    {
+      "before": 25.561999738276214,
+      "after": 38.34858580210009,
+      "improvement": 12.786586063823876
+    },
+    {
+      "before": 27.943251572265886,
+      "after": 38.34858580210009,
+      "improvement": 10.405334229834203
+    },
+    {
+      "before": 29.77680008568466,
+      "after": 38.50812710221201,
+      "improvement": 8.731327016527349
+    },
+    {
+      "before": 31.12340295717797,
+      "after": 38.437533542232686,
+      "improvement": 7.314130585054716
+    },
+    {
+      "before": 32.688330167338236,
+      "after": 38.437533542232686,
+      "improvement": 5.749203374894449
+    },
+    {
+      "before": 34.21066125227697,
+      "after": 38.58795403350155,
+      "improvement": 4.3772927812245825
+    },
+    {
+      "before": 34.934867785534124,
+      "after": 38.49613307005424,
+      "improvement": 3.5612652845201183
+    },
+    {
+      "before": 33.48014821937356,
+      "after": 54.13019249911502,
+      "improvement": 20.650044279741458
+    },
+    {
+      "before": 14.182408335161256,
+      "after": 37.435507516148164,
+      "improvement": 23.253099180986908
+    },
+    {
+      "before": 13.411238714305702,
+      "after": 37.43544980384492,
+      "improvement": 24.024211089539214
+    },
+    {
+      "before": 9.789081249234327,
+      "after": 37.43544980384492,
+      "improvement": 27.64636855461059
+    },
+    {
+      "before": 8.957317856155601,
+      "after": 37.43542993982736,
+      "improvement": 28.478112083671757
+    },
+    {
+      "before": 9.337757555666329,
+      "after": 37.43542993982736,
+      "improvement": 28.09767238416103
+    },
+    {
+      "before": 10.385796553698576,
+      "after": 37.43537222750403,
+      "improvement": 27.049575673805457
+    },
+    {
+      "before": 11.820409735182308,
+      "after": 37.43537222750403,
+      "improvement": 25.614962492321723
+    },
+    {
+      "before": 13.489688645477091,
+      "after": 37.43535236354482,
+      "improvement": 23.94566371806773
+    },
+    {
+      "before": 15.625011279698116,
+      "after": 37.43537222750403,
+      "improvement": 21.81036094780592
+    },
+    {
+      "before": 27.67343922775993,
+      "after": 37.43537222750403,
+      "improvement": 9.761932999744104
+    },
+    {
+      "before": 29.553002850275657,
+      "after": 37.43537222750403,
+      "improvement": 7.882369377228375
+    },
+    {
+      "before": 31.21827699603155,
+      "after": 37.43533437927005,
+      "improvement": 6.2170573832385045
+    },
+    {
+      "before": 32.76253987893747,
+      "after": 37.43533437927005,
+      "improvement": 4.672794500332586
+    },
+    {
+      "before": 34.152764602639294,
+      "after": 37.23120510581652,
+      "improvement": 3.0784405031772266
+    },
+    {
+      "before": 6.53955037971415,
+      "after": 51.92658466138745,
+      "improvement": 45.3870342816733
+    },
+    {
+      "before": 22.098859221267798,
+      "after": 51.92658466138745,
+      "improvement": 29.827725440119654
+    },
+    {
+      "before": 11.804124333085928,
+      "after": 51.9265576864027,
+      "improvement": 40.12243335331677
+    },
+    {
+      "before": 2.443948394383533,
+      "after": 51.92658506176771,
+      "improvement": 49.48263666738418
+    },
+    {
+      "before": 8.130554753907804,
+      "after": 51.92658506176771,
+      "improvement": 43.79603030785991
+    },
+    {
+      "before": 17.247263425500044,
+      "after": 51.92661243713622,
+      "improvement": 34.67934901163618
+    },
+    {
+      "before": 23.90137902747573,
+      "after": 51.92661243713622,
+      "improvement": 28.02523340966049
+    },
+    {
+      "before": 30.803523219080542,
+      "after": 51.92661243713622,
+      "improvement": 21.12308921805568
+    },
+    {
+      "before": 5.477967970295365,
+      "after": 45.461855045605034,
+      "improvement": 39.98388707530967
+    },
+    {
+      "before": 8.735249627607667,
+      "after": 45.461855045605034,
+      "improvement": 36.72660541799737
+    },
+    {
+      "before": 12.60971358189163,
+      "after": 45.461855045605034,
+      "improvement": 32.85214146371341
+    },
+    {
+      "before": 16.484191428536388,
+      "after": 45.461855045605034,
+      "improvement": 28.977663617068647
+    },
+    {
+      "before": 14.753658769565535,
+      "after": 45.461855045605034,
+      "improvement": 30.7081962760395
+    },
+    {
+      "before": 26.973183209180263,
+      "after": 43.7563108891753,
+      "improvement": 16.78312767999504
+    },
+    {
+      "before": 27.096437363364714,
+      "after": 43.7563108891753,
+      "improvement": 16.65987352581059
+    },
+    {
+      "before": 27.035048297617085,
+      "after": 43.7563108891753,
+      "improvement": 16.72126259155822
+    },
+    {
+      "before": 27.211452104215926,
+      "after": 43.75634050834798,
+      "improvement": 16.544888404132056
+    },
+    {
+      "before": 27.61615046512716,
+      "after": 43.75634050834798,
+      "improvement": 16.140190043220823
+    },
+    {
+      "before": 28.242951725163923,
+      "after": 43.75634050834798,
+      "improvement": 15.513388783184059
+    },
+    {
+      "before": 29.0851053188958,
+      "after": 43.75634050834798,
+      "improvement": 14.671235189452183
+    },
+    {
+      "before": 17.611456773894503,
+      "after": 40.7587528396315,
+      "improvement": 23.147296065736995
+    },
+    {
+      "before": 8.753868287849757,
+      "after": 40.7587528396315,
+      "improvement": 32.00488455178174
+    },
+    {
+      "before": 10.867551017635007,
+      "after": 40.75874938042529,
+      "improvement": 29.891198362790284
+    },
+    {
+      "before": 14.24744232822142,
+      "after": 40.7587528396315,
+      "improvement": 26.51131051141008
+    },
+    {
+      "before": 17.969796671133814,
+      "after": 40.75874938042529,
+      "improvement": 22.78895270929148
+    },
+    {
+      "before": 21.675673259391164,
+      "after": 40.75874938042529,
+      "improvement": 19.08307612103413
+    },
+    {
+      "before": 25.221640754796976,
+      "after": 40.75874938042529,
+      "improvement": 15.537108625628317
+    },
+    {
+      "before": 28.541804615114696,
+      "after": 40.75877984895215,
+      "improvement": 12.216975233837456
+    },
+    {
+      "before": 31.602372597710133,
+      "after": 40.75877984895215,
+      "improvement": 9.156407251242019
+    },
+    {
+      "before": 34.38437557964826,
+      "after": 40.75877984895215,
+      "improvement": 6.374404269303895
+    },
+    {
+      "before": 1.9229352902791423,
+      "after": 70.1144223330812,
+      "improvement": 68.19148704280205
+    },
+    {
+      "before": 10.306822556514106,
+      "after": 70.1144223330812,
+      "improvement": 59.80759977656709
+    },
+    {
+      "before": 18.52508688543465,
+      "after": 70.11448332705011,
+      "improvement": 51.58939644161546
+    },
+    {
+      "before": 26.458122010432135,
+      "after": 70.11448556896187,
+      "improvement": 43.65636355852973
+    },
+    {
+      "before": 33.15775155206651,
+      "after": 70.11454656292891,
+      "improvement": 36.9567950108624
+    },
+    {
+      "before": 4.029623692937537,
+      "after": 63.645515783251874,
+      "improvement": 59.61589209031434
+    },
+    {
+      "before": 6.944143120947153,
+      "after": 63.645546285139645,
+      "improvement": 56.70140316419249
+    },
+    {
+      "before": 14.399781824404208,
+      "after": 46.158222794422656,
+      "improvement": 31.758440970018448
+    },
+    {
+      "before": 20.398253964374064,
+      "after": 46.158222794422656,
+      "improvement": 25.759968830048592
+    },
+    {
+      "before": 26.031849117886345,
+      "after": 46.158222794422656,
+      "improvement": 20.12637367653631
+    },
+    {
+      "before": 30.900174859622002,
+      "after": 46.158212976459076,
+      "improvement": 15.258038116837074
+    },
+    {
+      "before": 12.509145086898062,
+      "after": 34.07560539906243,
+      "improvement": 21.56646031216437
+    },
+    {
+      "before": 18.165231738861316,
+      "after": 34.07557557764643,
+      "improvement": 15.910343838785117
+    },
+    {
+      "before": 18.295261769559765,
+      "after": 34.07558854006867,
+      "improvement": 15.780326770508907
+    },
+    {
+      "before": 15.31673577963417,
+      "after": 34.59921652732096,
+      "improvement": 19.28248074768679
+    },
+    {
+      "before": 13.531562816013716,
+      "after": 34.59926820700392,
+      "improvement": 21.0677053909902
+    },
+    {
+      "before": 12.178460733682021,
+      "after": 34.599251970487664,
+      "improvement": 22.42079123680564
+    },
+    {
+      "before": 12.22142676485334,
+      "after": 34.599251970487664,
+      "improvement": 22.377825205634323
+    },
+    {
+      "before": 13.925020594641559,
+      "after": 34.599251970487664,
+      "improvement": 20.674231375846105
+    },
+    {
+      "before": 14.526136232255126,
+      "after": 34.599251970487664,
+      "improvement": 20.073115738232538
+    },
+    {
+      "before": 17.290941811468343,
+      "after": 34.599251970487664,
+      "improvement": 17.30831015901932
+    },
+    {
+      "before": 18.660699987989133,
+      "after": 34.599251970487664,
+      "improvement": 15.938551982498531
+    },
+    {
+      "before": 21.11302410016774,
+      "after": 34.599303650225345,
+      "improvement": 13.486279550057606
+    },
+    {
+      "before": 24.016685670975203,
+      "after": 34.59928741375265,
+      "improvement": 10.582601742777445
+    },
+    {
+      "before": 25.7437179522918,
+      "after": 34.59928741375265,
+      "improvement": 8.85556946146085
+    },
+    {
+      "before": 30.938538675756714,
+      "after": 34.59928741375265,
+      "improvement": 3.6607487379959345
+    },
+    {
+      "before": 32.200265034280314,
+      "after": 34.47671208677682,
+      "improvement": 2.2764470524965077
+    },
+    {
+      "before": 33.227949062805735,
+      "after": 34.26565142337028,
+      "improvement": 1.0377023605645448
+    },
+    {
+      "before": 33.893563194261745,
+      "after": 34.26563492138602,
+      "improvement": 0.37207172712427194
+    },
+    {
+      "before": 34.14870626596746,
+      "after": 34.26563492138602,
+      "improvement": 0.11692865541855468
+    }
+  ]
+}

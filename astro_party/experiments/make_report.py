@@ -70,6 +70,30 @@ def charts():
     fig.tight_layout()
     fig.savefig(FIG/'training_curves.png',dpi=180)
     plt.close(fig)
+
+
+def cover_chart():
+    fig,axs=plt.subplots(1,2,figsize=(10,3.8))
+    for ax,opponent in zip(axs,['rusher','sniper']):
+        trace=read(ROOT/f'results/cover_model_cover_{opponent}_trace.json')
+        trace=[row for row in trace if row['t']<=10]
+        ax.add_patch(plt.Circle((600,400),100,color='#a0a7ac',alpha=.8))
+        ax.plot([r['enemy_x'] for r in trace],[r['enemy_y'] for r in trace],
+                color='#c34c43',linestyle='--',label='Opponent')
+        ax.plot([r['x'] for r in trace],[r['y'] for r in trace],color='#167d9a',label='Cover PPO')
+        ax.scatter([trace[0]['x']],[trace[0]['y']],s=35,color='#167d9a',marker='o',zorder=5)
+        ax.scatter([trace[0]['enemy_x']],[trace[0]['enemy_y']],s=35,color='#c34c43',marker='s',zorder=5)
+        for row in trace[::max(1,len(trace)//4)]:
+            ax.annotate(f"{row['t']:.0f}s",(row['x'],row['y']),fontsize=8)
+        ax.set(xlim=(0,1200),ylim=(800,0),title=f'Cover PPO vs {opponent}: seed 61000',xlabel='x (px)',ylabel='y (px)')
+        ax.set_aspect('equal')
+        ax.legend(loc='lower right',fontsize=8)
+    fig.tight_layout()
+    fig.savefig(FIG/'cover_paths.png',dpi=180)
+    plt.close(fig)
+
+
+def final_chart():
     public,holdout=read(ROOT/'results/final_public.json'),read(ROOT/'results/final_holdout.json')
     fig,ax=plt.subplots(figsize=(8,3.4))
     xs=np.arange(2)
@@ -90,8 +114,29 @@ def charts():
     plt.close(fig)
 
 
+def fast_charts():
+    data=read(ROOT/'results/fast_wandb_history.json')
+    fields=[('motion/ship_speed_mean','Ship speed during training (px/s)'),
+            ('motion/velocity_reward_mean','Velocity bonus per step'),
+            ('eval/rusher_win_rate','Rusher validation win rate'),
+            ('eval/sniper_win_rate','Sniper validation win rate')]
+    fig,axs=plt.subplots(2,2,figsize=(10,5.7))
+    for ax,(key,title) in zip(axs.flat,fields):
+        for label,color in [('no_velocity','#167d9a'),('velocity','#d06b38')]:
+            rows=[r for r in data[label]['history'] if isinstance(r.get(key),(int,float))
+                  and np.isfinite(r[key]) and isinstance(r.get('global_step'),(int,float))]
+            ax.plot([r['global_step'] for r in rows],[r[key] for r in rows],label=label,color=color)
+        ax.set(title=title,xlabel='Environment steps')
+    axs[0,0].legend(fontsize=8)
+    axs[0,1].ticklabel_format(axis='y',style='sci',scilimits=(0,0))
+    fig.tight_layout()
+    fig.savefig(FIG/'fast_speed_ablation.png',dpi=180)
+    plt.close(fig)
+
+
 def build():
     charts()
+    final_chart()
     public=read(ROOT/'results/final_public.json')
     holdout=read(ROOT/'results/final_holdout.json')
     meta=metadata()
@@ -234,6 +279,103 @@ def build():
         ('p','本次計畫、程式實作、實驗分析與報告由使用者委託 AI 協作完成。使用者應理解方法、核對課程 LLM 使用政策，並按規定揭露協作。未偽造訓練曲線、勝率或雲端上傳狀態。'),
     ])
 
+    comparison_path=ROOT/'results/cover_model_comparison.json'
+    reproduction_path=ROOT/'results/reproduction_check.json'
+    if comparison_path.exists() and reproduction_path.exists():
+        comparison=read(comparison_path)
+        reproduction=read(reproduction_path)
+        if 'cover' in comparison['results'] and 'sniper' in comparison['results']['cover']['opponents']:
+            trial1=read(ROOT/'results/cover_v1.json')
+            trial2=read(ROOT/'results/cover_v2.json')
+            checks=trial2['dodge_checks']
+            check_min=min(row['improvement'] for row in checks)
+            trained_dodge=read(ROOT/'results/cover_trained_dodge_check.json')
+            reference_sniper=comparison['results']['reference']['opponents']['sniper']['metrics']
+            cover_sniper=comparison['results']['cover']['opponents']['sniper']['metrics']
+            teacher_rows=[['教師版本','Rusher','Sniper','性質']]
+            for name,data in [('第一版',trial1),('第二版',trial2)]:
+                teacher_rows.append([name,f"{data['results']['rusher']['win_rate']:.0%}",
+                    f"{data['results']['sniper']['win_rate']:.0%}",'每對手 20 局，非模型成績'])
+            model_rows=[['固定模型','對手','勝率','平手率','首次射擊中位數']]
+            for label in ['reference','cover']:
+                for opponent in ['rusher','sniper']:
+                    m=comparison['results'][label]['opponents'][opponent]['metrics']
+                    model_rows.append(['原防禦' if label=='reference' else '掩體版',opponent.title(),
+                        f"{m['win_rate']:.0%}",f"{m['draw_rate']:.0%}",f"{m['first_shot_median']:.2f} 秒" if m['first_shot_median'] is not None else '無射擊'])
+            page('8. 新實驗：中央行星掩體射擊',[
+                ('p','使用者提出：開局先讓中央行星介於雙方之間，敵北我南、敵東我西；有彈藥時側移探頭射擊，之後退回掩體。這是對既有方法的新增實驗，沒有修改遊戲邏輯、評分器或觀測格式。'),
+                ('h','三段式導航與緊急避彈'),
+                ('p','CoverBot 先慢速接近行星背面的 180 px 安全半徑，補滿彈匣後朝側面約 1.05 rad 的位置探頭；射擊使彈匣不滿後退回背面補彈。暴露時加速，近距離被追上時允許原反擊，避免為了堅持掩體位置而放棄生存。'),
+                ('p','掩體導航先產生偏好動作，之後仍完整執行原有 60 步、15 組動作的避彈搜尋，並在閃避轉向後重新檢查射擊角度。所有決策依原始觀測，不用真實時間、測試種子或未提供的隱藏計時器。'),
+                ('p',f"教師檢查 {len(checks)} 次避彈決策，預測距離均改善，最小約 {check_min:.3f} px。訓練後模型另比較 {trained_dodge['checks']} 次：相較同一模型關閉避彈建議，全部距離改善，中位約 {trained_dodge['median_improvement']:.1f} px。這驗證避彈元件保留，不代表整體戰術一定更強。"),
+                ('h','開局時間的限制'),
+                ('p','原始 84 維觀測沒有回合 elapsed time，因此 3–5 秒只能以位置 / 速度 / 彈藥近似。第二版教師對 Rusher 的首次射擊中位數約 2.75 秒，對 Sniper 約 5.22 秒；近距離緊急反擊可能更早，不宣稱精確計時。'),
+                ('table',teacher_rows),
+                ('h','儲存 checkpoint 後的獨立比較'),
+                ('table',model_rows),
+                ('p',f"兩個模型使用相同種子 {comparison['config']['seed_base']}–{comparison['config']['seed_base']+comparison['config']['episodes']-1}，各對手 {comparison['config']['episodes']} 場；此表是實際 PPO 模型結果。掩體策略作為獨立實驗保存，原通過 baseline 的模型維持為預設。"),
+            ])
+            cover_chart()
+            page('9. 實驗判讀與一鍵重現',[
+                ('image',('cover_paths.png',485,185)),
+                ('p','上圖是掩體 PPO 在單一種子的前 10 秒軌跡，圓形為中央行星，藍色為模型、紅色為對手。單場示例只能解釋行為，不能代替完整勝率比較。'),
+                ('p',f"對 Sniper，開局遮蔽率由 {reference_sniper['opening_cover_fraction']:.0%} 提升至 {cover_sniper['opening_cover_fraction']:.0%}，前 5 秒出艙率由 {reference_sniper['opening_eject_rate']:.0%} 降至 {cover_sniper['opening_eject_rate']:.0%}；但平手率由 {reference_sniper['draw_rate']:.0%} 升至 {cover_sniper['draw_rate']:.0%}，勝率下降。開局更安全沒有轉化為更高勝率；較長的導航與等待可能減少擊殺窗口，這仍是解釋假設。"),
+                ('h','助教可直接從頭訓練'),
+                ('p','訓練主檔預設值已改為最終採用的防禦 recipe：直接 python train_astro_party.py 即完成教師資料、模仿初始化與 40,960 步 PPO，輸出 models/model_astro_party.zip。沒有載入舊 checkpoint，也不需要 PowerShell wrapper 或 experiments 資料夾。'),
+                ('p',f"已在乾淨目錄以平放的 train_astro_party.py / train_astro_party_env.py 加上原版 core / baseline 重跑。重訓 {reproduction['reproduced_steps']:,} 步後，全部 policy tensors 與原 reference {'完全相同' if reproduction['all_policy_tensors_equal'] else '存在差異'}，最大絕對差為 {reproduction['maximum_absolute_difference']:.8g}。ZIP 內嵌程式與 metadata 不同，所以不要求 ZIP 的 SHA-256 相同。"),
+                ('h','試驗與觀看指令'),
+                ('p','試驗訓練：python train_astro_party.py --controller cover。自動另外存成 models/model_astro_party_cover.zip；原模型備份為 models/model_astro_party_defense_reference.zip。'),
+                ('p','觀看：python watch_astro_party.py --model models/model_astro_party_cover.zip --opponent sniper --seed 0。訓練與對戰仍用原版 renderer。'),
+                ('p','W&B 預設 auto：有登入用雲端，無憑證就離線記錄，不要求助教登入。上傳模型 artifact 為額外 --upload-model 選項。訓練檔沒有直接匯入 sys、os、shutil、pathlib 或 subprocess。'),
+                ('p',f"W&B run ID：重現 {reproduction.get('run_id','sueyklu0')}；掩體訓練 cj240jwb；成對評估 em6va3hq。完整可點選網址見 README_TW.md。三者已由 API 確認 finished 與對應曲線存在。"),
+            ])
+
+    fast_path=ROOT/'results/fast_cover_comparison.json'
+    history_path=ROOT/'results/fast_wandb_history.json'
+    if fast_path.exists() and history_path.exists():
+        fast=read(fast_path)
+        complete=('fast_velocity' in fast['results'] and
+            'sniper' in fast['results']['fast_velocity']['opponents'])
+        if complete:
+            initialization=read(ROOT/'results/fast_cover_ablation_initialization.json')
+            labels={'old_cover':'舊掩體','fast_no_velocity':'高速無 bonus','fast_velocity':'高速有 bonus'}
+            table=[['版本','對手','勝率','船速','退避遮蔽','完成率']]
+            for label in labels:
+                for opponent in ['rusher','sniper']:
+                    m=fast['results'][label]['opponents'][opponent]['metrics']
+                    table.append([labels[label],opponent.title(),f"{m['win_rate']:.0%}",
+                        f"{m['ship_speed_mean']:.1f}",f"{m['retreat_cover_fraction']:.0%}",f"{m['pilot_finish_rate']:.0%}"])
+            old=fast['results']['old_cover']['opponents']['sniper']['metrics']
+            new=fast['results']['fast_velocity']['opponents']['sniper']['metrics']
+            no_bonus=fast['results']['fast_no_velocity']['opponents']['sniper']['metrics']
+            page('10. 高速繞行、速度 reward 與追撞',[
+                ('p','新增需求為：敵人順時針接近時也順時針逃走、提高移動速度、缺彈時利用中央行星、有一發就能探頭，敵人出艙後立即追撞。這版保留成獨立 fast-cover controller 與 fast_cover reward profile。'),
+                ('table',[
+                    ['reward / 控制項目','實作'],
+                    ['速度 bonus','0.0015 × min(有效速度 / 260, 1) × 情境權重'],
+                    ['情境權重','敵船仍在：行星遮蔽內 1、暴露時 0.25；自身出艙不加速度 bonus'],
+                    ['追小人時','只獎勵朝小人方向的速度；接近係數從舊有效值 2 提高到 6'],
+                    ['一般對射接近係數','降低為 0.1，避免 reward 一直把船拉出掩體'],
+                    ['防止純速度刷分','整局速度 bonus 上限 2.25 < 最終擊殺 20；每步成本 -0.002 仍大於最大速度 bonus'],
+                    ['退避與探頭','依觀測角速度追蹤同向繞行；有彈且上一發飛行退避窗口結束即可探頭，不等三發全滿']]),
+                ('p','先前看到射線暢通才轉槍，容易高速衝過射擊窗口；新版在接近掩體邊緣時提前瞄準並滑行，不再固定反推煞停。追小人分支在掩體計畫之前，以對方橫向速度加上接近速度追撞，仍保留射擊與緊急避彈。'),
+                ('h','固定模型後的同種子比較'),
+                ('table',table),
+                ('p',f"種子 {fast['seed_base']}–{fast['seed_base']+fast['episodes']-1}，各對手各 {fast['episodes']} 場。船速單位為 px/s，僅計飛船狀態；退避遮蔽指射後 / 冷卻 / 無彈退避期間的比例；完成率為最終勝場 / 對手出艙次數，包含對手重生造成的失敗機會。"),
+            ])
+            fast_charts()
+            page('11. 速度獎勵對照與結果界線',[
+                ('image',('fast_speed_ablation.png',485,240)),
+                ('p',f"有 / 無速度 bonus 使用相同 seed 42、相同高速控制、相同追小人係數 6、相同 40,960 步 PPO。兩者 BC 初始化全部權重相同，最大差 {initialization['maximum_absolute_difference']:.0f}；差異只有速度 bonus 係數 0.0015 / 0。這是單一訓練 seed 的對照，不代表跨 seed 的一般結論。"),
+                ('p',f"對 Sniper，舊掩體平均船速 {old['ship_speed_mean']:.1f}，高速有 bonus 為 {new['ship_speed_mean']:.1f} px/s；無 bonus 為 {no_bonus['ship_speed_mean']:.1f}。新版同向繞行比例 {new['orbit_direction_match']:.0%}，無彈遮蔽比例 {new['empty_ammo_cover_fraction']:.0%}。緊急避彈、瞄準與位置修正仍可改變繞行方向，因此不保證每一幀皆同方向。"),
+                ('p','這次沒有證據顯示速度 bonus 額外提高速度；主要速度提升來自新導航。無彈時遮蔽仍不理想，追小人完成率也未全面提高，不能把「跑更快、撞擊勝場更多」等同更穩定的策略。'),
+                ('p','速度快不等於勝率高；應同時看退避遮蔽、追小人完成率與最終擊殺。保留已通過的正式模型，實驗模型另外儲存，不以少數教師對戰或訓練 reward 宣稱打贏 baseline。'),
+                ('h','重現這版實驗'),
+                ('p','python train_astro_party.py --controller fast-cover。自動採用 fast_cover reward，輸出 models/model_astro_party_fast_cover.zip；預設裸命令仍採原通過版本與 original reward。'),
+                ('p','關閉速度 bonus 對照：加 --velocity-coef 0，並另設 --save-path models/model_astro_party_fast_cover_novelo。'),
+                ('p','W&B run ID：有速度 bonus xdfwkau6；無 bonus 4r0t3h22；評估 x4hdfhjo。雲端有 speed、velocity reward、covered、hunt mode 及 PPO loss / 勝率曲線；完整連結與逐局紀錄位置見 README_TW.md。'),
+            ])
+
     pdfmetrics.registerFont(TTFont('JH','C:/Windows/Fonts/msjh.ttc',subfontIndex=0))
     pdfmetrics.registerFont(TTFont('JHB','C:/Windows/Fonts/msjhbd.ttc',subfontIndex=0))
     body=ParagraphStyle('body',fontName='JH',fontSize=10,leading=16,spaceAfter=8,wordWrap='CJK',textColor=colors.HexColor('#263445'))
@@ -256,7 +398,8 @@ def build():
                 md.extend([f'![{name}](results/figures/{name})',''])
             else:
                 n=len(value[0])
-                widths=([105,44,46,42,105,45] if n==6 else [160,327] if n==2 else [233,110,144])
+                widths=([105,44,46,42,105,45] if n==6 else [160,327] if n==2 else
+                        [90,70,70,257] if n==4 else [95,70,65,75,182] if n==5 else [233,110,144])
                 cells=[[Paragraph(escape(str(x)),small) for x in row] for row in value]
                 table=Table(cells,colWidths=widths,repeatRows=1,hAlign='LEFT')
                 table.setStyle(TableStyle([

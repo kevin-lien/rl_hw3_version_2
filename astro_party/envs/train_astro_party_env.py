@@ -24,7 +24,7 @@ import numpy as np
 import gymnasium as gym
 from gymnasium import spaces
 
-from envs.game import ARENA_W, FPS, AstroPartyGame, decode_action, observation_space
+from envs.game import ARENA_W, FPS, MAX_SPEED, PLANET_POS, AstroPartyGame, decode_action, observation_space
 from envs.render import Renderer
 
 # ----------------------------------------------------------------- reward weights
@@ -36,12 +36,20 @@ PICKUP_REWARD = 0.1
 APPROACH_COEF = 0.5
 STEP_PENALTY = -0.002
 
+# Opt-in fast-cover reward. At full speed the maximum 1500-step velocity
+# bonus is 2.25, smaller than the 20-point final kill, and the per-step net
+# reward stays negative. Existing checkpoints keep the original reward profile.
+VELOCITY_REWARD_COEF = 0.0015
+HUNT_APPROACH_COEF = 6.0  # Previous effective pilot-chase coefficient was 0.5 * 4 = 2.
+FAST_COVER_APPROACH_COEF = 0.1
+
 
 class AstroPartyTrainEnv(gym.Env):
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": FPS}
 
     def __init__(self, opponent_fn=None, render_mode=None, random_spawn=True,
-                 mixed_opponents=False):
+                 mixed_opponents=False, reward_profile='original',
+                 velocity_coef=VELOCITY_REWARD_COEF,hunt_approach_coef=HUNT_APPROACH_COEF):
         # random_spawn=False starts every game from the same fixed spawn points, an
         # easier setting to begin with. Grading always uses random spawns.
         self.game = AstroPartyGame(random_spawn=random_spawn)
@@ -52,6 +60,14 @@ class AstroPartyTrainEnv(gym.Env):
         self.opponent_fn = opponent_fn if opponent_fn is not None else (lambda obs: np.zeros(3, dtype=np.float32))
         self.mixed_opponents = mixed_opponents
         self.opponent_name = 'custom'
+        if reward_profile not in ['original','fast_cover']:
+            raise ValueError('Unknown reward profile: '+reward_profile)
+        if not 0<=velocity_coef<-STEP_PENALTY:
+            raise ValueError('velocity_coef must be nonnegative and smaller than the step penalty')
+        self.reward_profile=reward_profile
+        self.velocity_coef=velocity_coef
+        self.hunt_approach_coef=hunt_approach_coef
+        self.last_reward_parts={}
 
     def reset(self, *, seed=None, options=None):
         super().reset(seed=seed)
@@ -73,7 +89,7 @@ class AstroPartyTrainEnv(gym.Env):
         reward = self.reward(events)
         if self.render_mode == "human":
             self.render()
-        info = {'opponent': self.opponent_name}
+        info = {'opponent': self.opponent_name,**self.last_reward_parts}
         if self.game.done or self.game.truncated:
             info['is_success'] = self.game.ships['ship1'].alive and not self.game.ships['ship2'].alive
             info['draw'] = not self.game.done
@@ -99,14 +115,45 @@ class AstroPartyTrainEnv(gym.Env):
 
         # Shaping: get closer to the enemy.
         dist = self.distance()
+        mine = self.game.ships['ship1'].mode == 'astronaut'
+        theirs = self.game.ships['ship2'].mode == 'astronaut'
+        speed=float(np.hypot(*self.game.ships['ship1'].vel))
+        covered=self.planet_blocks()
+        velocity_reward=0.0
+        approach_coefficient=0.0
         if not self.game.done:
             # Closing helps a ship finish an ejected pilot; a pilot should flee.
-            mine = self.game.ships['ship1'].mode == 'astronaut'
-            theirs = self.game.ships['ship2'].mode == 'astronaut'
-            weight = -1.0 if mine else (4.0 if theirs else 1.0)
-            r += APPROACH_COEF * weight * (self.prev_dist - dist)
+            if self.reward_profile=='original':
+                weight = -1.0 if mine else (4.0 if theirs else 1.0)
+                approach_coefficient=APPROACH_COEF*weight
+            else:
+                approach_coefficient=(-APPROACH_COEF if mine else
+                    self.hunt_approach_coef if theirs else FAST_COVER_APPROACH_COEF)
+                if not mine:
+                    ship,opponent=self.game.ships['ship1'],self.game.ships['ship2']
+                    if theirs:
+                        # Reward speed toward the pilot, not speeding past it.
+                        direction=opponent.pos-ship.pos
+                        distance=max(float(np.hypot(*direction)),1e-9)
+                        effective_speed=max(0.,float(np.dot(ship.vel,direction))/distance)
+                        context=1.0
+                    else:
+                        effective_speed=speed
+                        context=1.0 if covered else .25
+                    velocity_reward=self.velocity_coef*context*min(1.,effective_speed/MAX_SPEED)
+                    r+=velocity_reward
+            r += approach_coefficient * (self.prev_dist - dist)
         self.prev_dist = dist
+        self.last_reward_parts=dict(speed=speed,velocity_reward=velocity_reward,
+            covered=float(covered),hunt_mode=float(theirs and not mine),
+            approach_coefficient=approach_coefficient,is_ship=float(not mine))
         return r
+
+    def planet_blocks(self):
+        me=self.game.ships['ship1'].pos
+        delta=self.game.ships['ship2'].pos-me
+        t=float(np.clip(np.dot(PLANET_POS-me,delta)/max(float(np.dot(delta,delta)),1e-9),0,1))
+        return bool(np.hypot(*(me+t*delta-PLANET_POS))<104)
 
     def distance(self) -> float:
         """Distance between the two ships, in units of half the arena width."""

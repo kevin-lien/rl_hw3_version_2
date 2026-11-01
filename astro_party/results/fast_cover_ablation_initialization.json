@@ -1,0 +1,11 @@
+{
+  "same_bc_initialization": true,
+  "maximum_absolute_difference": 0.0,
+  "train_seed": 42,
+  "velocity_coefficients": [
+    0,
+    0.0015
+  ],
+  "hunt_approach_coefficient": 6,
+  "other_reward_profile": "fast_cover"
+}

@@ -1,0 +1,5 @@
+{
+  "parameter_count": 6238,
+  "num_timesteps": 40960,
+  "reference_policy_max_difference": 0.0
+}

@@ -1,0 +1,29 @@
+reference rusher 20 16 wins
+reference rusher 40 35 wins
+reference rusher 60 55 wins
+reference rusher 80 74 wins
+reference rusher 100 92 wins
+reference rusher {'win_rate': 0.92, 'loss_rate': 0.08, 'draw_rate': 0.0, 'mean_steps': 189.93, 'opening_cover_fraction': 0.3893159263889096, 'opening_eject_rate': 0.14, 'cover_fraction': 0.3771080112903595, 'first_shot_median': 1.2}
+reference sniper 20 17 wins
+reference sniper 40 33 wins
+reference sniper 60 52 wins
+reference sniper 80 69 wins
+reference sniper 100 88 wins
+reference sniper {'win_rate': 0.88, 'loss_rate': 0.11, 'draw_rate': 0.01, 'mean_steps': 405.89, 'opening_cover_fraction': 0.279060760419195, 'opening_eject_rate': 0.14, 'cover_fraction': 0.23203863288579005, 'first_shot_median': 1.22}
+Waiting for cover checkpoint: 40960 steps
+Waiting for cover checkpoint: 40960 steps
+Waiting for cover checkpoint: 40960 steps
+Waiting for cover checkpoint: 40960 steps
+Waiting for cover checkpoint: 40960 steps
+cover rusher 20 19 wins
+cover rusher 40 35 wins
+cover rusher 60 52 wins
+cover rusher 80 69 wins
+cover rusher 100 86 wins
+cover rusher {'win_rate': 0.86, 'loss_rate': 0.14, 'draw_rate': 0.0, 'mean_steps': 298.89, 'opening_cover_fraction': 0.4758973591661145, 'opening_eject_rate': 0.12, 'cover_fraction': 0.4197477360526036, 'first_shot_median': 2.8499999999999996}
+cover sniper 20 14 wins
+cover sniper 40 30 wins
+cover sniper 60 48 wins
+cover sniper 80 61 wins
+cover sniper 100 74 wins
+cover sniper {'win_rate': 0.74, 'loss_rate': 0.15, 'draw_rate': 0.11, 'mean_steps': 724.91, 'opening_cover_fraction': 0.5251137486428002, 'opening_eject_rate': 0.05, 'cover_fraction': 0.3789568503857228, 'first_shot_median': 3.88}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ghme0u0w",
+    "url": "https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3/runs/ghme0u0w",
+    "state": "finished",
+    "rows": 148,
+    "verified_metrics": [
+      "eval/sniper_win_rate",
+      "train/value_loss"
+    ]
+  },
+  {
+    "id": "cj240jwb",
+    "url": "https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3/runs/cj240jwb",
+    "state": "finished",
+    "rows": 148,
+    "verified_metrics": [
+      "eval/sniper_win_rate",
+      "train/value_loss"
+    ]
+  },
+  {
+    "id": "em6va3hq",
+    "url": "https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3/runs/em6va3hq",
+    "state": "finished",
+    "rows": 4,
+    "verified_metrics": [
+      "cover/sniper/win_rate",
+      "reference/sniper/win_rate"
+    ]
+  }
+]

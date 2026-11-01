@@ -1,0 +1,1237 @@
+{
+  "dqn": {
+    "steps": 40000,
+    "seconds": 38.45530462265015,
+    "evaluation": {
+      "rows": [
+        {
+          "seed": 0,
+          "highest": 32,
+          "score": 212.0,
+          "steps": 41
+        },
+        {
+          "seed": 1,
+          "highest": 16,
+          "score": 120.0,
+          "steps": 32
+        },
+        {
+          "seed": 2,
+          "highest": 16,
+          "score": 92.0,
+          "steps": 27
+        },
+        {
+          "seed": 3,
+          "highest": 8,
+          "score": 20.0,
+          "steps": 7
+        },
+        {
+          "seed": 4,
+          "highest": 8,
+          "score": 16.0,
+          "steps": 10
+        },
+        {
+          "seed": 5,
+          "highest": 16,
+          "score": 128.0,
+          "steps": 36
+        },
+        {
+          "seed": 6,
+          "highest": 8,
+          "score": 24.0,
+          "steps": 9
+        },
+        {
+          "seed": 7,
+          "highest": 8,
+          "score": 56.0,
+          "steps": 21
+        },
+        {
+          "seed": 8,
+          "highest": 8,
+          "score": 56.0,
+          "steps": 21
+        },
+        {
+          "seed": 9,
+          "highest": 8,
+          "score": 32.0,
+          "steps": 11
+        },
+        {
+          "seed": 10,
+          "highest": 32,
+          "score": 192.0,
+          "steps": 34
+        },
+        {
+          "seed": 11,
+          "highest": 64,
+          "score": 372.0,
+          "steps": 45
+        },
+        {
+          "seed": 12,
+          "highest": 32,
+          "score": 208.0,
+          "steps": 40
+        },
+        {
+          "seed": 13,
+          "highest": 16,
+          "score": 72.0,
+          "steps": 17
+        },
+        {
+          "seed": 14,
+          "highest": 16,
+          "score": 112.0,
+          "steps": 32
+        },
+        {
+          "seed": 15,
+          "highest": 32,
+          "score": 332.0,
+          "steps": 60
+        },
+        {
+          "seed": 16,
+          "highest": 8,
+          "score": 20.0,
+          "steps": 9
+        },
+        {
+          "seed": 17,
+          "highest": 32,
+          "score": 232.0,
+          "steps": 45
+        },
+        {
+          "seed": 18,
+          "highest": 32,
+          "score": 156.0,
+          "steps": 29
+        },
+        {
+          "seed": 19,
+          "highest": 8,
+          "score": 20.0,
+          "steps": 8
+        },
+        {
+          "seed": 20,
+          "highest": 16,
+          "score": 124.0,
+          "steps": 34
+        },
+        {
+          "seed": 21,
+          "highest": 16,
+          "score": 88.0,
+          "steps": 18
+        },
+        {
+          "seed": 22,
+          "highest": 32,
+          "score": 324.0,
+          "steps": 60
+        },
+        {
+          "seed": 23,
+          "highest": 32,
+          "score": 216.0,
+          "steps": 41
+        },
+        {
+          "seed": 24,
+          "highest": 8,
+          "score": 24.0,
+          "steps": 11
+        },
+        {
+          "seed": 25,
+          "highest": 32,
+          "score": 192.0,
+          "steps": 39
+        },
+        {
+          "seed": 26,
+          "highest": 32,
+          "score": 164.0,
+          "steps": 29
+        },
+        {
+          "seed": 27,
+          "highest": 16,
+          "score": 84.0,
+          "steps": 21
+        },
+        {
+          "seed": 28,
+          "highest": 8,
+          "score": 20.0,
+          "steps": 8
+        },
+        {
+          "seed": 29,
+          "highest": 32,
+          "score": 204.0,
+          "steps": 37
+        },
+        {
+          "seed": 30,
+          "highest": 64,
+          "score": 420.0,
+          "steps": 52
+        },
+        {
+          "seed": 31,
+          "highest": 16,
+          "score": 60.0,
+          "steps": 17
+        },
+        {
+          "seed": 32,
+          "highest": 16,
+          "score": 76.0,
+          "steps": 20
+        },
+        {
+          "seed": 33,
+          "highest": 16,
+          "score": 192.0,
+          "steps": 44
+        },
+        {
+          "seed": 34,
+          "highest": 32,
+          "score": 268.0,
+          "steps": 50
+        },
+        {
+          "seed": 35,
+          "highest": 8,
+          "score": 8.0,
+          "steps": 4
+        },
+        {
+          "seed": 36,
+          "highest": 16,
+          "score": 72.0,
+          "steps": 19
+        },
+        {
+          "seed": 37,
+          "highest": 16,
+          "score": 96.0,
+          "steps": 26
+        },
+        {
+          "seed": 38,
+          "highest": 8,
+          "score": 24.0,
+          "steps": 11
+        },
+        {
+          "seed": 39,
+          "highest": 16,
+          "score": 80.0,
+          "steps": 22
+        },
+        {
+          "seed": 40,
+          "highest": 8,
+          "score": 32.0,
+          "steps": 13
+        },
+        {
+          "seed": 41,
+          "highest": 32,
+          "score": 148.0,
+          "steps": 25
+        },
+        {
+          "seed": 42,
+          "highest": 32,
+          "score": 228.0,
+          "steps": 39
+        },
+        {
+          "seed": 43,
+          "highest": 8,
+          "score": 20.0,
+          "steps": 7
+        },
+        {
+          "seed": 44,
+          "highest": 32,
+          "score": 328.0,
+          "steps": 53
+        },
+        {
+          "seed": 45,
+          "highest": 64,
+          "score": 460.0,
+          "steps": 63
+        },
+        {
+          "seed": 46,
+          "highest": 32,
+          "score": 180.0,
+          "steps": 37
+        },
+        {
+          "seed": 47,
+          "highest": 32,
+          "score": 212.0,
+          "steps": 37
+        },
+        {
+          "seed": 48,
+          "highest": 8,
+          "score": 24.0,
+          "steps": 10
+        },
+        {
+          "seed": 49,
+          "highest": 32,
+          "score": 168.0,
+          "steps": 35
+        },
+        {
+          "seed": 50,
+          "highest": 4,
+          "score": 0.0,
+          "steps": 4
+        },
+        {
+          "seed": 51,
+          "highest": 4,
+          "score": 4.0,
+          "steps": 4
+        },
+        {
+          "seed": 52,
+          "highest": 64,
+          "score": 456.0,
+          "steps": 54
+        },
+        {
+          "seed": 53,
+          "highest": 64,
+          "score": 500.0,
+          "steps": 69
+        },
+        {
+          "seed": 54,
+          "highest": 8,
+          "score": 32.0,
+          "steps": 15
+        },
+        {
+          "seed": 55,
+          "highest": 32,
+          "score": 268.0,
+          "steps": 50
+        },
+        {
+          "seed": 56,
+          "highest": 32,
+          "score": 160.0,
+          "steps": 30
+        },
+        {
+          "seed": 57,
+          "highest": 8,
+          "score": 24.0,
+          "steps": 12
+        },
+        {
+          "seed": 58,
+          "highest": 16,
+          "score": 44.0,
+          "steps": 11
+        },
+        {
+          "seed": 59,
+          "highest": 16,
+          "score": 84.0,
+          "steps": 23
+        },
+        {
+          "seed": 60,
+          "highest": 8,
+          "score": 16.0,
+          "steps": 6
+        },
+        {
+          "seed": 61,
+          "highest": 32,
+          "score": 232.0,
+          "steps": 39
+        },
+        {
+          "seed": 62,
+          "highest": 64,
+          "score": 432.0,
+          "steps": 60
+        },
+        {
+          "seed": 63,
+          "highest": 4,
+          "score": 4.0,
+          "steps": 3
+        },
+        {
+          "seed": 64,
+          "highest": 8,
+          "score": 16.0,
+          "steps": 8
+        },
+        {
+          "seed": 65,
+          "highest": 16,
+          "score": 128.0,
+          "steps": 30
+        },
+        {
+          "seed": 66,
+          "highest": 16,
+          "score": 148.0,
+          "steps": 38
+        },
+        {
+          "seed": 67,
+          "highest": 16,
+          "score": 208.0,
+          "steps": 42
+        },
+        {
+          "seed": 68,
+          "highest": 32,
+          "score": 256.0,
+          "steps": 47
+        },
+        {
+          "seed": 69,
+          "highest": 16,
+          "score": 80.0,
+          "steps": 23
+        },
+        {
+          "seed": 70,
+          "highest": 8,
+          "score": 20.0,
+          "steps": 9
+        },
+        {
+          "seed": 71,
+          "highest": 32,
+          "score": 140.0,
+          "steps": 24
+        },
+        {
+          "seed": 72,
+          "highest": 32,
+          "score": 208.0,
+          "steps": 37
+        },
+        {
+          "seed": 73,
+          "highest": 16,
+          "score": 64.0,
+          "steps": 16
+        },
+        {
+          "seed": 74,
+          "highest": 8,
+          "score": 44.0,
+          "steps": 18
+        },
+        {
+          "seed": 75,
+          "highest": 8,
+          "score": 52.0,
+          "steps": 19
+        },
+        {
+          "seed": 76,
+          "highest": 32,
+          "score": 232.0,
+          "steps": 44
+        },
+        {
+          "seed": 77,
+          "highest": 8,
+          "score": 36.0,
+          "steps": 12
+        },
+        {
+          "seed": 78,
+          "highest": 32,
+          "score": 276.0,
+          "steps": 53
+        },
+        {
+          "seed": 79,
+          "highest": 16,
+          "score": 116.0,
+          "steps": 27
+        },
+        {
+          "seed": 80,
+          "highest": 16,
+          "score": 84.0,
+          "steps": 22
+        },
+        {
+          "seed": 81,
+          "highest": 4,
+          "score": 0.0,
+          "steps": 1
+        },
+        {
+          "seed": 82,
+          "highest": 8,
+          "score": 32.0,
+          "steps": 18
+        },
+        {
+          "seed": 83,
+          "highest": 32,
+          "score": 164.0,
+          "steps": 29
+        },
+        {
+          "seed": 84,
+          "highest": 32,
+          "score": 232.0,
+          "steps": 46
+        },
+        {
+          "seed": 85,
+          "highest": 32,
+          "score": 332.0,
+          "steps": 54
+        },
+        {
+          "seed": 86,
+          "highest": 32,
+          "score": 328.0,
+          "steps": 53
+        },
+        {
+          "seed": 87,
+          "highest": 16,
+          "score": 88.0,
+          "steps": 24
+        },
+        {
+          "seed": 88,
+          "highest": 32,
+          "score": 240.0,
+          "steps": 41
+        },
+        {
+          "seed": 89,
+          "highest": 16,
+          "score": 88.0,
+          "steps": 24
+        },
+        {
+          "seed": 90,
+          "highest": 16,
+          "score": 84.0,
+          "steps": 25
+        },
+        {
+          "seed": 91,
+          "highest": 32,
+          "score": 248.0,
+          "steps": 47
+        },
+        {
+          "seed": 92,
+          "highest": 16,
+          "score": 88.0,
+          "steps": 22
+        },
+        {
+          "seed": 93,
+          "highest": 16,
+          "score": 120.0,
+          "steps": 30
+        },
+        {
+          "seed": 94,
+          "highest": 32,
+          "score": 256.0,
+          "steps": 50
+        },
+        {
+          "seed": 95,
+          "highest": 16,
+          "score": 144.0,
+          "steps": 36
+        },
+        {
+          "seed": 96,
+          "highest": 32,
+          "score": 248.0,
+          "steps": 43
+        },
+        {
+          "seed": 97,
+          "highest": 16,
+          "score": 96.0,
+          "steps": 26
+        },
+        {
+          "seed": 98,
+          "highest": 16,
+          "score": 64.0,
+          "steps": 18
+        },
+        {
+          "seed": 99,
+          "highest": 8,
+          "score": 20.0,
+          "steps": 7
+        }
+      ],
+      "average_score": 142.44,
+      "counts": {
+        "4": 4,
+        "8": 25,
+        "16": 31,
+        "32": 34,
+        "64": 6
+      },
+      "best": 64
+    }
+  },
+  "ddqn": {
+    "steps": 40000,
+    "seconds": 44.41596269607544,
+    "evaluation": {
+      "rows": [
+        {
+          "seed": 0,
+          "highest": 32,
+          "score": 216.0,
+          "steps": 34
+        },
+        {
+          "seed": 1,
+          "highest": 16,
+          "score": 76.0,
+          "steps": 17
+        },
+        {
+          "seed": 2,
+          "highest": 16,
+          "score": 80.0,
+          "steps": 18
+        },
+        {
+          "seed": 3,
+          "highest": 128,
+          "score": 1072.0,
+          "steps": 108
+        },
+        {
+          "seed": 4,
+          "highest": 64,
+          "score": 468.0,
+          "steps": 51
+        },
+        {
+          "seed": 5,
+          "highest": 16,
+          "score": 68.0,
+          "steps": 15
+        },
+        {
+          "seed": 6,
+          "highest": 32,
+          "score": 164.0,
+          "steps": 29
+        },
+        {
+          "seed": 7,
+          "highest": 16,
+          "score": 68.0,
+          "steps": 15
+        },
+        {
+          "seed": 8,
+          "highest": 32,
+          "score": 168.0,
+          "steps": 32
+        },
+        {
+          "seed": 9,
+          "highest": 64,
+          "score": 580.0,
+          "steps": 74
+        },
+        {
+          "seed": 10,
+          "highest": 16,
+          "score": 56.0,
+          "steps": 13
+        },
+        {
+          "seed": 11,
+          "highest": 8,
+          "score": 12.0,
+          "steps": 6
+        },
+        {
+          "seed": 12,
+          "highest": 32,
+          "score": 252.0,
+          "steps": 43
+        },
+        {
+          "seed": 13,
+          "highest": 64,
+          "score": 532.0,
+          "steps": 67
+        },
+        {
+          "seed": 14,
+          "highest": 32,
+          "score": 244.0,
+          "steps": 46
+        },
+        {
+          "seed": 15,
+          "highest": 32,
+          "score": 220.0,
+          "steps": 41
+        },
+        {
+          "seed": 16,
+          "highest": 32,
+          "score": 340.0,
+          "steps": 52
+        },
+        {
+          "seed": 17,
+          "highest": 32,
+          "score": 200.0,
+          "steps": 35
+        },
+        {
+          "seed": 18,
+          "highest": 8,
+          "score": 20.0,
+          "steps": 7
+        },
+        {
+          "seed": 19,
+          "highest": 4,
+          "score": 8.0,
+          "steps": 5
+        },
+        {
+          "seed": 20,
+          "highest": 32,
+          "score": 220.0,
+          "steps": 39
+        },
+        {
+          "seed": 21,
+          "highest": 32,
+          "score": 224.0,
+          "steps": 38
+        },
+        {
+          "seed": 22,
+          "highest": 8,
+          "score": 20.0,
+          "steps": 8
+        },
+        {
+          "seed": 23,
+          "highest": 8,
+          "score": 36.0,
+          "steps": 12
+        },
+        {
+          "seed": 24,
+          "highest": 32,
+          "score": 384.0,
+          "steps": 61
+        },
+        {
+          "seed": 25,
+          "highest": 16,
+          "score": 60.0,
+          "steps": 13
+        },
+        {
+          "seed": 26,
+          "highest": 64,
+          "score": 564.0,
+          "steps": 73
+        },
+        {
+          "seed": 27,
+          "highest": 16,
+          "score": 52.0,
+          "steps": 12
+        },
+        {
+          "seed": 28,
+          "highest": 32,
+          "score": 140.0,
+          "steps": 21
+        },
+        {
+          "seed": 29,
+          "highest": 32,
+          "score": 184.0,
+          "steps": 28
+        },
+        {
+          "seed": 30,
+          "highest": 16,
+          "score": 84.0,
+          "steps": 18
+        },
+        {
+          "seed": 31,
+          "highest": 32,
+          "score": 188.0,
+          "steps": 31
+        },
+        {
+          "seed": 32,
+          "highest": 16,
+          "score": 148.0,
+          "steps": 33
+        },
+        {
+          "seed": 33,
+          "highest": 64,
+          "score": 504.0,
+          "steps": 72
+        },
+        {
+          "seed": 34,
+          "highest": 32,
+          "score": 140.0,
+          "steps": 21
+        },
+        {
+          "seed": 35,
+          "highest": 8,
+          "score": 8.0,
+          "steps": 4
+        },
+        {
+          "seed": 36,
+          "highest": 8,
+          "score": 24.0,
+          "steps": 8
+        },
+        {
+          "seed": 37,
+          "highest": 4,
+          "score": 4.0,
+          "steps": 2
+        },
+        {
+          "seed": 38,
+          "highest": 32,
+          "score": 268.0,
+          "steps": 46
+        },
+        {
+          "seed": 39,
+          "highest": 8,
+          "score": 24.0,
+          "steps": 13
+        },
+        {
+          "seed": 40,
+          "highest": 16,
+          "score": 60.0,
+          "steps": 14
+        },
+        {
+          "seed": 41,
+          "highest": 32,
+          "score": 124.0,
+          "steps": 18
+        },
+        {
+          "seed": 42,
+          "highest": 32,
+          "score": 344.0,
+          "steps": 55
+        },
+        {
+          "seed": 43,
+          "highest": 16,
+          "score": 64.0,
+          "steps": 14
+        },
+        {
+          "seed": 44,
+          "highest": 16,
+          "score": 76.0,
+          "steps": 19
+        },
+        {
+          "seed": 45,
+          "highest": 32,
+          "score": 148.0,
+          "steps": 29
+        },
+        {
+          "seed": 46,
+          "highest": 128,
+          "score": 780.0,
+          "steps": 70
+        },
+        {
+          "seed": 47,
+          "highest": 16,
+          "score": 108.0,
+          "steps": 24
+        },
+        {
+          "seed": 48,
+          "highest": 64,
+          "score": 580.0,
+          "steps": 77
+        },
+        {
+          "seed": 49,
+          "highest": 16,
+          "score": 68.0,
+          "steps": 17
+        },
+        {
+          "seed": 50,
+          "highest": 32,
+          "score": 228.0,
+          "steps": 37
+        },
+        {
+          "seed": 51,
+          "highest": 64,
+          "score": 464.0,
+          "steps": 68
+        },
+        {
+          "seed": 52,
+          "highest": 16,
+          "score": 60.0,
+          "steps": 13
+        },
+        {
+          "seed": 53,
+          "highest": 64,
+          "score": 356.0,
+          "steps": 41
+        },
+        {
+          "seed": 54,
+          "highest": 64,
+          "score": 372.0,
+          "steps": 47
+        },
+        {
+          "seed": 55,
+          "highest": 32,
+          "score": 236.0,
+          "steps": 40
+        },
+        {
+          "seed": 56,
+          "highest": 32,
+          "score": 244.0,
+          "steps": 39
+        },
+        {
+          "seed": 57,
+          "highest": 32,
+          "score": 192.0,
+          "steps": 32
+        },
+        {
+          "seed": 58,
+          "highest": 32,
+          "score": 272.0,
+          "steps": 50
+        },
+        {
+          "seed": 59,
+          "highest": 16,
+          "score": 80.0,
+          "steps": 18
+        },
+        {
+          "seed": 60,
+          "highest": 8,
+          "score": 12.0,
+          "steps": 6
+        },
+        {
+          "seed": 61,
+          "highest": 16,
+          "score": 48.0,
+          "steps": 13
+        },
+        {
+          "seed": 62,
+          "highest": 16,
+          "score": 88.0,
+          "steps": 23
+        },
+        {
+          "seed": 63,
+          "highest": 64,
+          "score": 484.0,
+          "steps": 60
+        },
+        {
+          "seed": 64,
+          "highest": 16,
+          "score": 44.0,
+          "steps": 10
+        },
+        {
+          "seed": 65,
+          "highest": 8,
+          "score": 20.0,
+          "steps": 7
+        },
+        {
+          "seed": 66,
+          "highest": 16,
+          "score": 44.0,
+          "steps": 8
+        },
+        {
+          "seed": 67,
+          "highest": 64,
+          "score": 492.0,
+          "steps": 69
+        },
+        {
+          "seed": 68,
+          "highest": 16,
+          "score": 68.0,
+          "steps": 17
+        },
+        {
+          "seed": 69,
+          "highest": 16,
+          "score": 60.0,
+          "steps": 13
+        },
+        {
+          "seed": 70,
+          "highest": 16,
+          "score": 64.0,
+          "steps": 15
+        },
+        {
+          "seed": 71,
+          "highest": 16,
+          "score": 64.0,
+          "steps": 15
+        },
+        {
+          "seed": 72,
+          "highest": 16,
+          "score": 64.0,
+          "steps": 16
+        },
+        {
+          "seed": 73,
+          "highest": 32,
+          "score": 172.0,
+          "steps": 27
+        },
+        {
+          "seed": 74,
+          "highest": 8,
+          "score": 16.0,
+          "steps": 8
+        },
+        {
+          "seed": 75,
+          "highest": 32,
+          "score": 268.0,
+          "steps": 45
+        },
+        {
+          "seed": 76,
+          "highest": 16,
+          "score": 88.0,
+          "steps": 23
+        },
+        {
+          "seed": 77,
+          "highest": 8,
+          "score": 32.0,
+          "steps": 11
+        },
+        {
+          "seed": 78,
+          "highest": 8,
+          "score": 20.0,
+          "steps": 7
+        },
+        {
+          "seed": 79,
+          "highest": 64,
+          "score": 436.0,
+          "steps": 57
+        },
+        {
+          "seed": 80,
+          "highest": 16,
+          "score": 56.0,
+          "steps": 12
+        },
+        {
+          "seed": 81,
+          "highest": 32,
+          "score": 372.0,
+          "steps": 56
+        },
+        {
+          "seed": 82,
+          "highest": 64,
+          "score": 400.0,
+          "steps": 52
+        },
+        {
+          "seed": 83,
+          "highest": 64,
+          "score": 552.0,
+          "steps": 73
+        },
+        {
+          "seed": 84,
+          "highest": 64,
+          "score": 452.0,
+          "steps": 65
+        },
+        {
+          "seed": 85,
+          "highest": 32,
+          "score": 196.0,
+          "steps": 32
+        },
+        {
+          "seed": 86,
+          "highest": 32,
+          "score": 196.0,
+          "steps": 36
+        },
+        {
+          "seed": 87,
+          "highest": 16,
+          "score": 80.0,
+          "steps": 17
+        },
+        {
+          "seed": 88,
+          "highest": 32,
+          "score": 212.0,
+          "steps": 39
+        },
+        {
+          "seed": 89,
+          "highest": 8,
+          "score": 16.0,
+          "steps": 8
+        },
+        {
+          "seed": 90,
+          "highest": 16,
+          "score": 64.0,
+          "steps": 16
+        },
+        {
+          "seed": 91,
+          "highest": 16,
+          "score": 132.0,
+          "steps": 30
+        },
+        {
+          "seed": 92,
+          "highest": 64,
+          "score": 440.0,
+          "steps": 60
+        },
+        {
+          "seed": 93,
+          "highest": 64,
+          "score": 496.0,
+          "steps": 61
+        },
+        {
+          "seed": 94,
+          "highest": 32,
+          "score": 144.0,
+          "steps": 23
+        },
+        {
+          "seed": 95,
+          "highest": 16,
+          "score": 56.0,
+          "steps": 13
+        },
+        {
+          "seed": 96,
+          "highest": 128,
+          "score": 880.0,
+          "steps": 90
+        },
+        {
+          "seed": 97,
+          "highest": 16,
+          "score": 84.0,
+          "steps": 23
+        },
+        {
+          "seed": 98,
+          "highest": 32,
+          "score": 208.0,
+          "steps": 37
+        },
+        {
+          "seed": 99,
+          "highest": 16,
+          "score": 76.0,
+          "steps": 17
+        }
+      ],
+      "average_score": 206.72,
+      "counts": {
+        "4": 2,
+        "8": 13,
+        "16": 33,
+        "32": 32,
+        "64": 17,
+        "128": 3
+      },
+      "best": 128
+    }
+  }
+}

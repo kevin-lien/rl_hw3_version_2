@@ -14,6 +14,14 @@ import numpy as np
 import torch as th
 from torch.nn import functional as F
 
+# The hand-in puts the training environment beside this script.
+try:
+    from train_2048_env import My2048Env, stack
+except ModuleNotFoundError as error:
+    if error.name != 'train_2048_env':
+        raise
+    from envs.train_2048_env import My2048Env, stack
+
 # ---------------------------------------------------------------- Double DQN
 # DoubleDQN subclasses SB3's DQN and only overrides train(), so a model trained
 # with it is saved as an ordinary DQN checkpoint and eval_2048.py loads it with
@@ -42,6 +50,16 @@ class DoubleDQN(DQN):
         # TODO: Double DQN. Choose the best next action with the *online* network
         # (self.q_net), then evaluate that action with the *target* network
         # (next_q_target above). Return a (batch, 1) tensor.
+        next_q_online = self.q_net(next_observations)
+        online_max, online_idx = next_q_online.max(dim = 1, keepdim=True)
+        next_q = next_q_target.gather(dim = 1, index = online_idx)
+        return next_q
+
+
+
+        
+
+
         raise NotImplementedError("Implement the Double DQN target in DoubleDQN.next_q_values()")
 
     def train(self, gradient_steps: int, batch_size: int = 100) -> None:
@@ -77,28 +95,76 @@ class DoubleDQN(DQN):
         self.logger.record("train/q_mean", np.mean(q_means))
 
 
+def monte_carlo_q(model, board, action, score=0, foul_count=0, seed=800000):
+    """Q1: 64 independent future-spawn rollouts in the training MDP.
+
+    Fix the first action, then follow the unmodified greedy policy. Return
+    pointwise Student-t confidence limits, with 63 degrees of freedom.
+    This helper is optional and is not called by the training loop.
+    """
+    envs = []
+    for rollout in range(64):
+        env = My2048Env()
+        env.reset(seed=seed + rollout)
+        env.Matrix = np.asarray(board, dtype=int).copy()
+        env.score = score
+        env.foul_count = foul_count
+        envs.append(env)
+    returns = np.zeros(64)
+    active = list(range(64))
+    discount = 1.0
+    for step in range(2000):
+        if not active:
+            break
+        if step == 0:
+            actions = np.full(len(active), action)
+        else:
+            observations = np.stack([stack(envs[i].Matrix) for i in active])
+            actions, _ = model.predict(observations, deterministic=True)
+        remaining = []
+        for index, chosen in zip(active, actions):
+            _, reward, done, truncated, _ = envs[index].step(int(chosen))
+            returns[index] += discount * reward
+            if not (done or truncated):
+                remaining.append(index)
+        active = remaining
+        discount *= model.gamma
+    for env in envs:
+        env.close()
+    mean = float(returns.mean())
+    half = float(1.998340543 * returns.std(ddof=1) / 8)
+    return dict(mean=mean, ci95=(mean-half, mean+half), returns=returns.tolist(),
+                capped_rollouts=len(active), gamma=model.gamma)
+
+
 warnings.filterwarnings("ignore")
 register(
     id='2048-v0',
-    entry_point='envs:My2048Env'
+    entry_point=My2048Env
 )
 
 # Set hyper params (configurations) for training
 my_config = {
-    "run_id": "example",
-    # 2048 must be trained with DQN. DoubleDQN (above) with double_q=False is
+    "run_id": "ddqn_weight1000",
+    # 2048 must be traine with DQN. DoubleDQN (above) with double_q=False is
     # exactly SB3's DQN plus Q-value logging; set double_q=True once you've
     # implemented the Double DQN target there, and compare the two.
     "algorithm": DoubleDQN,
     "algorithm_kwargs": {
-        "double_q": False,
+        "double_q": True,
         "buffer_size": 100_000,  # SB3's default (1M) needs ~4 GB of RAM for 2048's observations
+        "batch_size": 256,
+        "policy_kwargs": {"net_arch": [256, 256]},
+
+        "exploration_fraction": 0.1,
+        "exploration_initial_eps": 1,
+        "exploration_final_eps": 0.05,
     },
     "policy_network": "MlpPolicy",
-    "save_path": "models/model_2048",  # saved as models/model_2048.zip, the file you submit
+    "save_path": "models/model_2048.zip",  # Same recipe as ddqn_weight1000; standard hand-in name.
     "num_train_envs": 4,
-    "epoch_num": 5,
-    "timesteps_per_epoch": 100,
+    "epoch_num": 20,
+    "timesteps_per_epoch": 20000,
     "eval_episode_num": 10,
 }
 
@@ -155,6 +221,15 @@ def train(eval_env, model, config):
         ### Evaluation
         eval_start = time.time()
         avg_score, avg_highest = eval(eval_env, model, config["eval_episode_num"])
+
+        ###### add
+        model.logger.record("eval/avg_score", avg_score)
+        model.logger.record("eval/avg_highest", avg_highest)
+        model.logger.dump(step=model.num_timesteps)
+
+
+        ######
+
         eval_duration = time.time() - eval_start
 
         # Print training progress and speed
@@ -199,12 +274,12 @@ def train(eval_env, model, config):
 if __name__ == "__main__":
 
     # Create wandb session (Uncomment to enable wandb logging)
-    # run = wandb.init(
-    #     project="assignment_3",
-    #     config=my_config,
-    #     sync_tensorboard=True,  # auto-upload sb3's tensorboard metrics
-    #     id=my_config["run_id"]
-    # )
+    run = wandb.init(
+        project="assignment_3",
+        config=my_config,
+        sync_tensorboard=True,  # auto-upload sb3's tensorboard metrics
+        id=my_config["run_id"]
+    )
 
     train_env = SubprocVecEnv([make_env for _ in range(my_config["num_train_envs"])])
 
@@ -220,3 +295,5 @@ if __name__ == "__main__":
         **my_config["algorithm_kwargs"],
     )
     train(eval_env, model, my_config)
+
+    run.finish()
