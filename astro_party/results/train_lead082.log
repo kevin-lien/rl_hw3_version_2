@@ -1,0 +1,18 @@
+W&B run: None
+Demonstrations: 5000/10000
+Demonstrations: 10000/10000
+BC epoch 10: mse=0.030773
+BC epoch 20: mse=0.001721
+BC epoch 30: mse=0.000164
+BC epoch 40: mse=0.000025
+BC epoch 50: mse=0.000004
+BC epoch 60: mse=0.000001
+BC epoch 70: mse=0.000000
+BC epoch 80: mse=0.000000
+BC epoch 90: mse=0.000000
+BC epoch 100: mse=0.000000
+BC epoch 110: mse=0.000000
+BC epoch 120: mse=0.000000
+BC validation: {"eval/rusher_win_rate": 0.92, "eval/rusher_loss_rate": 0.08, "eval/rusher_draw_rate": 0.0, "eval/rusher_length": 193.64, "eval/sniper_win_rate": 0.89, "eval/sniper_loss_rate": 0.1, "eval/sniper_draw_rate": 0.01, "eval/sniper_length": 375.65, "eval/balanced_score": 1.0222222222222221}
+{"eval/rusher_win_rate": 0.92, "eval/rusher_loss_rate": 0.08, "eval/rusher_draw_rate": 0.0, "eval/rusher_length": 193.64, "eval/sniper_win_rate": 0.9, "eval/sniper_loss_rate": 0.09, "eval/sniper_draw_rate": 0.01, "eval/sniper_length": 374.05, "eval/balanced_score": 1.0222222222222221, "global_step": 8192, "epoch": 1, "epoch_seconds": 121.99335299996892}
+{"eval/rusher_win_rate": 0.93, "eval/rusher_loss_rate": 0.07, "eval/rusher_draw_rate": 0.0, "eval/rusher_length": 193.85, "eval/sniper_win_rate": 0.87, "eval/sniper_loss_rate": 0.13, "eval/sniper_draw_rate": 0.0, "eval/sniper_length": 380.52, "eval/balanced_score": 1.0235294117647058, "global_step": 16384, "epoch": 2, "epoch_seconds": 129.83836220001103}

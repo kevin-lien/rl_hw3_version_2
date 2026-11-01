@@ -1,0 +1,6 @@
+{'collisions': False, 'blocking': True, 'horizon': 60, 'rusher': 0.925}
+{'collisions': False, 'blocking': True, 'horizon': 60, 'rusher': 0.925, 'sniper': 0.925}
+{'collisions': True, 'blocking': False, 'horizon': 60, 'rusher': 0.95}
+{'collisions': True, 'blocking': False, 'horizon': 60, 'rusher': 0.95, 'sniper': 0.925}
+{'collisions': True, 'blocking': True, 'horizon': 60, 'rusher': 0.95}
+{'collisions': True, 'blocking': True, 'horizon': 60, 'rusher': 0.95, 'sniper': 0.925}

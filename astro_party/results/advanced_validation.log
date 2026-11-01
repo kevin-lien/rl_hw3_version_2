@@ -1,0 +1,4 @@
+{'near': 380, 'far': 620, 'horizon': 30, 'rusher': 0.95}
+{'near': 380, 'far': 620, 'horizon': 30, 'rusher': 0.95, 'sniper': 0.84}
+{'near': 500, 'far': 700, 'horizon': 30, 'rusher': 0.94}
+{'near': 500, 'far': 700, 'horizon': 30, 'rusher': 0.94, 'sniper': 0.83}

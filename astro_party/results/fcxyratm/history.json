@@ -1,0 +1,44 @@
+[
+  {
+    "eval/rusher_win_rate": 0.8333333333333334,
+    "eval/rusher_loss_rate": 0.16666666666666666,
+    "eval/rusher_draw_rate": 0.0,
+    "eval/rusher_length": 306.9166666666667,
+    "eval/sniper_win_rate": 0.3333333333333333,
+    "eval/sniper_loss_rate": 0.6666666666666666,
+    "eval/sniper_draw_rate": 0.0,
+    "eval/sniper_length": 607.9166666666666,
+    "eval/balanced_score": 0.39215686274509803,
+    "global_step": 8192,
+    "epoch": 1,
+    "epoch_seconds": 28.575686600001063
+  },
+  {
+    "eval/rusher_win_rate": 0.8333333333333334,
+    "eval/rusher_loss_rate": 0.16666666666666666,
+    "eval/rusher_draw_rate": 0.0,
+    "eval/rusher_length": 295.8333333333333,
+    "eval/sniper_win_rate": 0.5833333333333334,
+    "eval/sniper_loss_rate": 0.4166666666666667,
+    "eval/sniper_draw_rate": 0.0,
+    "eval/sniper_length": 554.0833333333334,
+    "eval/balanced_score": 0.6862745098039217,
+    "global_step": 16384,
+    "epoch": 2,
+    "epoch_seconds": 26.478837899980135
+  },
+  {
+    "eval/rusher_win_rate": 0.75,
+    "eval/rusher_loss_rate": 0.25,
+    "eval/rusher_draw_rate": 0.0,
+    "eval/rusher_length": 290.0833333333333,
+    "eval/sniper_win_rate": 0.5833333333333334,
+    "eval/sniper_loss_rate": 0.4166666666666667,
+    "eval/sniper_draw_rate": 0.0,
+    "eval/sniper_length": 422.5833333333333,
+    "eval/balanced_score": 0.6862745098039217,
+    "global_step": 24576,
+    "epoch": 3,
+    "epoch_seconds": 24.443615500000305
+  }
+]

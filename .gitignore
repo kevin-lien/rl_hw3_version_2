@@ -1,0 +1,7 @@
+.venv/
+.venv311/
+__pycache__/
+*.pyc
+astro_party/wandb/
+astro_party/runs/
+astro_party/data/

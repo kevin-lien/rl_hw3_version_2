@@ -1,0 +1,17 @@
+﻿[
+    {
+        "lead":  "0.82",
+        "pid":  4604,
+        "log":  "C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\results\\lead_082.log"
+    },
+    {
+        "lead":  "0.85",
+        "pid":  28492,
+        "log":  "C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\results\\lead_085.log"
+    },
+    {
+        "lead":  "0.88",
+        "pid":  35588,
+        "log":  "C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\results\\lead_088.log"
+    }
+]

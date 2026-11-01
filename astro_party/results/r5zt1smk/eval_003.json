@@ -1,0 +1,170 @@
+[
+  {
+    "opponent": "rusher",
+    "seed": 10000,
+    "win": false,
+    "loss": true,
+    "steps": 116
+  },
+  {
+    "opponent": "rusher",
+    "seed": 10001,
+    "win": false,
+    "loss": true,
+    "steps": 102
+  },
+  {
+    "opponent": "rusher",
+    "seed": 10002,
+    "win": false,
+    "loss": true,
+    "steps": 100
+  },
+  {
+    "opponent": "rusher",
+    "seed": 10003,
+    "win": false,
+    "loss": true,
+    "steps": 127
+  },
+  {
+    "opponent": "rusher",
+    "seed": 10004,
+    "win": false,
+    "loss": true,
+    "steps": 166
+  },
+  {
+    "opponent": "rusher",
+    "seed": 10005,
+    "win": false,
+    "loss": true,
+    "steps": 93
+  },
+  {
+    "opponent": "rusher",
+    "seed": 10006,
+    "win": false,
+    "loss": true,
+    "steps": 352
+  },
+  {
+    "opponent": "rusher",
+    "seed": 10007,
+    "win": false,
+    "loss": true,
+    "steps": 230
+  },
+  {
+    "opponent": "rusher",
+    "seed": 10008,
+    "win": false,
+    "loss": true,
+    "steps": 817
+  },
+  {
+    "opponent": "rusher",
+    "seed": 10009,
+    "win": false,
+    "loss": true,
+    "steps": 208
+  },
+  {
+    "opponent": "rusher",
+    "seed": 10010,
+    "win": false,
+    "loss": true,
+    "steps": 182
+  },
+  {
+    "opponent": "rusher",
+    "seed": 10011,
+    "win": true,
+    "loss": false,
+    "steps": 332
+  },
+  {
+    "opponent": "sniper",
+    "seed": 10000,
+    "win": false,
+    "loss": true,
+    "steps": 116
+  },
+  {
+    "opponent": "sniper",
+    "seed": 10001,
+    "win": false,
+    "loss": true,
+    "steps": 106
+  },
+  {
+    "opponent": "sniper",
+    "seed": 10002,
+    "win": true,
+    "loss": false,
+    "steps": 352
+  },
+  {
+    "opponent": "sniper",
+    "seed": 10003,
+    "win": false,
+    "loss": true,
+    "steps": 105
+  },
+  {
+    "opponent": "sniper",
+    "seed": 10004,
+    "win": false,
+    "loss": true,
+    "steps": 170
+  },
+  {
+    "opponent": "sniper",
+    "seed": 10005,
+    "win": false,
+    "loss": true,
+    "steps": 94
+  },
+  {
+    "opponent": "sniper",
+    "seed": 10006,
+    "win": false,
+    "loss": true,
+    "steps": 528
+  },
+  {
+    "opponent": "sniper",
+    "seed": 10007,
+    "win": false,
+    "loss": true,
+    "steps": 371
+  },
+  {
+    "opponent": "sniper",
+    "seed": 10008,
+    "win": false,
+    "loss": true,
+    "steps": 502
+  },
+  {
+    "opponent": "sniper",
+    "seed": 10009,
+    "win": false,
+    "loss": true,
+    "steps": 461
+  },
+  {
+    "opponent": "sniper",
+    "seed": 10010,
+    "win": false,
+    "loss": true,
+    "steps": 197
+  },
+  {
+    "opponent": "sniper",
+    "seed": 10011,
+    "win": false,
+    "loss": true,
+    "steps": 278
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "collisions": false,
+    "blocking": true,
+    "horizon": 40,
+    "rusher": 0.9,
+    "sniper": 0.7666666666666667
+  },
+  {
+    "collisions": true,
+    "blocking": false,
+    "horizon": 40,
+    "rusher": 0.9666666666666667,
+    "sniper": 0.8333333333333334
+  }
+]

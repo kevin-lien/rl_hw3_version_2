@@ -1,0 +1,74 @@
+[
+  {
+    "horizon": 60,
+    "near": 380,
+    "far": 620,
+    "lead": 0.7,
+    "rusher": 0.975,
+    "sniper": 0.8
+  },
+  {
+    "horizon": 60,
+    "near": 380,
+    "far": 620,
+    "lead": 0.9,
+    "rusher": 0.925,
+    "sniper": 0.775
+  },
+  {
+    "horizon": 60,
+    "near": 380,
+    "far": 620,
+    "lead": 1.0,
+    "rusher": 0.925,
+    "sniper": 0.7
+  },
+  {
+    "horizon": 60,
+    "near": 650,
+    "far": 850,
+    "lead": 0.7,
+    "rusher": 0.95,
+    "sniper": 0.7
+  },
+  {
+    "horizon": 60,
+    "near": 650,
+    "far": 850,
+    "lead": 0.9,
+    "rusher": 0.925,
+    "sniper": 0.825
+  },
+  {
+    "horizon": 60,
+    "near": 650,
+    "far": 850,
+    "lead": 1.0,
+    "rusher": 0.95,
+    "sniper": 0.7
+  },
+  {
+    "horizon": 60,
+    "near": 500,
+    "far": 700,
+    "lead": 0.7,
+    "rusher": 0.95,
+    "sniper": 0.7
+  },
+  {
+    "horizon": 60,
+    "near": 500,
+    "far": 700,
+    "lead": 0.9,
+    "rusher": 0.9,
+    "sniper": 0.875
+  },
+  {
+    "horizon": 60,
+    "near": 500,
+    "far": 700,
+    "lead": 1.0,
+    "rusher": 0.825,
+    "sniper": 0.725
+  }
+]

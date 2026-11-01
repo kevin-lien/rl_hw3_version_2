@@ -1,0 +1,15 @@
+{
+  "run_id": "6o6gk5el",
+  "selected_step": 40960,
+  "validation_file": "validation_final.json",
+  "epochs": 5,
+  "eval_episodes": 50,
+  "validation_episodes": 100,
+  "anchor_retention": 1.0,
+  "controller": "defense",
+  "learning_rate": 1e-06,
+  "bc_steps": 10000,
+  "bc_epochs": 120,
+  "selection": "public development feedback; export last checkpoint",
+  "holdout_seed": 50000
+}

@@ -1,0 +1,23 @@
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in wandb\offline-run-20261101_135448-xaaecw7c
+wandb: View this run in the terminal with `wandb leet`
+wandb: WARNING URL not available in offline run
+wandb: WARNING URL not available in offline run
+wandb: 
+wandb: Run summary:
+wandb:    bc/collected_steps 5000
+wandb:              bc/epoch 150
+wandb:                bc/mse 0.0
+wandb:   best_balanced_score 1.03333
+wandb:      best_global_step 8192
+wandb:                 epoch 1
+wandb:         epoch_seconds 142.93515
+wandb:   eval/balanced_score 1.03333
+wandb: eval/rusher_draw_rate 0
+wandb:    eval/rusher_length 196.3
+wandb:                   +24 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync wandb\offline-run-20261101_135448-xaaecw7c
+wandb: Find logs at: wandb\offline-run-20261101_135448-xaaecw7c\logs

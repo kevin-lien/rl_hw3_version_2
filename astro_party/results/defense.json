@@ -1,0 +1,56 @@
+[
+  {
+    "horizon": 25,
+    "margin": 28,
+    "rusher": 0.95,
+    "sniper": 0.9
+  },
+  {
+    "horizon": 25,
+    "margin": 45,
+    "rusher": 0.9,
+    "sniper": 0.9
+  },
+  {
+    "horizon": 25,
+    "margin": 65,
+    "rusher": 0.95,
+    "sniper": 0.9
+  },
+  {
+    "horizon": 40,
+    "margin": 28,
+    "rusher": 0.85,
+    "sniper": 0.85
+  },
+  {
+    "horizon": 40,
+    "margin": 45,
+    "rusher": 0.9,
+    "sniper": 0.9
+  },
+  {
+    "horizon": 40,
+    "margin": 65,
+    "rusher": 0.85,
+    "sniper": 0.85
+  },
+  {
+    "horizon": 60,
+    "margin": 28,
+    "rusher": 0.95,
+    "sniper": 0.9
+  },
+  {
+    "horizon": 60,
+    "margin": 45,
+    "rusher": 0.9,
+    "sniper": 0.75
+  },
+  {
+    "horizon": 60,
+    "margin": 65,
+    "rusher": 0.9,
+    "sniper": 0.9
+  }
+]

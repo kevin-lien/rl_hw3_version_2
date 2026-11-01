@@ -1,0 +1,5 @@
+﻿{
+    "pid":  6600,
+    "checkpoint":  "models/collision_candidate.zip",
+    "log":  "results/train_collision.log"
+}

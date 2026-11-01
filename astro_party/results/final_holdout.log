@@ -1,0 +1,12 @@
+Loaded models/model_astro_party.zip with PPO
+rusher 20 17
+rusher 40 35
+rusher 60 55
+rusher 80 73
+rusher 100 92
+sniper 20 16
+sniper 40 33
+sniper 60 52
+sniper 80 68
+sniper 100 87
+{"rusher": 0.92, "sniper": 0.87}

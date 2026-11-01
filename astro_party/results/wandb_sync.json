@@ -1,0 +1,16 @@
+{
+  "verified": true,
+  "entity": "kevinboyulien-national-taiwan-university",
+  "project": "astro-party-hw3",
+  "run_id": "6o6gk5el",
+  "run_url": "https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3/runs/6o6gk5el",
+  "project_url": "https://forge.coreweave.com/wandb/kevinboyulien-national-taiwan-university/astro-party-hw3",
+  "remote_state": "finished",
+  "remote_history_rows": 148,
+  "verified_metrics": [
+    "eval/rusher_win_rate",
+    "eval/sniper_win_rate",
+    "rollout/ep_rew_mean",
+    "train/value_loss"
+  ]
+}

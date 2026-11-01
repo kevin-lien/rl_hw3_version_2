@@ -1,0 +1,12 @@
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in wandb\offline-run-20261101_135147-y7wdx2g1
+wandb: View this run in the terminal with `wandb leet`
+wandb: 
+wandb: Run summary:
+wandb: rusher_win_rate 0.93
+wandb: sniper_win_rate 0.78
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync wandb\offline-run-20261101_135147-y7wdx2g1
+wandb: Find logs at: wandb\offline-run-20261101_135147-y7wdx2g1\logs

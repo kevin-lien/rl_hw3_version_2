@@ -1,0 +1,30 @@
+{
+  "id": "6o6gk5el",
+  "url": null,
+  "config": {
+    "name": "defense-ppo-h60",
+    "project": "astro-party-hw3",
+    "entity": null,
+    "wandb_mode": "offline",
+    "features": "tactical",
+    "epochs": 5,
+    "steps_per_epoch": 8192,
+    "eval_episodes": 50,
+    "eval_seed": 10000,
+    "seed": 42,
+    "envs": 4,
+    "bc_steps": 10000,
+    "bc_epochs": 120,
+    "learning_rate": 1e-06,
+    "near": 500.0,
+    "far": 700.0,
+    "no_dodge": false,
+    "controller": "defense",
+    "lead": 0.8,
+    "horizon": 60,
+    "margin": 28,
+    "log_std": -3.5,
+    "resume": null,
+    "save_path": "models/defense_h60"
+  }
+}

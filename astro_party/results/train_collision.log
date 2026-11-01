@@ -1,0 +1,19 @@
+W&B run: None
+Demonstrations: 5000/5000
+BC epoch 10: mse=0.124425
+BC epoch 20: mse=0.031617
+BC epoch 30: mse=0.007677
+BC epoch 40: mse=0.002021
+BC epoch 50: mse=0.000607
+BC epoch 60: mse=0.000209
+BC epoch 70: mse=0.000077
+BC epoch 80: mse=0.000028
+BC epoch 90: mse=0.000009
+BC epoch 100: mse=0.000003
+BC epoch 110: mse=0.000001
+BC epoch 120: mse=0.000000
+BC epoch 130: mse=0.000000
+BC epoch 140: mse=0.000000
+BC epoch 150: mse=0.000000
+BC validation: {"eval/rusher_win_rate": 0.94, "eval/rusher_loss_rate": 0.06, "eval/rusher_draw_rate": 0.0, "eval/rusher_length": 197.85, "eval/sniper_win_rate": 0.92, "eval/sniper_loss_rate": 0.08, "eval/sniper_draw_rate": 0.0, "eval/sniper_length": 374.43, "eval/balanced_score": 1.0444444444444443}
+{"eval/rusher_win_rate": 0.93, "eval/rusher_loss_rate": 0.07, "eval/rusher_draw_rate": 0.0, "eval/rusher_length": 196.3, "eval/sniper_win_rate": 0.92, "eval/sniper_loss_rate": 0.08, "eval/sniper_draw_rate": 0.0, "eval/sniper_length": 368.86, "eval/balanced_score": 1.0333333333333334, "global_step": 8192, "epoch": 1, "epoch_seconds": 142.9351465999498}

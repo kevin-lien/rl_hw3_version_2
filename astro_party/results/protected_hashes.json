@@ -1,0 +1,22 @@
+﻿[
+    {
+        "Path":  "C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\envs\\game.py",
+        "Hash":  "E9D7793FBD7EED220BB3F778235B12AA35193BD65DEE72A59CA7C57DB8487BE3"
+    },
+    {
+        "Path":  "C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\envs\\eval_astro_party_env.py",
+        "Hash":  "D5D647CA126F4E32AD1E24FB1A3237CA08CA9CDABB228ADBCCF8B4C9D712EFCD"
+    },
+    {
+        "Path":  "C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\eval_astro_party.py",
+        "Hash":  "FC604F8E4F0DA8A1AFCD9B438087CA7B1359F28D86A5CF6F8387674ED2CFAA50"
+    },
+    {
+        "Path":  "C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\models\\sniper_bot.py",
+        "Hash":  "A590D6BA94813FE91E8A5749205897F34D408560DBE4817EC8012BF5B961744F"
+    },
+    {
+        "Path":  "C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\models\\rusher_bot.py",
+        "Hash":  "887176A8720E1D74A45E08E5CCFE25FBA622B0E3D80E77F942D6ECA5ED31198E"
+    }
+]

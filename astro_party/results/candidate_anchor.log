@@ -1,0 +1,12 @@
+Loaded models/anchored_h60.zip with PPO
+rusher 20 19
+rusher 40 37
+rusher 60 57
+rusher 80 75
+rusher 100 93
+sniper 20 16
+sniper 40 33
+sniper 60 51
+sniper 80 66
+sniper 100 78
+{"rusher": 0.93, "sniper": 0.78}

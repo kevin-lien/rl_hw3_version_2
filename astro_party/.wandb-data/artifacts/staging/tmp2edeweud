@@ -1,0 +1,1028 @@
+{
+  "model": "models/model_astro_party.zip",
+  "sha256": "7822ea5d14e41cfab86099de0766c5e51906d66e5ebfb846ce9fb4976bb90fba",
+  "seed_base": 20000,
+  "episodes": 100,
+  "results": {
+    "rusher": {
+      "wins": 97,
+      "win_rate": 0.97,
+      "wilson95": [
+        0.9154806357094724,
+        0.9897454759759611
+      ],
+      "rows": [
+        {
+          "seed": 20000,
+          "win": true,
+          "steps": 102
+        },
+        {
+          "seed": 20001,
+          "win": true,
+          "steps": 142
+        },
+        {
+          "seed": 20002,
+          "win": true,
+          "steps": 140
+        },
+        {
+          "seed": 20003,
+          "win": true,
+          "steps": 89
+        },
+        {
+          "seed": 20004,
+          "win": true,
+          "steps": 142
+        },
+        {
+          "seed": 20005,
+          "win": true,
+          "steps": 343
+        },
+        {
+          "seed": 20006,
+          "win": true,
+          "steps": 343
+        },
+        {
+          "seed": 20007,
+          "win": true,
+          "steps": 144
+        },
+        {
+          "seed": 20008,
+          "win": true,
+          "steps": 583
+        },
+        {
+          "seed": 20009,
+          "win": true,
+          "steps": 125
+        },
+        {
+          "seed": 20010,
+          "win": true,
+          "steps": 130
+        },
+        {
+          "seed": 20011,
+          "win": true,
+          "steps": 637
+        },
+        {
+          "seed": 20012,
+          "win": true,
+          "steps": 117
+        },
+        {
+          "seed": 20013,
+          "win": true,
+          "steps": 380
+        },
+        {
+          "seed": 20014,
+          "win": true,
+          "steps": 96
+        },
+        {
+          "seed": 20015,
+          "win": true,
+          "steps": 91
+        },
+        {
+          "seed": 20016,
+          "win": true,
+          "steps": 249
+        },
+        {
+          "seed": 20017,
+          "win": true,
+          "steps": 177
+        },
+        {
+          "seed": 20018,
+          "win": true,
+          "steps": 81
+        },
+        {
+          "seed": 20019,
+          "win": true,
+          "steps": 107
+        },
+        {
+          "seed": 20020,
+          "win": true,
+          "steps": 291
+        },
+        {
+          "seed": 20021,
+          "win": false,
+          "steps": 253
+        },
+        {
+          "seed": 20022,
+          "win": true,
+          "steps": 84
+        },
+        {
+          "seed": 20023,
+          "win": true,
+          "steps": 159
+        },
+        {
+          "seed": 20024,
+          "win": true,
+          "steps": 118
+        },
+        {
+          "seed": 20025,
+          "win": true,
+          "steps": 172
+        },
+        {
+          "seed": 20026,
+          "win": true,
+          "steps": 104
+        },
+        {
+          "seed": 20027,
+          "win": true,
+          "steps": 344
+        },
+        {
+          "seed": 20028,
+          "win": true,
+          "steps": 98
+        },
+        {
+          "seed": 20029,
+          "win": true,
+          "steps": 101
+        },
+        {
+          "seed": 20030,
+          "win": true,
+          "steps": 106
+        },
+        {
+          "seed": 20031,
+          "win": true,
+          "steps": 244
+        },
+        {
+          "seed": 20032,
+          "win": true,
+          "steps": 317
+        },
+        {
+          "seed": 20033,
+          "win": true,
+          "steps": 156
+        },
+        {
+          "seed": 20034,
+          "win": true,
+          "steps": 116
+        },
+        {
+          "seed": 20035,
+          "win": true,
+          "steps": 364
+        },
+        {
+          "seed": 20036,
+          "win": true,
+          "steps": 133
+        },
+        {
+          "seed": 20037,
+          "win": true,
+          "steps": 253
+        },
+        {
+          "seed": 20038,
+          "win": true,
+          "steps": 109
+        },
+        {
+          "seed": 20039,
+          "win": true,
+          "steps": 166
+        },
+        {
+          "seed": 20040,
+          "win": true,
+          "steps": 139
+        },
+        {
+          "seed": 20041,
+          "win": true,
+          "steps": 131
+        },
+        {
+          "seed": 20042,
+          "win": true,
+          "steps": 198
+        },
+        {
+          "seed": 20043,
+          "win": false,
+          "steps": 203
+        },
+        {
+          "seed": 20044,
+          "win": true,
+          "steps": 114
+        },
+        {
+          "seed": 20045,
+          "win": true,
+          "steps": 323
+        },
+        {
+          "seed": 20046,
+          "win": true,
+          "steps": 107
+        },
+        {
+          "seed": 20047,
+          "win": true,
+          "steps": 109
+        },
+        {
+          "seed": 20048,
+          "win": true,
+          "steps": 164
+        },
+        {
+          "seed": 20049,
+          "win": true,
+          "steps": 141
+        },
+        {
+          "seed": 20050,
+          "win": true,
+          "steps": 133
+        },
+        {
+          "seed": 20051,
+          "win": true,
+          "steps": 114
+        },
+        {
+          "seed": 20052,
+          "win": true,
+          "steps": 204
+        },
+        {
+          "seed": 20053,
+          "win": true,
+          "steps": 93
+        },
+        {
+          "seed": 20054,
+          "win": true,
+          "steps": 170
+        },
+        {
+          "seed": 20055,
+          "win": true,
+          "steps": 182
+        },
+        {
+          "seed": 20056,
+          "win": true,
+          "steps": 100
+        },
+        {
+          "seed": 20057,
+          "win": true,
+          "steps": 194
+        },
+        {
+          "seed": 20058,
+          "win": true,
+          "steps": 86
+        },
+        {
+          "seed": 20059,
+          "win": true,
+          "steps": 229
+        },
+        {
+          "seed": 20060,
+          "win": true,
+          "steps": 118
+        },
+        {
+          "seed": 20061,
+          "win": true,
+          "steps": 84
+        },
+        {
+          "seed": 20062,
+          "win": true,
+          "steps": 99
+        },
+        {
+          "seed": 20063,
+          "win": true,
+          "steps": 253
+        },
+        {
+          "seed": 20064,
+          "win": true,
+          "steps": 79
+        },
+        {
+          "seed": 20065,
+          "win": true,
+          "steps": 236
+        },
+        {
+          "seed": 20066,
+          "win": true,
+          "steps": 165
+        },
+        {
+          "seed": 20067,
+          "win": true,
+          "steps": 164
+        },
+        {
+          "seed": 20068,
+          "win": true,
+          "steps": 148
+        },
+        {
+          "seed": 20069,
+          "win": true,
+          "steps": 121
+        },
+        {
+          "seed": 20070,
+          "win": true,
+          "steps": 110
+        },
+        {
+          "seed": 20071,
+          "win": false,
+          "steps": 362
+        },
+        {
+          "seed": 20072,
+          "win": true,
+          "steps": 95
+        },
+        {
+          "seed": 20073,
+          "win": true,
+          "steps": 355
+        },
+        {
+          "seed": 20074,
+          "win": true,
+          "steps": 100
+        },
+        {
+          "seed": 20075,
+          "win": true,
+          "steps": 147
+        },
+        {
+          "seed": 20076,
+          "win": true,
+          "steps": 89
+        },
+        {
+          "seed": 20077,
+          "win": true,
+          "steps": 129
+        },
+        {
+          "seed": 20078,
+          "win": true,
+          "steps": 126
+        },
+        {
+          "seed": 20079,
+          "win": true,
+          "steps": 373
+        },
+        {
+          "seed": 20080,
+          "win": true,
+          "steps": 136
+        },
+        {
+          "seed": 20081,
+          "win": true,
+          "steps": 152
+        },
+        {
+          "seed": 20082,
+          "win": true,
+          "steps": 103
+        },
+        {
+          "seed": 20083,
+          "win": true,
+          "steps": 148
+        },
+        {
+          "seed": 20084,
+          "win": true,
+          "steps": 189
+        },
+        {
+          "seed": 20085,
+          "win": true,
+          "steps": 106
+        },
+        {
+          "seed": 20086,
+          "win": true,
+          "steps": 221
+        },
+        {
+          "seed": 20087,
+          "win": true,
+          "steps": 95
+        },
+        {
+          "seed": 20088,
+          "win": true,
+          "steps": 152
+        },
+        {
+          "seed": 20089,
+          "win": true,
+          "steps": 124
+        },
+        {
+          "seed": 20090,
+          "win": true,
+          "steps": 96
+        },
+        {
+          "seed": 20091,
+          "win": true,
+          "steps": 155
+        },
+        {
+          "seed": 20092,
+          "win": true,
+          "steps": 122
+        },
+        {
+          "seed": 20093,
+          "win": true,
+          "steps": 193
+        },
+        {
+          "seed": 20094,
+          "win": true,
+          "steps": 232
+        },
+        {
+          "seed": 20095,
+          "win": true,
+          "steps": 345
+        },
+        {
+          "seed": 20096,
+          "win": true,
+          "steps": 107
+        },
+        {
+          "seed": 20097,
+          "win": true,
+          "steps": 112
+        },
+        {
+          "seed": 20098,
+          "win": true,
+          "steps": 169
+        },
+        {
+          "seed": 20099,
+          "win": true,
+          "steps": 126
+        }
+      ]
+    },
+    "sniper": {
+      "wins": 86,
+      "win_rate": 0.86,
+      "wilson95": [
+        0.7786281178903616,
+        0.9147365634006086
+      ],
+      "rows": [
+        {
+          "seed": 20000,
+          "win": true,
+          "steps": 503
+        },
+        {
+          "seed": 20001,
+          "win": true,
+          "steps": 187
+        },
+        {
+          "seed": 20002,
+          "win": true,
+          "steps": 270
+        },
+        {
+          "seed": 20003,
+          "win": true,
+          "steps": 1179
+        },
+        {
+          "seed": 20004,
+          "win": true,
+          "steps": 129
+        },
+        {
+          "seed": 20005,
+          "win": true,
+          "steps": 813
+        },
+        {
+          "seed": 20006,
+          "win": true,
+          "steps": 1419
+        },
+        {
+          "seed": 20007,
+          "win": true,
+          "steps": 191
+        },
+        {
+          "seed": 20008,
+          "win": true,
+          "steps": 578
+        },
+        {
+          "seed": 20009,
+          "win": true,
+          "steps": 1421
+        },
+        {
+          "seed": 20010,
+          "win": true,
+          "steps": 142
+        },
+        {
+          "seed": 20011,
+          "win": true,
+          "steps": 191
+        },
+        {
+          "seed": 20012,
+          "win": true,
+          "steps": 343
+        },
+        {
+          "seed": 20013,
+          "win": true,
+          "steps": 239
+        },
+        {
+          "seed": 20014,
+          "win": true,
+          "steps": 208
+        },
+        {
+          "seed": 20015,
+          "win": true,
+          "steps": 101
+        },
+        {
+          "seed": 20016,
+          "win": true,
+          "steps": 363
+        },
+        {
+          "seed": 20017,
+          "win": true,
+          "steps": 384
+        },
+        {
+          "seed": 20018,
+          "win": true,
+          "steps": 179
+        },
+        {
+          "seed": 20019,
+          "win": true,
+          "steps": 114
+        },
+        {
+          "seed": 20020,
+          "win": false,
+          "steps": 1499
+        },
+        {
+          "seed": 20021,
+          "win": true,
+          "steps": 229
+        },
+        {
+          "seed": 20022,
+          "win": true,
+          "steps": 91
+        },
+        {
+          "seed": 20023,
+          "win": true,
+          "steps": 345
+        },
+        {
+          "seed": 20024,
+          "win": true,
+          "steps": 276
+        },
+        {
+          "seed": 20025,
+          "win": false,
+          "steps": 1219
+        },
+        {
+          "seed": 20026,
+          "win": true,
+          "steps": 111
+        },
+        {
+          "seed": 20027,
+          "win": false,
+          "steps": 1241
+        },
+        {
+          "seed": 20028,
+          "win": true,
+          "steps": 146
+        },
+        {
+          "seed": 20029,
+          "win": true,
+          "steps": 105
+        },
+        {
+          "seed": 20030,
+          "win": true,
+          "steps": 1202
+        },
+        {
+          "seed": 20031,
+          "win": true,
+          "steps": 677
+        },
+        {
+          "seed": 20032,
+          "win": true,
+          "steps": 256
+        },
+        {
+          "seed": 20033,
+          "win": true,
+          "steps": 584
+        },
+        {
+          "seed": 20034,
+          "win": false,
+          "steps": 506
+        },
+        {
+          "seed": 20035,
+          "win": true,
+          "steps": 1110
+        },
+        {
+          "seed": 20036,
+          "win": true,
+          "steps": 460
+        },
+        {
+          "seed": 20037,
+          "win": true,
+          "steps": 233
+        },
+        {
+          "seed": 20038,
+          "win": false,
+          "steps": 1499
+        },
+        {
+          "seed": 20039,
+          "win": true,
+          "steps": 1395
+        },
+        {
+          "seed": 20040,
+          "win": true,
+          "steps": 192
+        },
+        {
+          "seed": 20041,
+          "win": true,
+          "steps": 136
+        },
+        {
+          "seed": 20042,
+          "win": true,
+          "steps": 571
+        },
+        {
+          "seed": 20043,
+          "win": true,
+          "steps": 186
+        },
+        {
+          "seed": 20044,
+          "win": true,
+          "steps": 348
+        },
+        {
+          "seed": 20045,
+          "win": true,
+          "steps": 1474
+        },
+        {
+          "seed": 20046,
+          "win": false,
+          "steps": 451
+        },
+        {
+          "seed": 20047,
+          "win": true,
+          "steps": 137
+        },
+        {
+          "seed": 20048,
+          "win": true,
+          "steps": 262
+        },
+        {
+          "seed": 20049,
+          "win": true,
+          "steps": 353
+        },
+        {
+          "seed": 20050,
+          "win": true,
+          "steps": 126
+        },
+        {
+          "seed": 20051,
+          "win": true,
+          "steps": 337
+        },
+        {
+          "seed": 20052,
+          "win": true,
+          "steps": 274
+        },
+        {
+          "seed": 20053,
+          "win": false,
+          "steps": 221
+        },
+        {
+          "seed": 20054,
+          "win": false,
+          "steps": 850
+        },
+        {
+          "seed": 20055,
+          "win": true,
+          "steps": 187
+        },
+        {
+          "seed": 20056,
+          "win": true,
+          "steps": 140
+        },
+        {
+          "seed": 20057,
+          "win": false,
+          "steps": 657
+        },
+        {
+          "seed": 20058,
+          "win": true,
+          "steps": 360
+        },
+        {
+          "seed": 20059,
+          "win": true,
+          "steps": 358
+        },
+        {
+          "seed": 20060,
+          "win": true,
+          "steps": 208
+        },
+        {
+          "seed": 20061,
+          "win": true,
+          "steps": 91
+        },
+        {
+          "seed": 20062,
+          "win": true,
+          "steps": 237
+        },
+        {
+          "seed": 20063,
+          "win": true,
+          "steps": 357
+        },
+        {
+          "seed": 20064,
+          "win": true,
+          "steps": 85
+        },
+        {
+          "seed": 20065,
+          "win": true,
+          "steps": 271
+        },
+        {
+          "seed": 20066,
+          "win": false,
+          "steps": 542
+        },
+        {
+          "seed": 20067,
+          "win": true,
+          "steps": 187
+        },
+        {
+          "seed": 20068,
+          "win": true,
+          "steps": 193
+        },
+        {
+          "seed": 20069,
+          "win": true,
+          "steps": 499
+        },
+        {
+          "seed": 20070,
+          "win": true,
+          "steps": 295
+        },
+        {
+          "seed": 20071,
+          "win": true,
+          "steps": 373
+        },
+        {
+          "seed": 20072,
+          "win": true,
+          "steps": 162
+        },
+        {
+          "seed": 20073,
+          "win": true,
+          "steps": 518
+        },
+        {
+          "seed": 20074,
+          "win": true,
+          "steps": 156
+        },
+        {
+          "seed": 20075,
+          "win": true,
+          "steps": 732
+        },
+        {
+          "seed": 20076,
+          "win": false,
+          "steps": 129
+        },
+        {
+          "seed": 20077,
+          "win": true,
+          "steps": 177
+        },
+        {
+          "seed": 20078,
+          "win": true,
+          "steps": 1008
+        },
+        {
+          "seed": 20079,
+          "win": true,
+          "steps": 237
+        },
+        {
+          "seed": 20080,
+          "win": true,
+          "steps": 208
+        },
+        {
+          "seed": 20081,
+          "win": true,
+          "steps": 296
+        },
+        {
+          "seed": 20082,
+          "win": true,
+          "steps": 293
+        },
+        {
+          "seed": 20083,
+          "win": true,
+          "steps": 164
+        },
+        {
+          "seed": 20084,
+          "win": false,
+          "steps": 193
+        },
+        {
+          "seed": 20085,
+          "win": true,
+          "steps": 176
+        },
+        {
+          "seed": 20086,
+          "win": true,
+          "steps": 1282
+        },
+        {
+          "seed": 20087,
+          "win": true,
+          "steps": 133
+        },
+        {
+          "seed": 20088,
+          "win": false,
+          "steps": 198
+        },
+        {
+          "seed": 20089,
+          "win": true,
+          "steps": 128
+        },
+        {
+          "seed": 20090,
+          "win": true,
+          "steps": 153
+        },
+        {
+          "seed": 20091,
+          "win": true,
+          "steps": 247
+        },
+        {
+          "seed": 20092,
+          "win": true,
+          "steps": 841
+        },
+        {
+          "seed": 20093,
+          "win": false,
+          "steps": 187
+        },
+        {
+          "seed": 20094,
+          "win": true,
+          "steps": 1069
+        },
+        {
+          "seed": 20095,
+          "win": true,
+          "steps": 301
+        },
+        {
+          "seed": 20096,
+          "win": true,
+          "steps": 251
+        },
+        {
+          "seed": 20097,
+          "win": true,
+          "steps": 886
+        },
+        {
+          "seed": 20098,
+          "win": true,
+          "steps": 810
+        },
+        {
+          "seed": 20099,
+          "win": true,
+          "steps": 302
+        }
+      ]
+    }
+  }
+}

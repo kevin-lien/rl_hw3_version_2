@@ -1,0 +1,20 @@
+{"time":"2026-11-01T12:18:42.7777983+08:00","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\11608\\AppData\\Local\\Temp\\tmps3gu835_\\port-34332.txt","pid":34332,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-11-01T12:18:42.784597+08:00","level":"INFO","msg":"server: will exit if parent process dies","ppid":34332}
+{"time":"2026-11-01T12:18:42.784597+08:00","level":"INFO","msg":"server: accepting connections","addr":{"Name":"C:\\Users\\11608\\AppData\\Local\\Temp\\wandb-34332-11936-1148145844\\socket","Net":"unix"}}
+{"time":"2026-11-01T12:18:42.784597+08:00","level":"INFO","msg":"server: accepting connections","addr":{"IP":"127.0.0.1","Port":57948,"Zone":""}}
+{"time":"2026-11-01T12:18:44.998684+08:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(127.0.0.1:57950)"}
+{"time":"2026-11-01T12:18:45.0442873+08:00","level":"INFO","msg":"handleInformInit: received","streamId":"yffn89i2","id":"1(127.0.0.1:57950)"}
+{"time":"2026-11-01T12:18:45.0469217+08:00","level":"ERROR","msg":"error symlinking debug-core.log","loggerPath":"C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\.wandb-cache\\wandb\\logs\\core-debug-20261101_121842.log","targetPath":"wandb\\offline-run-20261101_121842-yffn89i2\\logs\\debug-core.log","error":"symlink C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\.wandb-cache\\wandb\\logs\\core-debug-20261101_121842.log wandb\\offline-run-20261101_121842-yffn89i2\\logs\\debug-core.log: A required privilege is not held by the client."}
+{"time":"2026-11-01T12:18:45.0485203+08:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"yffn89i2","id":"1(127.0.0.1:57950)"}
+{"time":"2026-11-01T12:23:43.1862041+08:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"yffn89i2","id":"1(127.0.0.1:57950)"}
+{"time":"2026-11-01T12:23:43.1918048+08:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"yffn89i2","id":"1(127.0.0.1:57950)"}
+{"time":"2026-11-01T12:23:43.1923148+08:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(127.0.0.1:57950)"}
+{"time":"2026-11-01T12:23:43.1923148+08:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"1(127.0.0.1:57950)"}
+{"time":"2026-11-01T12:23:43.1923148+08:00","level":"INFO","msg":"connection: closing","id":"1(127.0.0.1:57950)"}
+{"time":"2026-11-01T12:23:43.1923148+08:00","level":"INFO","msg":"connection: closed successfully","id":"1(127.0.0.1:57950)"}
+{"time":"2026-11-01T12:23:43.1923148+08:00","level":"INFO","msg":"server: is shutting down"}
+{"time":"2026-11-01T12:23:43.1934282+08:00","level":"INFO","msg":"processOutgoingData: finished","id":"1(127.0.0.1:57950)"}
+{"time":"2026-11-01T12:23:43.1934282+08:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"1(127.0.0.1:57950)"}
+{"time":"2026-11-01T12:23:43.1934282+08:00","level":"INFO","msg":"server: listener closed","addr":{"Name":"C:\\Users\\11608\\AppData\\Local\\Temp\\wandb-34332-11936-1148145844\\socket","Net":"unix"}}
+{"time":"2026-11-01T12:23:43.1934282+08:00","level":"INFO","msg":"server: listener closed","addr":{"IP":"127.0.0.1","Port":57948,"Zone":""}}
+{"time":"2026-11-01T12:23:43.1934282+08:00","level":"INFO","msg":"server: all connections closed"}

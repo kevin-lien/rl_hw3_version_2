@@ -1,0 +1,40 @@
+{"time":"2026-11-01T13:51:47.3724105+08:00","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\11608\\AppData\\Local\\Temp\\tmpj2dij5eo\\port-3032.txt","pid":3032,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-11-01T13:51:47.3790181+08:00","level":"INFO","msg":"server: will exit if parent process dies","ppid":3032}
+{"time":"2026-11-01T13:51:47.3790181+08:00","level":"INFO","msg":"server: accepting connections","addr":{"Name":"C:\\Users\\11608\\AppData\\Local\\Temp\\wandb-3032-29488-533668121\\socket","Net":"unix"}}
+{"time":"2026-11-01T13:51:47.3790181+08:00","level":"INFO","msg":"server: accepting connections","addr":{"IP":"127.0.0.1","Port":62375,"Zone":""}}
+{"time":"2026-11-01T13:51:47.451251+08:00","level":"INFO","msg":"main: starting server","port-filename":"C:\\Users\\11608\\AppData\\Local\\Temp\\tmpoc_u4bt_\\port-26380.txt","pid":26380,"detached":false,"idle-timeout":600000000000,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2026-11-01T13:51:47.4586526+08:00","level":"INFO","msg":"server: accepting connections","addr":{"IP":"127.0.0.1","Port":62376,"Zone":""}}
+{"time":"2026-11-01T13:51:47.4586526+08:00","level":"INFO","msg":"server: will exit if parent process dies","ppid":26380}
+{"time":"2026-11-01T13:51:47.4596615+08:00","level":"INFO","msg":"server: accepting connections","addr":{"Name":"C:\\Users\\11608\\AppData\\Local\\Temp\\wandb-26380-27688-4018982600\\socket","Net":"unix"}}
+{"time":"2026-11-01T13:51:49.6129125+08:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(127.0.0.1:62379)"}
+{"time":"2026-11-01T13:51:49.6401702+08:00","level":"INFO","msg":"handleInformInit: received","streamId":"raz5bv6h","id":"1(127.0.0.1:62379)"}
+{"time":"2026-11-01T13:51:49.6437625+08:00","level":"ERROR","msg":"error symlinking debug-core.log","loggerPath":"C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\.wandb-cache\\wandb\\logs\\core-debug-20261101_135147.log","targetPath":"wandb\\offline-run-20261101_135147-raz5bv6h\\logs\\debug-core.log","error":"symlink C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\.wandb-cache\\wandb\\logs\\core-debug-20261101_135147.log wandb\\offline-run-20261101_135147-raz5bv6h\\logs\\debug-core.log: A required privilege is not held by the client."}
+{"time":"2026-11-01T13:51:49.6487351+08:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"raz5bv6h","id":"1(127.0.0.1:62379)"}
+{"time":"2026-11-01T13:51:49.6900574+08:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(127.0.0.1:62380)"}
+{"time":"2026-11-01T13:51:49.7247392+08:00","level":"INFO","msg":"handleInformInit: received","streamId":"y7wdx2g1","id":"1(127.0.0.1:62380)"}
+{"time":"2026-11-01T13:51:49.7282243+08:00","level":"ERROR","msg":"error symlinking debug-core.log","loggerPath":"C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\.wandb-cache\\wandb\\logs\\core-debug-20261101_135147.log","targetPath":"wandb\\offline-run-20261101_135147-y7wdx2g1\\logs\\debug-core.log","error":"symlink C:\\Users\\11608\\Desktop\\大三上\\1_Reinforcement_Learning\\rl_hw3_origin\\rl_assignment_3\\astro_party\\.wandb-cache\\wandb\\logs\\core-debug-20261101_135147.log wandb\\offline-run-20261101_135147-y7wdx2g1\\logs\\debug-core.log: A required privilege is not held by the client."}
+{"time":"2026-11-01T13:51:49.7314488+08:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"y7wdx2g1","id":"1(127.0.0.1:62380)"}
+{"time":"2026-11-01T13:54:04.200357+08:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"raz5bv6h","id":"1(127.0.0.1:62379)"}
+{"time":"2026-11-01T13:54:04.2034364+08:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"raz5bv6h","id":"1(127.0.0.1:62379)"}
+{"time":"2026-11-01T13:54:04.2144813+08:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(127.0.0.1:62379)"}
+{"time":"2026-11-01T13:54:04.2144813+08:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"1(127.0.0.1:62379)"}
+{"time":"2026-11-01T13:54:04.2144813+08:00","level":"INFO","msg":"server: is shutting down"}
+{"time":"2026-11-01T13:54:04.2144813+08:00","level":"INFO","msg":"processOutgoingData: finished","id":"1(127.0.0.1:62379)"}
+{"time":"2026-11-01T13:54:04.2144813+08:00","level":"INFO","msg":"connection: closing","id":"1(127.0.0.1:62379)"}
+{"time":"2026-11-01T13:54:04.2144813+08:00","level":"INFO","msg":"connection: closed successfully","id":"1(127.0.0.1:62379)"}
+{"time":"2026-11-01T13:54:04.2144813+08:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"1(127.0.0.1:62379)"}
+{"time":"2026-11-01T13:54:04.2155193+08:00","level":"INFO","msg":"server: listener closed","addr":{"Name":"C:\\Users\\11608\\AppData\\Local\\Temp\\wandb-3032-29488-533668121\\socket","Net":"unix"}}
+{"time":"2026-11-01T13:54:04.2155193+08:00","level":"INFO","msg":"server: listener closed","addr":{"IP":"127.0.0.1","Port":62375,"Zone":""}}
+{"time":"2026-11-01T13:54:04.2160544+08:00","level":"INFO","msg":"server: all connections closed"}
+{"time":"2026-11-01T13:54:07.084081+08:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"y7wdx2g1","id":"1(127.0.0.1:62380)"}
+{"time":"2026-11-01T13:54:07.0876763+08:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"y7wdx2g1","id":"1(127.0.0.1:62380)"}
+{"time":"2026-11-01T13:54:07.0917095+08:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(127.0.0.1:62380)"}
+{"time":"2026-11-01T13:54:07.0917095+08:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"1(127.0.0.1:62380)"}
+{"time":"2026-11-01T13:54:07.0917095+08:00","level":"INFO","msg":"server: is shutting down"}
+{"time":"2026-11-01T13:54:07.0917095+08:00","level":"INFO","msg":"processOutgoingData: finished","id":"1(127.0.0.1:62380)"}
+{"time":"2026-11-01T13:54:07.0917095+08:00","level":"INFO","msg":"connection: closing","id":"1(127.0.0.1:62380)"}
+{"time":"2026-11-01T13:54:07.0917095+08:00","level":"INFO","msg":"connection: closed successfully","id":"1(127.0.0.1:62380)"}
+{"time":"2026-11-01T13:54:07.0917095+08:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"1(127.0.0.1:62380)"}
+{"time":"2026-11-01T13:54:07.0935311+08:00","level":"INFO","msg":"server: listener closed","addr":{"Name":"C:\\Users\\11608\\AppData\\Local\\Temp\\wandb-26380-27688-4018982600\\socket","Net":"unix"}}
+{"time":"2026-11-01T13:54:07.0935311+08:00","level":"INFO","msg":"server: listener closed","addr":{"IP":"127.0.0.1","Port":62376,"Zone":""}}
+{"time":"2026-11-01T13:54:07.0935311+08:00","level":"INFO","msg":"server: all connections closed"}
